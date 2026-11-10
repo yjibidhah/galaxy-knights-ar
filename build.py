@@ -174,18 +174,36 @@ def write_home():
     ]))+'<div class="callout"><h2>شارك روح الفريق ⚽</h2><p>كل لاعب يملك مهارة مختلفة، والعمل الجماعي والاحترام يصنعان فريقًا أقوى. هذا الموقع مساحة تشجع المرح والروح الرياضية بعيدًا عن الإساءة أو مشاركة البيانات الشخصية.</p></div></div>'
     render("/","أبطال الكرة فرسان المجرة","موقع مجرة الفرسان العربي: دليل حلقات أبطال الكرة فرسان المجرة، الشخصيات، المقالات والاختبارات التفاعلية.",hero+main,head=critical_style)
 
-CHARACTERS = [
-    ("bayan","بيان","الشخصيات البارزة في النسخة العربية", "⚡","اكتشف صفحة بيان ضمن دليل الشخصيات باللغة العربية."),
-    ("hayyan","حيان","الحماس وروح التحدي","🔥","تعرّف على حيان وأسباب حب الجمهور لشخصيات أبطال الكرة."),
-    ("oqab","عقاب","التركيز والعمل الجماعي","🦅","صفحة مخصصة لعقاب مع لمحة عن متابعة تطور الشخصيات.")
-]
+CHARACTER_DATA = json.loads((ROOT / "characters_data.json").read_text(encoding="utf-8"))
+CHARACTERS = CHARACTER_DATA["characters"]
+
+def character_portrait(c, featured=False):
+    alt = "صورة شخصية " + c["name"] + " من أبطال الكرة فرسان المجرة"
+    klass = "character-portrait featured" if featured else "character-portrait"
+    return '<div class="{}"><img src="{}" alt="{}" loading="{}" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=&quot;/assets/portrait-fallback.svg&quot;;this.classList.add(&quot;portrait-missing&quot;)" width="420" height="420"></div>'.format(
+        klass, safe(c["portrait"]), safe(alt), "eager" if featured else "lazy")
+
+def character_card(c):
+    tag = "اسم الدبلجة العربية" if c["dub"] else "نقل صوتي للاسم الأصلي"
+    short = c["intro"][:144].rsplit(" ", 1)[0] + "…"
+    return '<a class="character-card" href="/characters/{}/" data-character-group="{}" data-search aria-label="ملف شخصية {}">{photo}<div class="character-card-body"><div class="character-kicker">{group}</div><h2>{name}</h2><p class="character-position">{position}</p><p>{intro}</p><span class="character-tag">{tag}</span><span class="character-more">التفاصيل الكاملة ←</span></div></a>'.format(
+        c["slug"],safe(c["group"]),safe(c["name"]),photo=character_portrait(c),group={"earth":"فريق الأرض","staff":"إدارة الفريق","galaxy":"شخصيات المجرة"}[c["group"]],name=safe(c["name"]),position=safe(c["position"]),intro=safe(short),tag=safe(tag))
 
 def write_characters():
-    items = [(name,"صفحة تعريفية وحقائق عامة وشخصيات عالم فرسان المجرة.","/characters/{}/".format(slug),icon) for slug,name,subtitle,icon,desc in CHARACTERS]
-    render("/characters/","شخصيات أبطال الكرة فرسان المجرة","استكشف شخصيات أبطال الكرة فرسان المجرة بالعربية، ومنها بيان وحيان وعقاب.",'<div class="toolbar"><input id="search-site" class="field" type="search" placeholder="ابحث عن شخصية" aria-label="ابحث عن شخصية"></div>'+cards(items)+'<p id="search-empty" class="empty" hidden>لا توجد نتائج مطابقة.</p>')
-    for slug,name,subtitle,icon,desc in CHARACTERS:
-        body='<span class="chip">دليل شخصيات فرسان المجرة</span><div style="font-size:5rem" aria-hidden="true">{}</div><p>{}</p><h2>كيف تستكشف شخصية {}؟</h2><p>عند مشاهدة الحلقات، تابع طريقة تعامل الشخصية مع زملائها وكيف تتغير قراراتها في أوقات التحدي. لاحظ متى تعتمد على مهاراتها، ومتى تستفيد من دعم الفريق.</p><h2>نصيحة للمشاهد</h2><p>يمكنك تدوين لحظاتك المفضلة ومناقشتها مع أصدقائك باحترام، مع تجنب نشر حرق للأحداث لمن لم يشاهد الحلقات بعد.</p><div class="notice">هذه مقدمة عامة لمحبّي المسلسل، وليست سيرة رسمية أو نصًا منقولًا عن الشركة المنتجة.</div><a class="btn secondary" href="/characters/">كل الشخصيات</a>'.format(icon,desc,safe(name))
-        render("/characters/{}/".format(slug),"{} - أبطال الكرة فرسان المجرة".format(name),"اكتشف صفحة شخصية {} في موقع مجرة الفرسان العربي.".format(name),body,article=True)
+    count = len(CHARACTERS)
+    heading = '<div class="character-intro"><p class="chip">موسوعة مجرة الفرسان</p><h2>تعرّف على {} شخصية من عالم فرسان المجرة</h2><p>صور الشخصيات، أدوارها، مسيرتها وأهم مميزاتها. ابحث بالاسم أو اختر مجموعة اللاعبين أو الشخصيات الفضائية.</p></div>'.format(count)
+    notice = '<div class="notice character-notice"><strong>تنبيه بخصوص الأسماء:</strong> {} وتظل الصور والرسوم الخاصة بالشخصيات ملكًا لأصحاب الحقوق؛ الروابط الخارجية لأغراض التعريف بالمصدر وليست دليلًا على الترخيص.</div>'.format(safe(CHARACTER_DATA["disclaimer"]))
+    filters = '<div class="character-tools"><input id="search-site" type="search" class="field" placeholder="ابحث: بيان، حيان، عقاب، إيبوكي…" aria-label="ابحث عن شخصية"><div class="character-filters" role="group" aria-label="تصفية مجموعات الشخصيات"><button class="character-filter active" data-char-filter="all" type="button" aria-pressed="true">الجميع</button><button class="character-filter" data-char-filter="earth" type="button" aria-pressed="false">فريق الأرض</button><button class="character-filter" data-char-filter="staff" type="button" aria-pressed="false">الطاقم</button><button class="character-filter" data-char-filter="galaxy" type="button" aria-pressed="false">شخصيات المجرة</button></div></div>'
+    grid = '<div class="character-grid" id="character-grid">{}</div><p id="search-empty" role="status" class="empty" hidden>لا توجد شخصيات تطابق البحث.</p>'.format("".join(character_card(c) for c in CHARACTERS))
+    render("/characters/","شخصيات أبطال الكرة فرسان المجرة - الصور والمعلومات الكاملة","موسوعة شخصيات أبطال الكرة فرسان المجرة بالعربية: صور بيان وحيان وعقاب، أبطال فريق الأرض، المواهب والمنافسون، وصفحات تعريف مفصلة.",heading+filters+grid+notice)
+
+    for c in CHARACTERS:
+        related = [v for v in CHARACTERS if v["slug"] != c["slug"] and v["group"] == c["group"]][:3]
+        related_html = '<div class="character-related-grid">'+ "".join('<a class="character-related" href="/characters/{}/">{photo}<span>{}</span></a>'.format(v["slug"],safe(v["name"]),photo=character_portrait(v)) for v in related) + "</div>" if related else ""
+        alias = '<span class="character-tag authentic">اسم مستخدم في الدبلجة العربية</span>' if c["dub"] else '<span class="character-tag">كتابة عربية للاسم الأصلي — اسم الدبلجة غير مؤكد</span>'
+        body = '<div class="character-detail"><div class="character-profile-top">{photo}<div class="character-profile-summary"><span class="chip">{role}</span><h2>{name}</h2><p class="latin-name" lang="en">{original}</p>{alias}<p class="character-lead">{intro}</p><div class="character-facts"><span>المجموعة: <b>{group}</b></span><span>الدور: <b>{position}</b></span></div></div></div><section><h2>القصة والدور في المسلسل</h2><p>{story}</p></section><section><h2>مهاراته ومميزاته</h2><p>{skill}</p></section><section><h2>تطوّر الشخصية</h2><p>{growth}</p></section><section><h2>شخصيات قد تعجبك</h2>{related}</section><p class="character-credit">مصدر صورة الشخصية: <a href="{source}" target="_blank" rel="noopener noreferrer">عرض المصدر الأصلي</a>. الصور خارجية وقد يتوقف عرضها إذا تغيّرت سياسة الموقع المضيف. هذا موقع معجبين غير رسمي.</p><a href="/characters/" class="btn secondary">← العودة إلى جميع الشخصيات</a></div>'.format(
+            photo=character_portrait(c,True),role={"earth":"فريق الأرض","staff":"الطاقم والإدارة","galaxy":"شخصيات ومنافسو المجرة"}[c["group"]],name=safe(c["name"]),original=safe(c["original"]),alias=alias,intro=safe(c["intro"]),group={"earth":"منتخب الأرض","staff":"إدارة المنتخب","galaxy":"عالم المجرة"}[c["group"]],position=safe(c["position"]),story=safe(c["story"]),skill=safe(c["skill"]),growth=safe(c["growth"]),related=related_html,source=safe(c["src"]))
+        render("/characters/{}/".format(c["slug"]),"{} | شخصيات أبطال الكرة فرسان المجرة".format(c["name"]),"تعرف على {} ({}): صورته، قصته، مهاراته وتطوّره ضمن أبطال الكرة فرسان المجرة.".format(c["name"],c["original"]),body,article=True)
 
 ARTICLES = [
     ("story","قصة أبطال الكرة فرسان المجرة","ما الذي يميز رحلة كرة القدم في هذا الجزء؟","🌌",[
