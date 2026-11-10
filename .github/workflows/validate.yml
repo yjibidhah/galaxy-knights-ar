@@ -1,0 +1,46 @@
+name: Validate Arabic fan website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Build and inspect site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build, check SEO and internal links
+        env:
+          SITE_URL: https://example.pages.dev
+        run: |
+          python3 -m py_compile build.py
+          python3 build.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+          root = Path("public")
+          pages = sorted(root.rglob("*.html"))
+          assert len(pages) == 16, "Expected 16 generated HTML pages, got {}".format(len(pages))
+          assert (root / "assets/styles.css").exists()
+          assert (root / "assets/app.js").exists()
+          assert (root / "assets/hero.svg").exists()
+          assert (root / "robots.txt").exists()
+          ET.parse(root / "sitemap.xml")
+          for page in pages:
+              html = page.read_text(encoding="utf-8")
+              assert 'lang="ar"' in html, page
+              assert 'dir="rtl"' in html, page
+              assert '<meta name="description"' in html or page.name == "404.html", page
+              for target in re.findall(r'(?:href|src)="(/[^"?#]*)"', html):
+                  path = root / target.lstrip("/")
+                  assert path.is_file() or (path / "index.html").is_file(), (page, target)
+          print("All {} pages, site navigation and sitemap verified.".format(len(pages)))
+          PY
