@@ -47,7 +47,7 @@ def render(route, title, description, body, *, head="", article=False):
     full_title = "{} | {}".format(title, NAME) if route != "/" else "مجرة الفرسان | أبطال الكرة فرسان المجرة بالعربية"
     canonical = '<link rel="canonical" href="{}">'.format(safe(full_url(route))) if SITE_URL else ""
     og_url = '<meta property="og:url" content="{}">'.format(safe(full_url(route))) if SITE_URL else ""
-    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/galaxy-hero-desktop.webp"))) if SITE_URL else ""
+    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/galaxy-hero-desktop-v2.webp"))) if SITE_URL else ""
     current = lambda path: ' aria-current="page"' if route == path or (path != "/" and route.startswith(path)) else ""
     navbar = "".join('<a href="{}"{}>{}</a>'.format(p,current(p),safe(t)) for p,t in NAV)
     web_schema = {
@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=galaxy-quality-guard-20261110">
+<link rel="stylesheet" href="/assets/styles.css?v=premium-galaxy-hero-v2">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
@@ -107,35 +107,59 @@ def section(title, intro, content, href="", linktext="عرض الكل"):
 
 def write_home():
     critical_style = """<style>
-/* Homepage critical CSS: full-width banner; also protects against stale cached stylesheets. */
+/* Premium full-bleed galaxy homepage — desktop and mobile */
 #main{display:block;width:100%;max-width:none;margin:0}
-#main>.galaxy-hero{display:block;position:relative;clear:both;width:100%;max-width:none;overflow:hidden;padding:0 0 52px;background:linear-gradient(180deg,#081a3c,#071b36)}
-#main .galaxy-hero-picture{display:block;width:100%;max-width:none;margin:0;overflow:hidden}
-#main .galaxy-hero-picture img{display:block;width:100%;max-width:1200px;margin-inline:auto;height:auto;max-height:680px;aspect-ratio:3/1;object-fit:contain;object-position:center}
-#main .galaxy-hero-panel{position:relative;box-sizing:border-box;width:min(1160px,92%);max-width:1160px;margin:-24px auto 0;padding:24px 30px;border:1px solid #3c77ac;border-radius:22px;background:linear-gradient(115deg,#06172ef7,#102855f0);box-shadow:0 22px 54px #0008;display:flex;align-items:center;justify-content:space-between;gap:26px;backdrop-filter:blur(12px)}
-#main .galaxy-hero-copy{flex:1;min-width:0}
-#main .galaxy-hero-kicker{color:#67efff;font-weight:900;font-size:.9rem}
-#main .galaxy-hero-panel h1{color:#fff;font-size:clamp(1.6rem,2.6vw,2.5rem);line-height:1.35;margin:6px 0}
-#main .galaxy-hero-panel p{margin:0;color:#c7daf1;font-size:1rem;line-height:1.85}
-#main .galaxy-hero-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-#main .galaxy-hero-links .btn{white-space:nowrap}
-@media(max-width:900px){#main .galaxy-hero-panel{flex-direction:column;align-items:stretch;gap:16px}#main .galaxy-hero-links{justify-content:flex-start}}
-@media(max-width:700px){#main>.galaxy-hero{padding-bottom:24px}#main .galaxy-hero-picture img{aspect-ratio:1/1;max-height:none;object-fit:cover}#main .galaxy-hero-panel{margin:-10px auto 0;padding:16px;border-radius:17px}#main .galaxy-hero-links{display:grid;grid-template-columns:1fr;gap:10px}#main .galaxy-hero-links .btn{width:100%;white-space:normal}#main .galaxy-hero-panel p{font-size:.92rem}}
+#main>.galaxy-hero{position:relative;isolation:isolate;clear:both;overflow:hidden;display:flex;align-items:stretch;width:100%;max-width:none;min-height:clamp(500px,42vw,710px);padding:0;margin:0;background:#07132b}
+#main .galaxy-hero-picture{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;margin:0;overflow:hidden;z-index:0}
+#main .galaxy-hero-picture img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center center;filter:none}
+#main>.galaxy-hero::after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(270deg,rgba(3,11,36,.94) 0%,rgba(3,11,36,.86) 18%,rgba(3,11,36,.44) 37%,rgba(3,11,36,.04) 66%),linear-gradient(0deg,rgba(5,15,43,.6),transparent 24%)}
+#main .galaxy-hero-overlay{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-start;width:min(1320px,92%);max-width:1320px;min-height:inherit;margin:0 auto;padding:46px 0}
+#main .galaxy-hero-copy{width:min(520px,48%);max-width:520px;min-width:0;text-align:right;filter:drop-shadow(0 4px 12px rgba(1,10,30,.55))}
+#main .galaxy-hero-kicker{display:inline-flex;align-items:center;padding:6px 17px;border:1px solid #38c7f5a0;border-radius:100px;background:#042a50a8;color:#9deeff;letter-spacing:0;font-weight:900;font-size:.9rem}
+#main .galaxy-hero-copy h1{margin:18px 0 14px;line-height:1.2;font-size:clamp(2.6rem,5.1vw,5.4rem);font-weight:900;letter-spacing:-.025em}
+#main .galaxy-hero-copy h1 span,#main .galaxy-hero-copy h1 strong{display:block;font-weight:900}
+#main .galaxy-hero-copy h1 span{color:#ffdb70;text-shadow:0 4px 22px #ffbe5544}
+#main .galaxy-hero-copy h1 strong{color:#fff;text-shadow:0 4px 16px #001c52,0 0 26px #2fa2ff70}
+#main .galaxy-hero-copy p{margin:0;max-width:470px;line-height:1.9;color:#e6f1ff;font-weight:600;font-size:clamp(1rem,1.4vw,1.17rem)}
+#main .galaxy-hero-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:25px}
+#main .galaxy-hero-links .btn{min-height:50px;border-radius:14px;white-space:normal;font-size:1rem}
+#main .galaxy-hero-links .btn.primary{background:linear-gradient(115deg,#ffe477,#ffad41);box-shadow:0 8px 24px #ffbf5240}
+#main .galaxy-hero-links .btn.secondary{background:#033052cb;border:1px solid #3cc9ff;color:#fff}
+@media(max-width:950px) and (min-width:701px){
+ #main>.galaxy-hero{min-height:470px}
+ #main .galaxy-hero-copy{width:51%}
+ #main .galaxy-hero-copy h1{font-size:clamp(2.1rem,5vw,3.8rem)}
+ #main .galaxy-hero-copy p{font-size:.95rem}
+}
+@media(max-width:700px){
+ #main>.galaxy-hero{min-height:clamp(680px,169vw,980px);align-items:stretch}
+ #main .galaxy-hero-picture img{object-fit:cover;object-position:center top}
+ #main>.galaxy-hero::after{background:linear-gradient(0deg,#05142df5 0%,#071739eb 18%,#071839aa 40%,transparent 65%)}
+ #main .galaxy-hero-overlay{width:min(92%,570px);align-items:flex-end;justify-content:center;min-height:inherit;padding:20px 0 36px}
+ #main .galaxy-hero-copy{width:100%;max-width:540px;text-align:center}
+ #main .galaxy-hero-copy h1{margin:11px 0;font-size:clamp(2.25rem,9vw,3.8rem);line-height:1.24}
+ #main .galaxy-hero-copy p{font-size:.96rem;line-height:1.75;max-width:460px;margin:0 auto}
+ #main .galaxy-hero-kicker{font-size:.78rem}
+ #main .galaxy-hero-links{justify-content:center;gap:9px;margin-top:20px}
+ #main .galaxy-hero-links .btn{flex:1 1 170px;min-height:47px;padding:8px 14px}
+}
+@media(max-width:390px){#main .galaxy-hero-copy h1{font-size:2rem}#main .galaxy-hero-links{flex-direction:column}#main .galaxy-hero-links .btn{flex:auto;width:100%}}
+@media(prefers-reduced-motion:reduce){#main .galaxy-hero-picture img{animation:none!important}}
 </style>"""
-    hero = '''<section class="galaxy-hero" aria-label="مقدمة موقع مجرة الفرسان">
+    hero = '''<section class="galaxy-hero" aria-label="أبطال الكرة فرسان المجرة - الموقع العربي">
     <picture class="galaxy-hero-picture">
-      <source media="(max-width: 700px)" srcset="/assets/galaxy-hero-mobile.webp" type="image/webp">
-      <img src="/assets/galaxy-hero-desktop.webp" width="1200" height="400" fetchpriority="high" decoding="async" alt="ملصق أنمي مجرّي يجمع الأبطال تنما وشيندو وتسووروجي مع كرة قدم مضيئة، وعنوان أبطال الكرة فرسان المجرة">
+      <source media="(max-width: 700px)" srcset="/assets/galaxy-hero-mobile-v2.webp" type="image/webp">
+      <img src="/assets/galaxy-hero-desktop-v2.webp" width="2172" height="724" fetchpriority="high" loading="eager" decoding="async" alt="تنما وشيندو وتسووروجي في ملعب كرة قدم فضائي وسط النجوم والمجرات">
     </picture>
-    <div class="shell galaxy-hero-panel">
+    <div class="shell galaxy-hero-overlay">
       <div class="galaxy-hero-copy">
-        <span class="galaxy-hero-kicker">⚽ انطلق مع أبطال المجرة</span>
-        <h1>أبطال الكرة: فرسان المجرة</h1>
-        <p>مغامرتك تبدأ من هنا! استكشف الشخصيات، وتابع دليل الحلقات، وخُض تحديات ممتعة باللغة العربية.</p>
-      </div>
-      <div class="galaxy-hero-links" aria-label="ابدأ الاستكشاف">
-        <a class="btn primary" href="/episodes/">اكتشف الحلقات ←</a>
-        <a class="btn secondary" href="/quiz/">اختبر معلوماتك ✨</a>
+        <span class="galaxy-hero-kicker">⚡ أهلاً بك في مجرة الفرسان</span>
+        <h1><span>أبطال الكرة</span><strong>فرسان المجرة</strong></h1>
+        <p>انطلق نحو النجوم مع أبطالك المفضلين! اكتشف الشخصيات، استكشف دليل الحلقات، واختبر معلوماتك في مغامرة كروية بالعربية.</p>
+        <div class="galaxy-hero-links" aria-label="ابدأ الاستكشاف">
+          <a class="btn primary" href="/episodes/">اكتشف الحلقات ⚽</a>
+          <a class="btn secondary" href="/characters/">تعرّف على الأبطال ✨</a>
+        </div>
       </div>
     </div>
   </section>'''

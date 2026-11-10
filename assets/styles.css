@@ -7,54 +7,41 @@
 @media(max-width:450px){.cards,.cards.four{grid-template-columns:1fr}.episodes-grid{grid-template-columns:repeat(2,1fr)}.section{padding:20px 0}.card{min-height:145px}.callout{padding:20px}.quiz{padding:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
-/* Cinematic Galaxy hero - live HTML content remains searchable and accessible */
-.galaxy-hero{position:relative;isolation:isolate;overflow:hidden;padding:0 0 54px;background:radial-gradient(ellipse at 50% 18%,#123b75 0%,#071a37 60%,transparent 85%)}
-.galaxy-hero:before{content:"";pointer-events:none;position:absolute;inset:0;background:radial-gradient(circle at 12% 64%,#705cf42a,transparent 27%),radial-gradient(circle at 82% 40%,#07ccff20,transparent 26%);z-index:-1}
-.galaxy-hero-picture{display:block;width:min(100%,1920px);margin:0 auto;overflow:hidden;background:#07152d}
-.galaxy-hero-picture img{width:100%;height:auto;max-height:670px;display:block;object-fit:cover;object-position:center;aspect-ratio:3 / 1}
-.galaxy-hero-panel{position:relative;margin-top:-22px;padding:24px 30px;border-radius:24px;border:1px solid #3c77acb8;box-shadow:0 22px 55px #010b23a6,0 0 35px #00baff20;display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(110deg,#06172eef,#102855ee 70%,#0b1f3bf7);backdrop-filter:blur(14px)}
-.galaxy-hero-kicker{color:#67efff;font-size:.85rem;font-weight:900;letter-spacing:.01em}
-.galaxy-hero-panel h1{font-size:clamp(1.55rem,2.5vw,2.4rem);line-height:1.4;margin:6px 0 7px;color:#fff}
-.galaxy-hero-panel p{color:#bdcee9;font-size:.97rem;max-width:660px;line-height:1.8;margin:0}
-.galaxy-hero-links{display:flex;gap:11px;flex-wrap:wrap;align-items:center;flex-shrink:0}
-.galaxy-hero-links .btn{font-size:.92rem;white-space:nowrap}
-.brand-mark{overflow:hidden;display:inline-flex;align-items:center;justify-content:center}
-.brand-emblem{width:85%;height:85%;display:block;object-fit:contain}
-@media(max-width:980px){
- .galaxy-hero-panel{flex-direction:column;align-items:stretch;gap:14px}
- .galaxy-hero-links{justify-content:flex-start}
+/* Premium full-bleed galaxy homepage — desktop and mobile */
+#main{display:block;width:100%;max-width:none;margin:0}
+#main>.galaxy-hero{position:relative;isolation:isolate;clear:both;overflow:hidden;display:flex;align-items:stretch;width:100%;max-width:none;min-height:clamp(500px,42vw,710px);padding:0;margin:0;background:#07132b}
+#main .galaxy-hero-picture{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;margin:0;overflow:hidden;z-index:0}
+#main .galaxy-hero-picture img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center center;filter:none}
+#main>.galaxy-hero::after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(270deg,rgba(3,11,36,.94) 0%,rgba(3,11,36,.86) 18%,rgba(3,11,36,.44) 37%,rgba(3,11,36,.04) 66%),linear-gradient(0deg,rgba(5,15,43,.6),transparent 24%)}
+#main .galaxy-hero-overlay{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-start;width:min(1320px,92%);max-width:1320px;min-height:inherit;margin:0 auto;padding:46px 0}
+#main .galaxy-hero-copy{width:min(520px,48%);max-width:520px;min-width:0;text-align:right;filter:drop-shadow(0 4px 12px rgba(1,10,30,.55))}
+#main .galaxy-hero-kicker{display:inline-flex;align-items:center;padding:6px 17px;border:1px solid #38c7f5a0;border-radius:100px;background:#042a50a8;color:#9deeff;letter-spacing:0;font-weight:900;font-size:.9rem}
+#main .galaxy-hero-copy h1{margin:18px 0 14px;line-height:1.2;font-size:clamp(2.6rem,5.1vw,5.4rem);font-weight:900;letter-spacing:-.025em}
+#main .galaxy-hero-copy h1 span,#main .galaxy-hero-copy h1 strong{display:block;font-weight:900}
+#main .galaxy-hero-copy h1 span{color:#ffdb70;text-shadow:0 4px 22px #ffbe5544}
+#main .galaxy-hero-copy h1 strong{color:#fff;text-shadow:0 4px 16px #001c52,0 0 26px #2fa2ff70}
+#main .galaxy-hero-copy p{margin:0;max-width:470px;line-height:1.9;color:#e6f1ff;font-weight:600;font-size:clamp(1rem,1.4vw,1.17rem)}
+#main .galaxy-hero-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:25px}
+#main .galaxy-hero-links .btn{min-height:50px;border-radius:14px;white-space:normal;font-size:1rem}
+#main .galaxy-hero-links .btn.primary{background:linear-gradient(115deg,#ffe477,#ffad41);box-shadow:0 8px 24px #ffbf5240}
+#main .galaxy-hero-links .btn.secondary{background:#033052cb;border:1px solid #3cc9ff;color:#fff}
+@media(max-width:950px) and (min-width:701px){
+ #main>.galaxy-hero{min-height:470px}
+ #main .galaxy-hero-copy{width:51%}
+ #main .galaxy-hero-copy h1{font-size:clamp(2.1rem,5vw,3.8rem)}
+ #main .galaxy-hero-copy p{font-size:.95rem}
 }
 @media(max-width:700px){
- .galaxy-hero{padding-bottom:28px}
- .galaxy-hero-picture img{aspect-ratio:1 / 1;max-height:none;object-fit:cover}
- .galaxy-hero-panel{margin-top:-12px;padding:18px;border-radius:18px;gap:17px}
- .galaxy-hero-panel h1{font-size:clamp(1.5rem,6vw,2.05rem)}
- .galaxy-hero-panel p{font-size:.9rem;line-height:1.7}
- .galaxy-hero-links{flex-direction:column;align-items:stretch}
- .galaxy-hero-links .btn{width:100%;text-align:center}
+ #main>.galaxy-hero{min-height:clamp(680px,169vw,980px);align-items:stretch}
+ #main .galaxy-hero-picture img{object-fit:cover;object-position:center top}
+ #main>.galaxy-hero::after{background:linear-gradient(0deg,#05142df5 0%,#071739eb 18%,#071839aa 40%,transparent 65%)}
+ #main .galaxy-hero-overlay{width:min(92%,570px);align-items:flex-end;justify-content:center;min-height:inherit;padding:20px 0 36px}
+ #main .galaxy-hero-copy{width:100%;max-width:540px;text-align:center}
+ #main .galaxy-hero-copy h1{margin:11px 0;font-size:clamp(2.25rem,9vw,3.8rem);line-height:1.24}
+ #main .galaxy-hero-copy p{font-size:.96rem;line-height:1.75;max-width:460px;margin:0 auto}
+ #main .galaxy-hero-kicker{font-size:.78rem}
+ #main .galaxy-hero-links{justify-content:center;gap:9px;margin-top:20px}
+ #main .galaxy-hero-links .btn{flex:1 1 170px;min-height:47px;padding:8px 14px}
 }
-
-/* Quality guard: the current 1200px desktop artwork must not be enlarged above native resolution.
-   Once the 2172px replacement is uploaded, the native-size cap can be raised. */
-@media(min-width:1201px){
- .galaxy-hero-picture{
-   position:relative;
-   background:
-     radial-gradient(ellipse at 25% 50%,#142a68 0%,transparent 60%),
-     radial-gradient(ellipse at 75% 50%,#244f84 0%,transparent 65%),
-     linear-gradient(90deg,#09132d,#101f4d,#06172d);
- }
- .galaxy-hero-picture img{
-   max-width:1200px;
-   margin-inline:auto;
-   width:100%;
-   height:auto;
-   box-shadow:0 0 90px 24px #081938a3;
- }
-}
-@media(max-width:700px){
- .galaxy-hero-picture img{
-   max-width:520px;
-   margin-inline:auto;
- }
-}
+@media(max-width:390px){#main .galaxy-hero-copy h1{font-size:2rem}#main .galaxy-hero-links{flex-direction:column}#main .galaxy-hero-links .btn{flex:auto;width:100%}}
+@media(prefers-reduced-motion:reduce){#main .galaxy-hero-picture img{animation:none!important}}
