@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "public"
 ASSETS = ROOT / "assets"
-SITE_URL = os.environ.get("SITE_URL", "").strip().rstrip("/")
+SITE_URL = os.environ.get("SITE_URL", "https://galaxy-knights-ar.pages.dev").strip().rstrip("/")
 NAME = "مجرة الفرسان"
 SERIES = "أبطال الكرة: فرسان المجرة"
 ROUTES = []
@@ -47,7 +47,7 @@ def render(route, title, description, body, *, head="", article=False):
     full_title = "{} | {}".format(title, NAME) if route != "/" else "مجرة الفرسان | أبطال الكرة فرسان المجرة بالعربية"
     canonical = '<link rel="canonical" href="{}">'.format(safe(full_url(route))) if SITE_URL else ""
     og_url = '<meta property="og:url" content="{}">'.format(safe(full_url(route))) if SITE_URL else ""
-    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/hero.svg"))) if SITE_URL else ""
+    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/galaxy-hero-desktop.webp"))) if SITE_URL else ""
     current = lambda path: ' aria-current="page"' if route == path or (path != "/" and route.startswith(path)) else ""
     navbar = "".join('<a href="{}"{}>{}</a>'.format(p,current(p),safe(t)) for p,t in NAV)
     web_schema = {
@@ -84,13 +84,13 @@ def render(route, title, description, body, *, head="", article=False):
 <body>
 <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
 <header class="site-header"><div class="shell topbar">
-<a class="brand" href="/" aria-label="مجرة الفرسان، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">⚽</span><span>مجرة الفرسان</span></a>
+<a class="brand" href="/" aria-label="مجرة الفرسان، الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true"><img class="brand-emblem" src="/assets/favicon.svg" width="38" height="38" alt=""></span><span>مجرة الفرسان</span></a>
 <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="فتح قائمة الموقع">☰</button>
 <nav id="main-nav" class="nav" aria-label="القائمة الرئيسية">{navbar}</nav>
 </div></header>
 <main id="main">{heading}{body}</main>
 <footer class="site-footer"><div class="shell footer-grid">
-<div><div class="brand"><span class="brand-mark" aria-hidden="true">⚽</span>مجرة الفرسان</div>
+<div><div class="brand"><span class="brand-mark" aria-hidden="true"><img class="brand-emblem" src="/assets/favicon.svg" width="38" height="38" alt=""></span>مجرة الفرسان</div>
 <p>مساحة عربية مستقلة لمحبي أبطال الكرة: فرسان المجرة، تقدم أدلة أصلية وتحديات مرحة ومحتوى مناسبًا للعائلة.</p>
 <p class="tiny">موقع معجبين مستقل وغير تابع للشركات المالكة للأنمي. لا يوفر حلقات مقرصنة.</p></div>
 <div class="footer-links"><a href="/about/">من نحن</a><a href="/contact/">تواصل معنا</a><a href="/privacy/">الخصوصية</a><a href="/episodes/">الحلقات</a></div>
@@ -106,12 +106,23 @@ def section(title, intro, content, href="", linktext="عرض الكل"):
     return '<section class="section"><div class="section-head"><div><h2>{}</h2><p class="section-intro">{}</p></div>{}</div>{}</section>'.format(safe(title),safe(intro),view,content)
 
 def write_home():
-    hero = '''<section class="shell hero"><div>
-<span class="eyebrow">⚽ رحلة كروية إلى النجوم</span>
-<h1>مرحبًا بك في<br>مجرة الفرسان!</h1>
-<p>اكتشف عالم <strong>أبطال الكرة: فرسان المجرة</strong> بالعربية. تعرّف على الشخصيات، نظّم مشاهدة الحلقات، واقبل تحدي المعلومات مع أصدقائك.</p>
-<div class="actions"><a class="btn primary" href="/episodes/">ابدأ رحلة الحلقات</a><a class="btn secondary" href="/quiz/">اختبر معرفتك ✨</a></div>
-</div><img class="hero-art" src="/assets/hero.svg" alt="تصميم أصلي لكرة قدم مضيئة تدور حولها مدارات ونجوم" width="680" height="560"></section>'''
+    hero = '''<section class="galaxy-hero" aria-label="مقدمة موقع مجرة الفرسان">
+    <picture class="galaxy-hero-picture">
+      <source media="(max-width: 700px)" srcset="/assets/galaxy-hero-mobile.webp" type="image/webp">
+      <img src="/assets/galaxy-hero-desktop.webp" width="1200" height="400" fetchpriority="high" decoding="async" alt="ملصق أنمي مجرّي يجمع الأبطال تنما وشيندو وتسووروجي مع كرة قدم مضيئة، وعنوان أبطال الكرة فرسان المجرة">
+    </picture>
+    <div class="shell galaxy-hero-panel">
+      <div class="galaxy-hero-copy">
+        <span class="galaxy-hero-kicker">⚽ انطلق مع أبطال المجرة</span>
+        <h1>أبطال الكرة: فرسان المجرة</h1>
+        <p>مغامرتك تبدأ من هنا! استكشف الشخصيات، وتابع دليل الحلقات، وخُض تحديات ممتعة باللغة العربية.</p>
+      </div>
+      <div class="galaxy-hero-links" aria-label="ابدأ الاستكشاف">
+        <a class="btn primary" href="/episodes/">اكتشف الحلقات ←</a>
+        <a class="btn secondary" href="/quiz/">اختبر معلوماتك ✨</a>
+      </div>
+    </div>
+  </section>'''
     main = '<div class="shell">'+section("استكشف العالم","كل شيء في مكان واحد، بتجربة عربية سهلة على الهاتف والحاسوب.",cards([
         ("دليل الحلقات","تابع تقدمك عبر الحلقات الـ43 من النسخة اليابانية الأصلية.","/episodes/","🎬"),
         ("أبطال القصة","صفحات تعريفية بالشخصيات وأدوارها في عالم كرة القدم.","/characters/","🌟"),

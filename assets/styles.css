@@ -6,3 +6,30 @@
 @media(max-width:720px){.topbar{min-height:68px}.brand{font-size:1.15rem}.brand-mark{width:40px;height:40px}.menu-btn{display:block}.nav{display:none;position:absolute;top:68px;right:0;left:0;padding:12px 4%;background:#081d37;border-bottom:1px solid #3a608a;box-shadow:0 16px 25px #0005}.nav.open{display:flex;flex-direction:column;align-items:stretch}.nav a{font-size:1.03rem}.hero{grid-template-columns:1fr;padding:40px 0 20px;text-align:center}.hero p{font-size:1rem}.hero-art{max-width:420px;margin:auto}.actions{justify-content:center}.cards,.cards.four{grid-template-columns:1fr 1fr;gap:12px}.card{padding:17px;min-height:170px}.episodes-grid{grid-template-columns:repeat(2,1fr)}.page-heading{padding-top:28px}}
 @media(max-width:450px){.cards,.cards.four{grid-template-columns:1fr}.episodes-grid{grid-template-columns:repeat(2,1fr)}.section{padding:20px 0}.card{min-height:145px}.callout{padding:20px}.quiz{padding:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Cinematic Galaxy hero - live HTML content remains searchable and accessible */
+.galaxy-hero{position:relative;isolation:isolate;overflow:hidden;padding:0 0 54px;background:radial-gradient(ellipse at 50% 18%,#123b75 0%,#071a37 60%,transparent 85%)}
+.galaxy-hero:before{content:"";pointer-events:none;position:absolute;inset:0;background:radial-gradient(circle at 12% 64%,#705cf42a,transparent 27%),radial-gradient(circle at 82% 40%,#07ccff20,transparent 26%);z-index:-1}
+.galaxy-hero-picture{display:block;width:min(100%,1920px);margin:0 auto;overflow:hidden;background:#07152d}
+.galaxy-hero-picture img{width:100%;height:auto;max-height:670px;display:block;object-fit:cover;object-position:center;aspect-ratio:3 / 1}
+.galaxy-hero-panel{position:relative;margin-top:-22px;padding:24px 30px;border-radius:24px;border:1px solid #3c77acb8;box-shadow:0 22px 55px #010b23a6,0 0 35px #00baff20;display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(110deg,#06172eef,#102855ee 70%,#0b1f3bf7);backdrop-filter:blur(14px)}
+.galaxy-hero-kicker{color:#67efff;font-size:.85rem;font-weight:900;letter-spacing:.01em}
+.galaxy-hero-panel h1{font-size:clamp(1.55rem,2.5vw,2.4rem);line-height:1.4;margin:6px 0 7px;color:#fff}
+.galaxy-hero-panel p{color:#bdcee9;font-size:.97rem;max-width:660px;line-height:1.8;margin:0}
+.galaxy-hero-links{display:flex;gap:11px;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.galaxy-hero-links .btn{font-size:.92rem;white-space:nowrap}
+.brand-mark{overflow:hidden;display:inline-flex;align-items:center;justify-content:center}
+.brand-emblem{width:85%;height:85%;display:block;object-fit:contain}
+@media(max-width:980px){
+ .galaxy-hero-panel{flex-direction:column;align-items:stretch;gap:14px}
+ .galaxy-hero-links{justify-content:flex-start}
+}
+@media(max-width:700px){
+ .galaxy-hero{padding-bottom:28px}
+ .galaxy-hero-picture img{aspect-ratio:1 / 1;max-height:none;object-fit:cover}
+ .galaxy-hero-panel{margin-top:-12px;padding:18px;border-radius:18px;gap:17px}
+ .galaxy-hero-panel h1{font-size:clamp(1.5rem,6vw,2.05rem)}
+ .galaxy-hero-panel p{font-size:.9rem;line-height:1.7}
+ .galaxy-hero-links{flex-direction:column;align-items:stretch}
+ .galaxy-hero-links .btn{width:100%;text-align:center}
+}
