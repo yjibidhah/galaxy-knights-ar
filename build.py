@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=galaxy-layout-fix-20261110">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
@@ -106,6 +106,22 @@ def section(title, intro, content, href="", linktext="عرض الكل"):
     return '<section class="section"><div class="section-head"><div><h2>{}</h2><p class="section-intro">{}</p></div>{}</div>{}</section>'.format(safe(title),safe(intro),view,content)
 
 def write_home():
+    critical_style = """<style>
+/* Homepage critical CSS: full-width banner; also protects against stale cached stylesheets. */
+#main{display:block;width:100%;max-width:none;margin:0}
+#main>.galaxy-hero{display:block;position:relative;clear:both;width:100%;max-width:none;overflow:hidden;padding:0 0 52px;background:linear-gradient(180deg,#081a3c,#071b36)}
+#main .galaxy-hero-picture{display:block;width:100%;max-width:none;margin:0;overflow:hidden}
+#main .galaxy-hero-picture img{display:block;width:100%;height:auto;max-height:680px;aspect-ratio:3/1;object-fit:cover;object-position:center}
+#main .galaxy-hero-panel{position:relative;box-sizing:border-box;width:min(1160px,92%);max-width:1160px;margin:-24px auto 0;padding:24px 30px;border:1px solid #3c77ac;border-radius:22px;background:linear-gradient(115deg,#06172ef7,#102855f0);box-shadow:0 22px 54px #0008;display:flex;align-items:center;justify-content:space-between;gap:26px;backdrop-filter:blur(12px)}
+#main .galaxy-hero-copy{flex:1;min-width:0}
+#main .galaxy-hero-kicker{color:#67efff;font-weight:900;font-size:.9rem}
+#main .galaxy-hero-panel h1{color:#fff;font-size:clamp(1.6rem,2.6vw,2.5rem);line-height:1.35;margin:6px 0}
+#main .galaxy-hero-panel p{margin:0;color:#c7daf1;font-size:1rem;line-height:1.85}
+#main .galaxy-hero-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#main .galaxy-hero-links .btn{white-space:nowrap}
+@media(max-width:900px){#main .galaxy-hero-panel{flex-direction:column;align-items:stretch;gap:16px}#main .galaxy-hero-links{justify-content:flex-start}}
+@media(max-width:700px){#main>.galaxy-hero{padding-bottom:24px}#main .galaxy-hero-picture img{aspect-ratio:1/1;max-height:none;object-fit:cover}#main .galaxy-hero-panel{margin:-10px auto 0;padding:16px;border-radius:17px}#main .galaxy-hero-links{display:grid;grid-template-columns:1fr;gap:10px}#main .galaxy-hero-links .btn{width:100%;white-space:normal}#main .galaxy-hero-panel p{font-size:.92rem}}
+</style>"""
     hero = '''<section class="galaxy-hero" aria-label="مقدمة موقع مجرة الفرسان">
     <picture class="galaxy-hero-picture">
       <source media="(max-width: 700px)" srcset="/assets/galaxy-hero-mobile.webp" type="image/webp">
@@ -132,7 +148,7 @@ def write_home():
         ("ترتيب المشاهدة","من أين تبدأ وما الذي يجب معرفته؟","/articles/watch-order/","🧭"),
         ("دليل الشخصيات","كيف تتعرّف على أبطالك المفضلين؟","/articles/characters-guide/","👥")
     ]))+'<div class="callout"><h2>شارك روح الفريق ⚽</h2><p>كل لاعب يملك مهارة مختلفة، والعمل الجماعي والاحترام يصنعان فريقًا أقوى. هذا الموقع مساحة تشجع المرح والروح الرياضية بعيدًا عن الإساءة أو مشاركة البيانات الشخصية.</p></div></div>'
-    render("/","أبطال الكرة فرسان المجرة","موقع مجرة الفرسان العربي: دليل حلقات أبطال الكرة فرسان المجرة، الشخصيات، المقالات والاختبارات التفاعلية.",hero+main)
+    render("/","أبطال الكرة فرسان المجرة","موقع مجرة الفرسان العربي: دليل حلقات أبطال الكرة فرسان المجرة، الشخصيات، المقالات والاختبارات التفاعلية.",hero+main,head=critical_style)
 
 CHARACTERS = [
     ("bayan","بيان","الشخصيات البارزة في النسخة العربية", "⚡","اكتشف صفحة بيان ضمن دليل الشخصيات باللغة العربية."),
