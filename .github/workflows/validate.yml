@@ -28,10 +28,14 @@ jobs:
           import xml.etree.ElementTree as ET
           root = Path("public")
           pages = sorted(root.rglob("*.html"))
-          assert len(pages) == 16, "Expected 16 generated HTML pages, got {}".format(len(pages))
+          assert len(pages) >= 32, "Expected original pages plus 19 character profiles, got {}".format(len(pages))
+          assert (root / "characters/index.html").is_file()
+          assert (root / "characters/ibuki/index.html").is_file()
+          assert (root / "characters/ozrock/index.html").is_file()
           assert (root / "assets/styles.css").exists()
           assert (root / "assets/app.js").exists()
           assert (root / "assets/hero.svg").exists()
+          assert (root / "assets/portrait-fallback.svg").exists()
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
