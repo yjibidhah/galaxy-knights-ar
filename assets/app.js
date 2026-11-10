@@ -36,5 +36,30 @@ const item=questions[qi];locked=false;quizArea.innerHTML='<div class="meta">ال
 $('#quiz-next').addEventListener('click',()=>{if(locked){qi++;showQuiz();return;}const chosen=$('input[name="answer"]:checked');if(!chosen){$('#quiz-feedback').textContent='اختر إجابة أولًا.';return;}const right=Number(chosen.value)===item.c;if(right)score++;locked=true;$$('input[name="answer"]').forEach(x=>x.disabled=true);$('#quiz-feedback').textContent=right?'إجابة صحيحة! 🌟':'الإجابة الصحيحة: '+item.a[item.c];$('#quiz-next').textContent=qi===questions.length-1?'شاهد النتيجة':'السؤال التالي';});
 }
 if(quizArea)showQuiz();
-const searchable=$$('[data-search]'),search=$('#search-site');if(search)search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let visible=0;searchable.forEach(el=>{const show=el.textContent.toLowerCase().includes(q);el.hidden=!show;if(show)visible++});const message=$('#search-empty');if(message)message.hidden=visible!==0;});
+const searchable=$$('[data-search]'),search=$('#search-site'),charFilters=$$('[data-char-filter]');
+let selectedCharacterGroup='all';
+function applySiteSearch(){
+  if(!search)return;
+  const q=search.value.trim().toLocaleLowerCase('ar');
+  let visible=0;
+  searchable.forEach(el=>{
+    const matchText=(el.textContent+' '+(el.getAttribute('aria-label')||'')).toLocaleLowerCase('ar').includes(q);
+    const group=el.dataset.characterGroup;
+    const matchGroup=!group||selectedCharacterGroup==='all'||group===selectedCharacterGroup;
+    const show=matchText&&matchGroup;
+    el.hidden=!show;
+    if(show)visible++;
+  });
+  const message=$('#search-empty');if(message)message.hidden=visible!==0;
+}
+if(search)search.addEventListener('input',applySiteSearch);
+charFilters.forEach(button=>button.addEventListener('click',()=>{
+  selectedCharacterGroup=button.dataset.charFilter;
+  charFilters.forEach(b=>{
+    const active=b===button;
+    b.classList.toggle('active',active);
+    b.setAttribute('aria-pressed',String(active));
+  });
+  applySiteSearch();
+}));
 })();
