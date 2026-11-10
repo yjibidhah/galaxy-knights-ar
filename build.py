@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=galaxy-layout-fix-20261110">
+<link rel="stylesheet" href="/assets/styles.css?v=galaxy-quality-guard-20261110">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
@@ -111,7 +111,7 @@ def write_home():
 #main{display:block;width:100%;max-width:none;margin:0}
 #main>.galaxy-hero{display:block;position:relative;clear:both;width:100%;max-width:none;overflow:hidden;padding:0 0 52px;background:linear-gradient(180deg,#081a3c,#071b36)}
 #main .galaxy-hero-picture{display:block;width:100%;max-width:none;margin:0;overflow:hidden}
-#main .galaxy-hero-picture img{display:block;width:100%;height:auto;max-height:680px;aspect-ratio:3/1;object-fit:cover;object-position:center}
+#main .galaxy-hero-picture img{display:block;width:100%;max-width:1200px;margin-inline:auto;height:auto;max-height:680px;aspect-ratio:3/1;object-fit:contain;object-position:center}
 #main .galaxy-hero-panel{position:relative;box-sizing:border-box;width:min(1160px,92%);max-width:1160px;margin:-24px auto 0;padding:24px 30px;border:1px solid #3c77ac;border-radius:22px;background:linear-gradient(115deg,#06172ef7,#102855f0);box-shadow:0 22px 54px #0008;display:flex;align-items:center;justify-content:space-between;gap:26px;backdrop-filter:blur(12px)}
 #main .galaxy-hero-copy{flex:1;min-width:0}
 #main .galaxy-hero-kicker{color:#67efff;font-weight:900;font-size:.9rem}
