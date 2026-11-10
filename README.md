@@ -1,109 +1,67 @@
-# مجرة الفرسان | Galaxy Knights Arabic fan site
+# مجرة الفرسان — موقع أبطال الكرة فرسان المجرة بالعربية
 
-موقع عربي مستقل لمحبي **أبطال الكرة: فرسان المجرة / Inazuma Eleven GO Galaxy**.
+A fast Arabic RTL fan site for **Inazuma Eleven GO Galaxy / أبطال الكرة: فرسان المجرة**, built with plain HTML, CSS, JavaScript and a Python 3 standard-library static-site generator.
 
-A fast, mobile-first, right-to-left fan website, built as **static HTML, CSS, JavaScript, and a Python 3 standard-library site generator**. It does not require npm, a database, paid hosting, or a backend.
+This is an independent fan project, not an official website. No anime footage is distributed here. The original illustrations are made specifically for this site.
 
-## What's included
+## Features
 
-- Fully responsive Arabic homepage and accessible navigation
-- 43 numbered episodes (Japanese original), with a filter and local-only watch progress
-- Character directory and profile pages for بيان، حيان، عقاب
-- Four original Arabic articles and an article index
-- Eight-question interactive quiz with local scores and optional sharing
-- About, Contact, Privacy and custom 404 pages
-- Original SVG illustrations, favicon, social card image
-- SEO titles, descriptions, Open Graph tags, semantic navigation, JSON-LD, optional canonical URLs and sitemap, `robots.txt`
-- Cloudflare security headers
-- No copied anime episodes or unlicensed promotional artwork
-- No accounts, visitor analytics, or ad scripts in the initial version
+- 16 generated pages: homepage, 43-episode viewing tracker, 3 character profiles, 4 Arabic articles, quiz, About, Contact, Privacy, 404 and index pages
+- Responsive, accessible Arabic layout for phones and desktop
+- Eight-question quiz and local-only viewing progress
+- Searchable character directory and articles
+- Unique metadata per page, JSON-LD, Open Graph tags, robots.txt, conditional canonical tags and sitemap
+- No registration, behavioral tracking or advertising SDKs
+- Original CSS, SVG artwork and favicon
+- Zero paid API dependencies
 
-## 1. Deploy on GitHub + Cloudflare Pages
+## Deploy with Cloudflare Pages
 
-1. Go to **https://github.com/new** and create a repository named `galaxy-knights-ar` under your own GitHub account. Keep your existing `sixradar` and `adsnap-ai` repositories untouched.
-2. Extract the provided ZIP to a folder, then upload its **contents**, not the ZIP itself, to the new repository. Or open a terminal in that folder and use:
+1. In Cloudflare, open **Workers & Pages → Create application → Pages → Connect to Git**.
+2. Authorize and select **yjibidhah/galaxy-knights-ar**.
+3. Production branch: **main**.
+4. Framework preset: **None**.
+5. Build command: **python3 build.py**.
+6. Build output directory: **public**.
+7. Save and deploy. Cloudflare assigns a real \`*.pages.dev\` site address.
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Launch Arabic Galaxy Knights fan site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/galaxy-knights-ar.git
-   git push -u origin main
-   ```
+Cloudflare builds the \`public/\` folder automatically; generated HTML is not committed to this repository.
 
-3. In **Cloudflare → Workers & Pages → Create → Pages → Connect to Git**, choose the new repository.
-4. Set **Production branch** to `main`, **Build command** to `python3 build.py`, and **Build output directory** to `public` (without a leading `/`).
-5. Deploy. Cloudflare provides your actual `*.pages.dev` URL; availability of a particular name is not guaranteed.
+## After the first deployment
 
-The `public/` folder is pre-generated, so you can preview the static pages even without running the build script.
+In the Cloudflare Pages project, add a production environment variable:
 
-## 2. Enable sitemap and canonical tags after the first deployment
+\`SITE_URL=https://YOUR-REAL-PROJECT.pages.dev\`
 
-Once Cloudflare gives you the **real** address (e.g. `https://YOUR-ACTUAL-PROJECT.pages.dev`), go to your project's **Settings → Environment variables** and add:
+Use the real address assigned by Cloudflare. Redeploy. The builder then adds \`public/sitemap.xml\`, canonical URLs, and full Open Graph URLs.
 
-`SITE_URL` = `https://YOUR-ACTUAL-PROJECT.pages.dev`
+Submit the verified site to Google Search Console. Indexing and first-page rankings are **not guaranteed**.
 
-Set it for **Production** and redeploy (or push a commit). The next `python3 build.py` run generates a valid `public/sitemap.xml`, announces it in `robots.txt`, and adds canonical and full social-media image URLs. **Never leave an invented/incorrect site URL here.**
+## Local testing
 
-Visit your live `/sitemap.xml` and then submit it in **Google Search Console**. Request indexing for the homepage and valuable article pages. This helps discovery but does not guarantee ranking or indexation.
-
-## 3. Add your YouTube and Facebook links
-
-Edit `assets/site-config.js`:
-
-```js
-window.GALAXY_SOCIAL = {
-  youtube: 'https://www.youtube.com/@YOUR_CHANNEL',
-  facebook: 'https://www.facebook.com/YOUR_PAGE'
-};
-```
-
-The site only shows those social links if they are set to a valid HTTPS address. **Use your real URLs, not the examples.** Commit the change to GitHub; Cloudflare rebuilds it automatically.
-
-## 4. Update content / styling
-
-- Text and pages: `build.py`. Run `python3 build.py` and commit the changes.
-- Design: `assets/styles.css`
-- Interactive tools: `assets/app.js`
-- Original vector assets: `assets/hero.svg`, `assets/favicon.svg`
-- Shared OG image: `assets/og-cover.png`
-- Output: `public/` (generated automatically)
-
-To preview locally:
-
-```bash
+\`\`\`bash
 python3 build.py
-python3 -m http.server 8000 --directory public
-```
+python3 -m http.server 8000 -d public
+\`\`\`
 
-Then open `http://localhost:8000`.
+Open http://localhost:8000 . No npm packages needed.
 
-The optional `make_social_image.py` recreates the OG card; it requires Pillow and CairoSVG and local Arabic font availability. **Not required** for building or deploying the website. Font files are not included.
+To verify the full site and its links, use the included GitHub Actions validation workflow.
 
-## SEO and publication checklist
+## Project files
 
-- [ ] Confirm the exact project URL, set `SITE_URL`, and redeploy
-- [ ] Submit `https://YOUR_SITE/sitemap.xml` to Google Search Console
-- [ ] Add your real YouTube and Facebook profile links
-- [ ] Verify the Arabic character-name spellings against your own dubbed reference
-- [ ] Add distinctive original articles and community content regularly
-- [ ] Replace any artwork only with images you own or have permission to use
-- [ ] Verify mobile appearance and usability on a real phone
-- [ ] Before advertising, review all applicable child-privacy, COPPA, GDPR, Google publisher, and consent requirements
-- [ ] Update the Privacy page if analytics, forms, or advertising are introduced
+- \`build.py\`: site source content, templates, SEO, and page generation
+- \`assets/styles.css\`: responsive design
+- \`assets/app.js\`: episode tracker, quiz, navigation and search
+- \`assets/hero.svg\`: original football-in-space illustration
+- \`assets/favicon.svg\`: original vector icon
 
-### Child-friendly design and ads
+## Before monetization
 
-The intended audience includes young children. **Google ads are not yet configured.** If the site is considered child-directed under applicable law, Google requires proper child-directed treatment and does **not** allow interest-based targeting on child-directed pages or users known to be under 13. Carefully check local laws and updated policies before placing any ad code. A first-page Google rank cannot be promised.
+The site can attract children. Do not add behavioral profiling, personalized advertisements, external chat tools, or data collection until the necessary child-directed advertising and privacy safeguards are reviewed and implemented.
 
-## Rights and attribution
+The site is not affiliated with Level-5, the anime's rights holders or distributors. All anime names and trademarks belong to their owners.
 
-This is a **non-official fan-made informational website**. *Inazuma Eleven*, *Inazuma Eleven GO*, *Inazuma Eleven GO Galaxy*, and the characters are the property of their respective rights holders. The site does not host, distribute, or embed unauthorized episodes and does not copy character art. Descriptive Arabic fan content is editorial.
+## Social links
 
-Factual background and season count checked with publicly accessible sources:
-- https://animecca.jp/en/works/inazumairebungogyarakushi
-- https://en.wikipedia.org/wiki/Inazuma_Eleven_GO:_Galaxy_(TV_series)
-- https://developers.google.com/search/docs/fundamentals/seo-starter-guide
-- https://support.google.com/publisherpolicies/answer/10436800
-- https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+Actual YouTube and Facebook URLs have **not yet been provided**; no social links were invented.
