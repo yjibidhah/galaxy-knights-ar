@@ -33,3 +33,28 @@
  .galaxy-hero-links{flex-direction:column;align-items:stretch}
  .galaxy-hero-links .btn{width:100%;text-align:center}
 }
+
+/* Quality guard: the current 1200px desktop artwork must not be enlarged above native resolution.
+   Once the 2172px replacement is uploaded, the native-size cap can be raised. */
+@media(min-width:1201px){
+ .galaxy-hero-picture{
+   position:relative;
+   background:
+     radial-gradient(ellipse at 25% 50%,#142a68 0%,transparent 60%),
+     radial-gradient(ellipse at 75% 50%,#244f84 0%,transparent 65%),
+     linear-gradient(90deg,#09132d,#101f4d,#06172d);
+ }
+ .galaxy-hero-picture img{
+   max-width:1200px;
+   margin-inline:auto;
+   width:100%;
+   height:auto;
+   box-shadow:0 0 90px 24px #081938a3;
+ }
+}
+@media(max-width:700px){
+ .galaxy-hero-picture img{
+   max-width:520px;
+   margin-inline:auto;
+ }
+}
