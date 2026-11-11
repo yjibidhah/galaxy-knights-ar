@@ -1,4 +1,4 @@
-"""Arabic Galaxy Knights episode catalogue. Only embed independently verified official videos."""
+"""Arabic Galaxy Knights episode catalogue with user-initiated Facebook embeds; Meta controls playback."""
 from pathlib import Path
 from html import escape
 import json
@@ -20,7 +20,7 @@ def verified_video(item):
 
 
 def user_supplied_post(item):
-    """Only produce a safe outbound Facebook URL. Never imply this is an authorized stream."""
+    """Validate a visitor-supplied Facebook post. Its availability and publishing rights remain unverified."""
     url=item.get("external_post_url")
     if not url or item.get("external_post_status")!="user_supplied_unverified":
         return None
@@ -43,16 +43,17 @@ def build_episodes(root):
     for e in episodes:
         verified=verified_video(e)
         external=user_supplied_post(e)
-        external_button = (f'<a class="ep-external-link" href="{esc(external)}" target="_blank" rel="noopener noreferrer" aria-label="فتح منشور الحلقة {e["number"]} على فيسبوك من صفحة غير رسمية">▶ عرض المنشور على فيسبوك ↗</a>' if external else "")
+        playable = bool(verified or external)
+        play_hint = '<span class="ep-video-badge">▶ مشغل فيسبوك</span>' if playable else ""
+        play_label = "▶ مشاهدة داخل الموقع" if playable else "عرض تفاصيل الحلقة ←"
         cards.append(f'''<article class="ep-card" data-ep-item data-ep-number="{e["number"]}" data-ep-stage="{esc(e["phase"])}" data-ep-search="{esc(str(e["number"])+" "+e["title"]+" "+e["phase"])}">
           <button type="button" class="ep-card-open" data-ep-open="{e["number"]}" aria-label="عرض تفاصيل الحلقة {e["number"]}: {esc(e["title"])}">
-            <span class="ep-thumb"><img src="{e["art"]}" width="320" height="190" loading="lazy" alt="رسمة أصلية تمثل أجواء الحلقة {e["number"]}"><span class="ep-number-chip">الحلقة {e["number"]:02d}</span></span>
-            <span class="ep-card-info"><span class="ep-stage-name">{esc(e["phase"])}</span><strong>{esc(e["title"])}</strong><span class="ep-open-label">{'مشاهدة متاحة من المصدر الرسمي ▶' if verified else 'عرض تفاصيل الحلقة ←'}</span></span>
+            <span class="ep-thumb"><img src="{e["art"]}" width="320" height="190" loading="lazy" alt="رسمة أصلية تمثل أجواء الحلقة {e["number"]}"><span class="ep-number-chip">الحلقة {e["number"]:02d}</span>{play_hint}</span>
+            <span class="ep-card-info"><span class="ep-stage-name">{esc(e["phase"])}</span><strong>{esc(e["title"])}</strong><span class="ep-open-label">{play_label}</span></span>
           </button>
-          {external_button}
           <button type="button" class="episode ep-watched-toggle" data-episode="{e["number"]}" aria-pressed="false"><span class="episode-status">لم أشاهدها</span></button>
         </article>''')
-    # Only actual authorized video URLs can reach browser-side embed rendering.
+    # Authorized posts and visitor-provided posts remain separately labeled. Facebook itself decides whether each video can be embedded.
     videos=[{"number":e["number"],"url":verified_video(e)} for e in episodes if verified_video(e)]
     external_posts=[{"number":e["number"],"url":user_supplied_post(e),"source":e["external_post_source"]} for e in episodes if user_supplied_post(e)]
     player_data=json.dumps({"episodes":[{"number":e["number"],"title":e["title"],"phase":e["phase"],"art":e["art"]} for e in episodes],"videos":videos,"externalPosts":external_posts},ensure_ascii=False).replace("<","\\u003c")
@@ -68,7 +69,7 @@ def build_episodes(root):
         <div class="ep-progress-track"><div class="progress-track" id="watch-progress" role="progressbar" aria-label="نسبة مشاهدة الحلقات" aria-valuemin="0" aria-valuemax="43" aria-valuenow="0"><div class="progress-bar"></div></div></div></div>
         <button id="reset-watch" type="button" class="btn secondary">إعادة ضبط التقدم</button>
       </section>
-      <div class="ep-legality"><strong>عن مشاهدة الحلقات:</strong> تظهر روابط تشغيل الحلقات الكاملة فقط عندما نتحقق من أن الناشر مخوّل بإتاحتها وأن الفيديو العام يقبل التضمين. أضيف رابطا منشوري الحلقتين 20 و40 من صفحة Old But Cold بناءً على الروابط التي شاركها أحد المتابعين. وهما روابط إلى فيسبوك فقط وليسا بثًا داخل الموقع؛ لم يُتحقق من إتاحة مشاهدتهما بلا تسجيل دخول أو من حقوق نشر الحلقات. وقد يطلب فيسبوك تسجيل الدخول.</div>
+      <div class="ep-legality"><strong>عن مشاهدة الحلقات:</strong> يمكنك تجربة مشاهدة الحلقتين 20 و40 من منشورات صفحة Old But Cold داخل الموقع باستخدام مشغّل فيسبوك نفسه. نحمّل الفيديو عند اختيار الحلقة فقط؛ وقد يمنع فيسبوك تشغيله أو يطلب تسجيل الدخول. لم نتحقق من ترخيص نشر الحلقات لدى الصفحة، ولا نستضيف ملفات الفيديو أو نتحايل على قيود فيسبوك.</div>
       <section class="ep-browse" aria-labelledby="ep-browser-title">
         <div class="ep-section-head"><h2 id="ep-browser-title">اختر حلقتك</h2><p>تصفح العناوين أو ابحث برقم الحلقة أو باسمها</p></div>
         <div class="ep-search-toolbar"><label for="episode-search-v2">🔎 <input id="episode-search-v2" type="search" placeholder="مثلاً: الحلقة 25 أو قصة ضياء" autocomplete="off"></label><span id="ep-count-label" aria-live="polite">43 حلقة</span></div>
@@ -87,5 +88,5 @@ def build_episodes(root):
       </section>
       <script type="application/json" id="episode-catalog-data">{player_data}</script>
     </div>'''
-    head='<script defer src="/assets/episodes.js?v=20261111"></script>'
+    head='<script defer src="/assets/episodes.js?v=facebook-embed-20261111"></script>'
     return html,head
