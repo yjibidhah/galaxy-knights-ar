@@ -548,3 +548,62 @@
 }
 @media(max-width:350px){.home-world-grid{grid-template-columns:1fr}.home-world-image{height:120px}.home-character-card{grid-template-columns:1fr}.home-character-picture{height:190px}}
 @media(prefers-reduced-motion:reduce){.home-world-card,.home-character-card,.home-editor-card,.home-world-image img,.home-mini-progress span,.home-watch-track span,.home-quicklinks a{transition:none!important}}
+
+
+/* Arabic episode catalogue — current videos require authorized official links */
+.episode-library{padding-bottom:48px}
+.ep-welcome{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:24px;overflow:hidden;border:1px solid #416c9b;border-radius:23px;padding:23px 27px;margin:2px 0 23px;background:linear-gradient(120deg,#113562,#142451 70%,#34255c)}
+.ep-welcome-copy h2{font-size:clamp(1.65rem,2.8vw,2.35rem);line-height:1.48;color:#ffe184;margin:7px 0 10px}
+.ep-welcome-copy p{font-size:.98rem;color:#d4e5f7;line-height:1.9}
+.ep-welcome>img{width:100%;max-height:270px;object-fit:cover;border:1px solid #4e83a2;border-radius:18px}
+.ep-welcome-stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.ep-welcome-stats span{font-size:.81rem;border:1px solid #4b75a0;border-radius:99px;padding:5px 12px;background:#0b2d55;color:#f0faff}
+.ep-welcome-stats strong{color:#ffdf7e}
+.ep-progress-panel{display:flex;justify-content:space-between;align-items:center;gap:18px;border:1px solid #42749c;background:linear-gradient(100deg,#0e3353,#122850);padding:20px 23px;border-radius:19px;margin:20px 0}
+.ep-progress-panel>div{flex:1;min-width:0}
+.ep-progress-panel h2{font-size:1.26rem;color:#fff;margin:0 0 4px}
+.ep-progress-panel h2 span{color:#ffdf79}
+.ep-progress-panel p{color:#b8d3ed;font-size:.83rem;margin:0 0 11px}
+.ep-progress-track .progress-track{height:14px;border-radius:30px;overflow:hidden;background:#081e3e;max-width:720px}
+.ep-progress-track .progress-bar{height:100%;background:linear-gradient(90deg,#34e3d3,#ffe67c);width:0}
+.ep-legality{border:1px solid #467292;border-right:4px solid #7dd6e6;border-radius:14px;background:#102e4a;padding:14px 18px;margin:20px 0;color:#c8e3f2;font-size:.87rem;line-height:1.9}
+.ep-legality strong{color:#ffe39d}
+.ep-section-head h2{font-size:1.74rem;color:#fff;margin:0}
+.ep-section-head p{margin:0;color:#b7cce7;font-size:.9rem}
+.ep-search-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 11px}
+.ep-search-toolbar label{display:flex;align-items:center;gap:9px;flex:1;border:1px solid #45749d;border-radius:14px;background:#0d2c52;padding:3px 13px;color:#8eeaf4}
+.ep-search-toolbar input{width:100%;min-height:42px;background:none;border:0;color:#fff;outline:none;font-size:.96rem}
+.ep-search-toolbar input::placeholder{color:#a8bfdd}
+.ep-search-toolbar>span{font-weight:900;color:#9ce9f0;white-space:nowrap;font-size:.87rem}
+.ep-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.ep-filter{cursor:pointer;border:1px solid #3d6c9e;border-radius:99px;background:#12305a;color:#c7ddf2;font-size:.81rem;font-weight:800;min-height:40px;padding:7px 15px}
+.ep-filter.active,.ep-filter:hover{color:#fff;border-color:#66e6e8;background:#255780}
+.ep-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.ep-card{display:flex;min-width:0;flex-direction:column;border-radius:18px;border:1px solid #315f94;background:linear-gradient(145deg,#142f5e,#0b2146);overflow:hidden;box-shadow:0 12px 28px #0003;transition:border-color .2s,transform .2s}
+.ep-card:hover{border-color:#67eaf4;transform:translateY(-4px)}
+.ep-card-open{display:flex;flex:1;flex-direction:column;border:0;padding:0;min-width:0;width:100%;background:none;cursor:pointer;text-align:right;color:inherit}
+.ep-thumb{display:block;position:relative;width:100%;aspect-ratio:16/9;overflow:hidden}
+.ep-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .2s}
+.ep-card:hover .ep-thumb img{transform:scale(1.05)}
+.ep-number-chip{position:absolute;top:10px;right:10px;color:#102247;background:#ffe085;border-radius:99px;padding:2px 10px;font-weight:900;font-size:.73rem}
+.ep-card-info{display:flex;flex:1;flex-direction:column;padding:13px;gap:7px}
+.ep-stage-name{font-size:.74rem;color:#79f2e8;font-weight:900}
+.ep-card-info strong{color:#fff;font-size:.97rem;line-height:1.7;flex:1}
+.ep-open-label{font-size:.8rem;color:#ffdf76;font-weight:900}
+.ep-watched-toggle{min-height:41px;display:flex;align-items:center;justify-content:center;background:#092b4b;border:0;border-top:1px solid #35618d;width:100%;font-weight:800;color:#c9e3f0;cursor:pointer;font-size:.81rem}
+.ep-watched-toggle.done,.ep-watched-toggle[aria-pressed="true"]{color:#a3f7df;background:#124e4b}
+.ep-no-results{padding:28px;text-align:center;border:1px dashed #4884ac;border-radius:13px}
+.ep-detail{scroll-margin-top:106px;display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:20px;margin:30px 0;border:1px solid #4c78ac;background:linear-gradient(115deg,#16376a,#0c2145);border-radius:20px;padding:19px}
+.ep-detail-cover img{width:100%;height:auto;max-height:290px;object-fit:cover;border-radius:13px}
+.ep-detail-copy h2{font-size:clamp(1.4rem,2.5vw,1.95rem);line-height:1.6;margin:7px 0;color:#fff}
+.ep-detail-copy>p{color:#c8def1;font-size:.9rem;line-height:1.8}
+.ep-play-status{border-radius:12px;background:#0d3556;border:1px solid #3e7b9d;padding:12px;font-size:.86rem}
+.ep-verified-video{display:flex;flex-direction:column;gap:12px;margin:18px 0}
+.ep-verified-video>a{color:#76e7ec;text-decoration:underline}
+.ep-facebook-frame{width:100%;height:380px;background:#091528}
+.ep-facebook-frame iframe{display:block;width:100%;height:100%}
+@media(max-width:1050px){.ep-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:740px){.ep-welcome{grid-template-columns:1fr}.ep-welcome>img{max-height:185px}.ep-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.ep-detail{grid-template-columns:1fr}.ep-detail-cover img{max-height:210px}}
+@media(max-width:510px){.ep-welcome{padding:16px}.ep-progress-panel{padding:14px;flex-direction:column;align-items:stretch}.ep-welcome-copy h2{font-size:1.55rem}.ep-card-info{padding:10px}.ep-card-info strong{font-size:.85rem}.ep-stage-name{font-size:.68rem}.ep-filter{font-size:.73rem;padding:7px 10px}.ep-facebook-frame{height:280px}}
+@media(max-width:360px){.ep-grid{grid-template-columns:1fr}.ep-thumb{max-height:190px}}
+@media(prefers-reduced-motion:reduce){.ep-card,.ep-thumb img{transition:none!important}}
