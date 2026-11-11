@@ -20,8 +20,9 @@ jobs:
         env:
           SITE_URL: https://example.pages.dev
         run: |
-          python3 -m py_compile build.py
+          python3 -m py_compile build.py magazine.py
           node --check assets/app.js
+          node --check assets/magazine.js
           node --check assets/quiz.js
           node --check assets/quiz-data.js
           python3 build.py
@@ -58,6 +59,29 @@ jobs:
           assert all(not re.search(r"تاكوتو|مونماسا|تيتسوكادو|إيبوكي|ماتاتاغي|شيندو|تسوروغي|تينما", str(text)) for q in questions for text in [q["question"], q["explanation"], *q["options"]]), "Unverified transliterated Japanese names in quiz"
           assert all((root / q["image"].lstrip("/")).exists() for q in questions if q["image"].startswith("/"))
           print("Validated illustrated arcade with {} questions.".format(len(questions)))
+          editorial = json.loads(Path("articles_data.json").read_text(encoding="utf-8"))["articles"]
+          assert len(editorial) == 11, "Magazine should contain 11 substantive articles"
+          assert len({a["slug"] for a in editorial}) == len(editorial)
+          assert sum(len(a["sections"]) for a in editorial) >= 50
+          assert len([a for a in editorial if a.get("video")]) == 2
+          assert (root / "assets/magazine.js").is_file()
+          import magazine
+          article_page = (root / "articles/index.html").read_text(encoding="utf-8")
+          assert article_page.count('data-magazine-card') == len(editorial)
+          assert article_page.count('data-load-video') == 2
+          assert '<iframe' not in article_page, "YouTube must load only on click"
+          assert 'src="/assets/magazine.js?v=1"' in article_page
+          for article in editorial:
+              path = root / "articles" / article["slug"] / "index.html"
+              assert path.exists(), "Missing article page: {}".format(path)
+              page_text = path.read_text(encoding="utf-8")
+              assert page_text.count('class="magazine-chapter"') >= 4
+              assert 'magazine-related-grid' in page_text
+              assert 'magazine-reading-progress' in page_text
+              assert page_text.count('property="og:image"') == 1
+              for key in ('/assets/article-story.svg','/assets/article-hayyan-spotlight.svg','/assets/article-nidal-spotlight.svg'):
+                  assert (root / key.lstrip('/')).exists(), key
+          print("Validated {} original magazine articles, {} sections and two optional official videos.".format(len(editorial),sum(len(a["sections"]) for a in editorial)))
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
