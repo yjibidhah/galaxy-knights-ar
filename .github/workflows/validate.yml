@@ -110,23 +110,31 @@ jobs:
           episode_html = (root / "episodes/index.html").read_text(encoding="utf-8")
           assert episode_html.count('data-ep-item') == 43
           assert episode_html.count('data-ep-open') == 43
-          assert 'src="/assets/episodes.js?v=20261111"' in episode_html
+          assert 'src="/assets/episodes.js?v=facebook-embed-20261111"' in episode_html
           assert 'id="watched-count"' in episode_html and 'id="reset-watch"' in episode_html
           assert 'id="ep-play-status"' in episode_html
-          assert 'facebook.com/plugins/video.php' not in episode_html, "No Facebook request until a verified video is deliberately played."
+          assert 'facebook.com/plugins/video.php' not in episode_html, "Facebook embeds must only be loaded after the visitor selects an episode."
           shared_posts = {e["number"]:e for e in episode_data if e.get("external_post_url")}
           assert set(shared_posts) == {20, 40}, "Only user-provided episode 20 and 40 posts should be listed"
           assert shared_posts[20]["external_post_url"].endswith("/1538264508018291/")
           assert shared_posts[40]["external_post_url"].endswith("/3226086250916619/")
           assert all(e["external_post_status"] == "user_supplied_unverified" for e in shared_posts.values())
-          assert episode_html.count('class="ep-external-link"') == 2
+          assert episode_html.count('class="ep-video-badge"') == 2
           assert 'id="ep-external-post"' in episode_html
+          assert episode_html.count('class="ep-external-link"') == 0, "Video card action must stay on the website."
+          assert '▶ مشاهدة داخل الموقع' in episode_html
+          assert '<iframe' not in episode_html, "The player must load only when selected."
+          embedded_js = Path("assets/episodes.js").read_text(encoding="utf-8")
+          assert 'facebook.com/plugins/video.php' in embedded_js
+          assert "catalogue.externalPosts.find" in embedded_js
+          assert 'appendChild(createPlayer(source.url,n,embedWidth))' in embedded_js
+          assert 'zone.replaceChildren()' in embedded_js, "Old videos must stop when switching episodes."
           assert all(e.get("source_status") != "authorized_verified" for e in shared_posts.values()), "Unverified posts must not be marked licensed"
-          assert all(e.get("facebook_video_url") is None for e in shared_posts.values()), "Unverified posts must not become embedded streams"
-          print("Validated two user-submitted Facebook outbound post links without embedding.")
+          assert all(e.get("facebook_video_url") is None for e in shared_posts.values()), "Unverified posts must not be described as authorized."
+          print("Validated opt-in native Facebook embeds for user-supplied episodes 20 and 40; Facebook controls video playback.")
           import episodes_page
           assert all(episodes_page.verified_video(e) is None or e["source_status"] == "authorized_verified" for e in episode_data)
-          print("Validated 43 Arabic-titled episodes with local tracker and verified-only video policy.")
+          print("Validated 43 Arabic-titled episodes, progress tracker and official Facebook plugin integration.")
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
