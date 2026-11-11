@@ -21,6 +21,9 @@ jobs:
           SITE_URL: https://example.pages.dev
         run: |
           python3 -m py_compile build.py
+          node --check assets/app.js
+          node --check assets/quiz.js
+          node --check assets/quiz-data.js
           python3 build.py
           python3 - <<'PY'
           from pathlib import Path
@@ -36,6 +39,23 @@ jobs:
           assert (root / "assets/app.js").exists()
           assert (root / "assets/hero.svg").exists()
           assert (root / "assets/portrait-fallback.svg").exists()
+          assert (root / "assets/quiz.js").exists()
+          assert (root / "assets/quiz-data.js").exists()
+          quiz_html = (root / "quiz/index.html").read_text(encoding="utf-8")
+          assert "104" in quiz_html
+          assert quiz_html.count("data-start-category=") == 7
+          assert 'src="/assets/quiz.js?v=2"' in quiz_html
+          import json
+          quiz_raw = Path("assets/quiz-data.js").read_text(encoding="utf-8")
+          quiz_data = json.loads(quiz_raw.split("window.GALAXY_QUIZ_BANK = ",1)[1].rsplit(";",1)[0])
+          questions = quiz_data["questions"]
+          assert len(questions) >= 100
+          assert len(quiz_data["categories"]) == 6
+          assert len({q["id"] for q in questions}) == len(questions)
+          assert all(len(q["options"]) == 4 and len(set(q["options"])) == 4 and 0 <= q["answer"] < 4 for q in questions)
+          assert all(q.get("image") and q.get("explanation") for q in questions)
+          assert all((root / q["image"].lstrip("/")).exists() for q in questions if q["image"].startswith("/"))
+          print("Validated illustrated arcade with {} questions.".format(len(questions)))
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
