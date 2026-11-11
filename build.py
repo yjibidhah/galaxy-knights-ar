@@ -253,10 +253,61 @@ def write_episodes():
     render("/episodes/","حلقات أبطال الكرة فرسان المجرة كاملة بالترتيب","دليل ترتيب حلقات أبطال الكرة فرسان المجرة: قائمة 43 حلقة يابانية أصلية مع متتبع تقدم مشاهدة مجاني.",body)
 
 def write_quiz():
-    body='''<div class="callout"><h2>هل أنت من أبطال المجرة؟ 🏆</h2><p>ثمانية أسئلة ممتعة عن كرة القدم والمسلسل. لا حاجة إلى التسجيل أو إدخال الاسم أو البريد الإلكتروني.</p></div>
-<div id="quiz-area" class="quiz" aria-live="polite"><p>جارٍ تحميل التحدي...</p></div>
-<div class="notice">نتيجتك تبقى على هذا الجهاز فقط. كن لطيفًا مع أصدقائك عند مقارنة النقاط.</div>'''
-    render("/quiz/","اختبار أبطال الكرة فرسان المجرة","اختبار عربي مجاني وتفاعلي لمحبي أبطال الكرة فرسان المجرة: ثمانية أسئلة وتحديات رياضية.",body)
+    challenges = [
+        ("faces", "من هذا البطل؟", "صوَر وأسماء أشهر شخصيات فرسان المجرة، من بيان إلى منافسي الكواكب.", "23 سؤالًا", "/assets/quiz-faces.svg", "👀"),
+        ("souls", "قوى الأرواح", "هل تتذكر الحيوان الذي يمثل روح كل لاعب من أبطال الفريق؟", "12 سؤالًا", "/assets/quiz-souls.svg", "🐺"),
+        ("roles", "نجوم فريق الأرض", "اختبر معرفتك بمراكز اللاعبين وحراس المرمى والمهاجمين.", "13 سؤالًا", "/assets/quiz-stadium.svg", "⚽"),
+        ("galaxy", "مغامرة عبر المجرة", "الكواكب والمنافسون وسر البطولة الكونية.", "18 سؤالًا", "/assets/quiz-cosmos.svg", "🪐"),
+        ("story", "أسرار فرسان المجرة", "الأحداث والشخصيات والبدايات التي صنعت قصة الموسم.", "18 سؤالًا", "/assets/quiz-story.svg", "🌟"),
+        ("football", "أستاذ كرة القدم", "اختبر مهاراتك في القوانين والخطط والروح الرياضية.", "20 سؤالًا", "/assets/quiz-stadium.svg", "🏆"),
+    ]
+    cards_html = "".join('''
+      <article class="quiz-mode-card">
+        <div class="quiz-mode-picture"><img src="{cover}" loading="lazy" width="500" height="320" alt="رسم خاص بتحدي {name}"></div>
+        <div class="quiz-mode-info">
+          <span class="quiz-mode-count">{count}</span>
+          <h3>{name}</h3>
+          <p>{description}</p>
+          <button type="button" class="quiz-mode-button" data-start-category="{slug}" aria-label="ابدأ تحدي {name}">ابدأ التحدي <span aria-hidden="true">←</span></button>
+        </div>
+        <div class="quiz-mode-best" data-quiz-best="{slug}">ابدأ أول تحدٍّ</div>
+      </article>'''.format(slug=slug,name=safe(name),description=safe(description),cover=cover,count=count) for slug,name,description,count,cover,icon in challenges)
+    body = '''<div class="shell galaxy-arcade">
+    <section id="quiz-hub" class="quiz-hub" aria-labelledby="quiz-hub-title">
+      <div class="quiz-arcade-hero">
+        <div class="quiz-arcade-copy">
+          <span class="quiz-eyebrow">⚡ تحديات تفاعلية مجانية</span>
+          <h2 id="quiz-hub-title">هل أنت مستعد لتصبح أسطورة المجرة؟</h2>
+          <p>ستة عوالم من الأسئلة الممتعة، وصور للشخصيات، وإجابات تشرح لك المعلومة. كل تحدٍّ يختار لك 10 أسئلة متنوعة. لا تسجيل، ولا مؤقت، ولا حاجة إلى مشاركة بياناتك.</p>
+          <div class="quiz-arcade-metrics"><span>🌌 <strong>104</strong> أسئلة متنوعة</span><span>🎮 <strong>6</strong> تحديات</span><span>🏆 <strong id="quiz-total-plays">0</strong> تحديات أنهيتها</span></div>
+          <button class="btn primary" data-start-category="marathon" type="button">ابدأ الملحمة الكونية — 20 سؤالًا ✨</button>
+        </div>
+        <img class="quiz-arcade-art" src="/assets/quiz-cosmos.svg" loading="eager" width="660" height="420" alt="رسم خيالي لكوكب مضيء ومدارات في عالم كرة القدم">
+      </div>
+      <div class="quiz-section-label"><div><span class="chip">اختر مغامرتك</span><h2>عالم كامل من الاختبارات</h2><p>يمكنك إعادة أي تحدٍّ لتجربة أسئلة مختلفة، وستبقى نتائجك الأفضل محفوظة على هذا الجهاز.</p></div></div>
+      <div class="quiz-mode-grid">'''+cards_html+'''</div>
+      <div class="quiz-arcade-note"><strong>💚 نلعب ونتعلم:</strong> كل اختبار يحترم وقتك. نعرض شرح الإجابة بعد كل سؤال، ولا توجد إعلانات مزعجة داخل اللعبة أو حسابات شخصية. الصور الخارجية قد لا تظهر في بعض المتصفحات؛ ستظل الأسئلة قابلة للإجابة.</div>
+    </section>
+    <section id="quiz-play" class="quiz-play" aria-labelledby="quiz-mode-name" hidden>
+      <div class="quiz-topline"><button id="quiz-exit" class="quiz-exit" type="button">→ العودة للتحديات</button><span class="quiz-now-playing">🎮 أنت في قلب التحدي</span></div>
+      <div class="quiz-play-heading"><div><h2 id="quiz-mode-name">التحدي</h2><p id="quiz-mode-description">اختبر معلوماتك</p></div><div class="quiz-play-points"><span id="quiz-score">⭐ 0 نقطة</span><span id="quiz-streak">✨ اكتشف الإجابة</span></div></div>
+      <div class="quiz-progress-label"><span id="quiz-question-counter">السؤال 1 من 10</span><span>تقدمك في التحدي</span></div>
+      <div id="quiz-progress-track" class="quiz-progress-track" role="progressbar" aria-label="تقدم التحدي" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><div id="quiz-progress-fill" class="quiz-progress-fill"></div></div>
+      <div class="quiz-question-stage">
+        <div class="quiz-question-visual"><img id="quiz-question-image" src="/assets/quiz-cosmos.svg" width="600" height="400" alt="رسم توضيحي للسؤال"><div class="quiz-visual-caption"><span id="quiz-topic">المجرة</span><span>مجرة الفرسان ⚽</span></div></div>
+        <div class="quiz-question-main"><div class="quiz-question-label">⭐ اختر الإجابة الصحيحة</div><h3 id="quiz-question">من سيجيب عن السؤال؟</h3><p class="quiz-question-help" id="quiz-answer-help">اختر إجابة واحدة من الخيارات الأربعة.</p><div id="quiz-answers" class="quiz-answers" role="group" aria-label="اختيارات السؤال"></div><div id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite" hidden></div><button id="quiz-next" class="btn primary quiz-next" type="button" hidden>السؤال التالي ←</button></div>
+      </div>
+    </section>
+    <section id="quiz-end" class="quiz-end" aria-labelledby="quiz-finish-title" hidden>
+      <div class="quiz-result-card"><div class="quiz-result-icon" id="quiz-finish-icon" aria-hidden="true">🏆</div><p class="quiz-eyebrow">🎉 انتهى التحدي!</p><h2 id="quiz-finish-title">أنت من أساطير المجرة!</h2><p id="quiz-finish-caption">أحسنت!</p>
+        <div class="quiz-result-metrics"><div><strong id="quiz-finish-score">0 / 10</strong><span>إجابات صحيحة</span></div><div><strong id="quiz-finish-percent">0%</strong><span>الدقة</span></div><div><strong id="quiz-finish-streak">0</strong><span>أفضل سلسلة</span></div><div><strong id="quiz-finish-best">0</strong><span>أفضل نتيجة</span></div></div>
+        <div class="quiz-result-actions"><button id="quiz-again" class="btn primary" type="button">🔁 العب تحديًا جديدًا</button><button id="quiz-back" class="btn secondary" type="button">اختبر نفسك في عالم آخر</button><button id="quiz-share" class="btn secondary" type="button">شارك نتيجتك</button></div>
+      </div>
+      <div class="quiz-mistakes-panel"><h3 id="quiz-mistakes-title">تعلم من إجاباتك</h3><div id="quiz-mistakes"></div><button id="quiz-retry-wrong" type="button" class="btn secondary" hidden>جرّب الأسئلة الصعبة مجددًا</button></div>
+    </section>
+  </div>'''
+    head = '<script defer src="/assets/quiz-data.js?v=2"></script><script defer src="/assets/quiz.js?v=2"></script>'
+    render("/quiz/","اختبارات أبطال الكرة فرسان المجرة | 104 أسئلة مصورة","تحديات أبطال الكرة فرسان المجرة بالعربية: أكثر من 100 سؤال مصور عن بيان وحيان وعقاب، قوى الأرواح، أبطال الأرض وبطولة المجرة؛ 6 ألعاب ونتائج فورية.",body,head=head)
 
 def write_info():
     about='<h2>من نحن؟</h2><p>مجرة الفرسان موقع عربي مستقل من صنع محبّي عالم أبطال الكرة، يهدف إلى تقديم محتوى أصلي ممتع وسهل القراءة عن فرسان المجرة، مع أدوات لمتابعة الحلقات وتحديات معرفية بسيطة.</p><h2>هل الموقع رسمي؟</h2><p>لا. الموقع ليس تابعًا لـ LEVEL-5 أو الجهات المنتجة أو الموزعة للمسلسل. جميع حقوق الشخصيات والعناوين الأصلية لأصحابها. الرسوم التخطيطية المستخدمة هنا أصلية وليست منسوخة من لقطات الأنمي.</p><h2>ماذا نقدم؟</h2><p>مقالات تعريفية، صفحات شخصيات، دليل للحلقات، واختبارات مناسبة للعائلة. لا نستضيف نسخًا مقرصنة من الحلقات أو نطلب معلومات شخصية من الأطفال.</p>'
