@@ -8,7 +8,7 @@ const episodeButtons=$$('[data-episode]');
 let watched=new Set(safeRead('galaxy-watched-v1',[]).filter(n=>Number.isInteger(n)&&n>=1&&n<=43));
 function updateEpisodes(){
 episodeButtons.forEach(b=>{const n=Number(b.dataset.episode),done=watched.has(n);b.classList.toggle('done',done);b.setAttribute('aria-pressed',String(done));$('.episode-status',b).textContent=done?'✓ شاهدتها':'لم أشاهدها';});
-const count=$('#watched-count'),bar=$('#watch-progress');if(count)count.textContent=String(watched.size);if(bar){bar.style.width=(watched.size/43*100)+'%';bar.setAttribute('aria-valuenow',String(watched.size));}
+const count=$('#watched-count'),bar=$('#watch-progress');if(count)count.textContent=String(watched.size);if(bar){const fill=$('.progress-bar',bar);if(fill)fill.style.width=(watched.size/43*100)+'%';bar.setAttribute('aria-valuenow',String(watched.size));}
 }
 if(episodeButtons.length){
 episodeButtons.forEach(b=>b.addEventListener('click',()=>{const n=Number(b.dataset.episode);watched.has(n)?watched.delete(n):watched.add(n);safeSave('galaxy-watched-v1',[...watched].sort((a,b)=>a-b));updateEpisodes();}));
