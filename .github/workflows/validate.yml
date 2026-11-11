@@ -114,6 +114,16 @@ jobs:
           assert 'id="watched-count"' in episode_html and 'id="reset-watch"' in episode_html
           assert 'id="ep-play-status"' in episode_html
           assert 'facebook.com/plugins/video.php' not in episode_html, "No Facebook request until a verified video is deliberately played."
+          shared_posts = {e["number"]:e for e in episode_data if e.get("external_post_url")}
+          assert set(shared_posts) == {20, 40}, "Only user-provided episode 20 and 40 posts should be listed"
+          assert shared_posts[20]["external_post_url"].endswith("/1538264508018291/")
+          assert shared_posts[40]["external_post_url"].endswith("/3226086250916619/")
+          assert all(e["external_post_status"] == "user_supplied_unverified" for e in shared_posts.values())
+          assert episode_html.count('class="ep-external-link"') == 2
+          assert 'id="ep-external-post"' in episode_html
+          assert all(e.get("source_status") != "authorized_verified" for e in shared_posts.values()), "Unverified posts must not be marked licensed"
+          assert all(e.get("facebook_video_url") is None for e in shared_posts.values()), "Unverified posts must not become embedded streams"
+          print("Validated two user-submitted Facebook outbound post links without embedding.")
           import episodes_page
           assert all(episodes_page.verified_video(e) is None or e["source_status"] == "authorized_verified" for e in episode_data)
           print("Validated 43 Arabic-titled episodes with local tracker and verified-only video policy.")
