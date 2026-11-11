@@ -29,7 +29,8 @@ def h(value):
     return escape(str(value), quote=True)
 
 def cover(article):
-    return "/assets/article-" + article["slug"] + ".svg"
+    alternate = {"watch-order": "episodes", "characters-guide": "characters"}
+    return "/assets/article-" + alternate.get(article["slug"], article["slug"]) + ".svg"
 
 def minutes(article):
     text = article["lead"] + " ".join(t + " " + p for t,p in article["sections"])
