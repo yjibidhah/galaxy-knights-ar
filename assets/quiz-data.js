@@ -1,6 +1,6 @@
 /* Original Arabic quiz content for Galaxy Knights. No visitor analytics. */
 window.GALAXY_QUIZ_BANK = {
-  "version": "2026-11-11",
+  "version": "2026-11-11-spacetoon-ar",
   "categories": [
     {
       "id": "faces",
@@ -54,426 +54,426 @@ window.GALAXY_QUIZ_BANK = {
   "questions": [
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Matsukaze Tenma» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو قائد الفريق الذي يؤمن بأن الصداقة تجعل كرة القدم أجمل؟",
       "image": "https://cdn.neoapo.com/images/character/541/e7055f5578f09e2791bd58ec6b660533.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "بيان: بيان هو قلب الحكاية وصاحب الإيمان الذي لا يتزعزع بكرة القدم. يقود المنتخب في رحلة تبدأ بمباريات صعبة وتنفتح لاحقًا على تحديات تفوق حدود الأرض.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "بيان — بيان هو قلب الحكاية وصاحب الإيمان الذي لا يتزعزع بكرة القدم. يقود المنتخب في رحلة تبدأ بمباريات صعبة وتنفتح لاحقًا على تحديات تفوق حدود الأرض.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "حيان",
-        "بيان",
-        "عقاب",
-        "هشام"
+        "هشام",
+        "ضياء",
+        "ورقة",
+        "بيان"
       ],
-      "answer": 1,
+      "answer": 3,
       "id": "q001"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Shindou Takuto» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو صانع الألعاب الذي ينظم تحركات الفريق بذكاء؟",
       "image": "https://2.bp.blogspot.com/-ZXijEEeoi_A/Tmtf56770WI/AAAAAAAAAJ0/yj_7RkpOLSE/s1600/shindou.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "حيان: حيان قائد يتمتع بحس تكتيكي استثنائي؛ يرى الملعب كأنه لوحة موسيقية تحتاج إلى تنظيم دقيق وحسن توقيت.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "حيان — حيان قائد يتمتع بحس تكتيكي استثنائي؛ يرى الملعب كأنه لوحة موسيقية تحتاج إلى تنظيم دقيق وحسن توقيت.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
+        "ضياء",
+        "ورقة",
         "حيان",
-        "بيان",
-        "عقاب",
-        "هشام"
+        "نضال"
       ],
-      "answer": 0,
+      "answer": 2,
       "id": "q002"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Tsurugi Kyousuke» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو المهاجم المعروف بتسديداته القوية وحسمه للمواقف الصعبة؟",
       "image": "https://pbs.twimg.com/profile_images/738412181176209408/wRmqwJsl_400x400.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "عقاب: عقاب مهاجم قوي وسريع، يبدو هادئًا وصارمًا لكنه يضع كل طاقته داخل الملعب عندما يحتاجه الفريق.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "عقاب — عقاب مهاجم قوي وسريع، يبدو هادئًا وصارمًا لكنه يضع كل طاقته داخل الملعب عندما يحتاجه الفريق.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "بيان",
-        "حيان",
-        "هشام",
-        "عقاب"
+        "ورقة",
+        "عقاب",
+        "نضال",
+        "حيان"
       ],
-      "answer": 3,
+      "answer": 1,
       "id": "q003"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Nishizono Shinsuke» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو الحارس الصغير الذي يتمتع بشجاعة كبيرة رغم قصر قامته؟",
       "image": "https://cdn.anime-planet.com/characters/primary/shinsuke-nishizono-1.jpg?t=1625826767",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "هشام: هشام حارس مرمى صغير القامة لكنه يتمتع بروح تنافسية كبيرة، ولا يقبل أن تمنعه الفوارق الجسدية من تحقيق حلمه.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "هشام — هشام حارس مرمى صغير القامة لكنه يتمتع بروح تنافسية كبيرة، ولا يقبل أن تمنعه الفوارق الجسدية من تحقيق حلمه.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "بيان",
-        "حيان",
         "هشام",
-        "عقاب"
+        "نضال",
+        "حيان",
+        "براء"
       ],
-      "answer": 2,
+      "answer": 0,
       "id": "q004"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Ibuki Munemasa» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو حارس المرمى الذي مارس كرة السلة قبل الانضمام إلى الفريق؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "إيبوكي مونِماسا: حارس مرمى موهوب يأتي إلى المنتخب بخبرة رياضية من كرة السلة، ويواجه صعوبة في البداية في الانسجام مع أسلوب الفريق.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "براء — حارس مرمى موهوب يأتي إلى المنتخب بخبرة رياضية من كرة السلة، ويواجه صعوبة في البداية في الانسجام مع أسلوب الفريق.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "بيان",
-        "إيبوكي مونِماسا",
         "حيان",
-        "عقاب"
+        "هشام",
+        "ليان",
+        "براء"
       ],
-      "answer": 1,
+      "answer": 3,
       "id": "q005"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Matatagi Hayato» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو اللاعب السريع الذي تكشف الحلقة 25 أسرارًا من ماضيه؟",
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ماتاتاغي هاياتو: أحد أسرع لاعبي المنتخب، وقد انتقل إلى كرة القدم بعد ممارسة ألعاب القوى، ويخفي وراء ابتسامته جانبًا معقدًا من شخصيته.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "ضياء — أحد أسرع لاعبي المنتخب، وقد انتقل إلى كرة القدم بعد ممارسة ألعاب القوى، ويخفي وراء ابتسامته جانبًا معقدًا من شخصيته.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "ماتاتاغي هاياتو",
-        "بيان",
-        "حيان",
-        "عقاب"
+        "هشام",
+        "ليان",
+        "ضياء",
+        "لبيب"
       ],
-      "answer": 0,
+      "answer": 2,
       "id": "q006"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Nozaki Sakura» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هي اللاعبة التي استفادت من خبرتها في الجمباز الإيقاعي؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "نوزاكي ساكورا: لاعبة جاءت من الجمباز الإيقاعي، وتتميز برشاقتها وقدرتها على التحكم بحركتها داخل الملعب.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "ليان — لاعبة جاءت من الجمباز الإيقاعي، وتتميز برشاقتها وقدرتها على التحكم بحركتها داخل الملعب.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "بيان",
-        "حيان",
-        "عقاب",
-        "نوزاكي ساكورا"
+        "ضياء",
+        "ليان",
+        "لبيب",
+        "بيان"
       ],
-      "answer": 3,
+      "answer": 1,
       "id": "q007"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Morimura Konoha» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هي المدافعة الخجولة التي تحب الحيوانات؟",
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "موريمورا كونوهـا: فتاة خجولة تحب الحيوانات، ولا تبدو في البداية مرتاحة لخشونة المباريات أو الضغط الذي تفرضه كرة القدم.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "ورقة — فتاة خجولة تحب الحيوانات، ولا تبدو في البداية مرتاحة لخشونة المباريات أو الضغط الذي تفرضه كرة القدم.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
+        "ورقة",
+        "لبيب",
         "بيان",
-        "حيان",
-        "موريمورا كونوهـا",
         "عقاب"
       ],
-      "answer": 2,
+      "answer": 0,
       "id": "q008"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Manabe Jinichirou» في عالم فرسان المجرة؟",
-      "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «كارثة المنتخب الوطني الجديد!»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "مانابي جينئيتشيرو: لاعب بارع في الحساب والتحليل، يفضل التفكير بالأرقام والاحتمالات قبل اتخاذ قراره.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 1 في الدبلجة العربية هو «كارثة المنتخب الوطني الجديد!».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "بيان",
-        "مانابي جينئيتشيرو",
-        "حيان",
-        "عقاب"
+        "الحلقة 5",
+        "الحلقة 9",
+        "الحلقة 1",
+        "الحلقة 13"
       ],
-      "answer": 1,
+      "answer": 2,
       "id": "q009"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Minaho Kazuto» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو المدافع المحب للتحقيق والملاحظة وصاحب خطة الحلقة 27؟",
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ميناهو كازوتو: شخصية محبة للملاحظة والتحقيق، يلفت انتباهها ما يغيب عن الآخرين من تصرفات وإشارات صغيرة.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "لبيب — شخصية محبة للملاحظة والتحقيق، يلفت انتباهها ما يغيب عن الآخرين من تصرفات وإشارات صغيرة.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "ميناهو كازوتو",
-        "بيان",
-        "حيان",
-        "عقاب"
+        "عقاب",
+        "براء",
+        "لبيب",
+        "ليان"
       ],
-      "answer": 0,
+      "answer": 2,
       "id": "q010"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Tetsukado Shin» في عالم فرسان المجرة؟",
-      "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «ليان تواجه مشكلة»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "تيتسوكادو شين: ملاكم سابق يستخدم قوته البدنية وخفة حركة قدميه للدفاع عن فريقه في الملعب.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 7 في الدبلجة العربية هو «ليان تواجه مشكلة».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "بيان",
-        "حيان",
-        "عقاب",
-        "تيتسوكادو شين"
+        "الحلقة 11",
+        "الحلقة 7",
+        "الحلقة 15",
+        "الحلقة 19"
       ],
-      "answer": 3,
+      "answer": 1,
       "id": "q011"
     },
     {
       "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Kusaka Ryuuji» في عالم فرسان المجرة؟",
+      "question": "انظر إلى الصورة: من هو اللاعب القوي الذي كشفت الحلقة 8 جانبًا من مشكلاته؟",
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "كوساكا ريوجي: لاعب ضخم البنية يملك قوة لافتة، وتتغير طريقة لعبه عندما يفقد السيطرة على غضبه.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "explanation": "نضال — لاعب ضخم البنية يملك قوة لافتة، وتتغير طريقة لعبه عندما يفقد السيطرة على غضبه.",
+      "reference": "الشخصية في دبلجة أبطال الكرة: فرسان المجرة",
       "options": [
-        "بيان",
-        "حيان",
-        "كوساكا ريوجي",
-        "عقاب"
-      ],
-      "answer": 2,
-      "id": "q012"
-    },
-    {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Ichikawa Zanakurou» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
-      "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "إيتشيكاوا زاناكورو: لاعب له أسلوب ملفت مستوحى من فن الكابوكي الياباني، وينضم إلى رحلة فريق الأرض في مرحلة متقدمة.",
-      "reference": "موسوعة الشخصيات بالموقع",
-      "options": [
-        "بيان",
-        "إيتشيكاوا زاناكورو",
-        "حيان",
-        "عقاب"
-      ],
-      "answer": 1,
-      "id": "q013"
-    },
-    {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Sorano Aoi» في عالم فرسان المجرة؟",
-      "image": "https://i.pinimg.com/736x/a9/3c/24/a93c24a094af12e9de7e5da8292ea679.jpg",
-      "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "سورانو آوي: إحدى أقرب الشخصيات إلى بيان، ترافق الفريق وتساند اللاعبين خارج أرض الملعب.",
-      "reference": "موسوعة الشخصيات بالموقع",
-      "options": [
-        "سورانو آوي",
-        "كورويوا ريوسي",
-        "بيان",
+        "نضال",
+        "ليان",
+        "لبيب",
         "حيان"
       ],
       "answer": 0,
+      "id": "q012"
+    },
+    {
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «مشكلة نضال»؟",
+      "image": "/assets/quiz-story.svg",
+      "localFallback": "/assets/quiz-faces.svg",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 8 في الدبلجة العربية هو «مشكلة نضال».",
+      "reference": "عناوين الحلقات العربية",
+      "options": [
+        "الحلقة 12",
+        "الحلقة 16",
+        "الحلقة 20",
+        "الحلقة 8"
+      ],
+      "answer": 3,
+      "id": "q013"
+    },
+    {
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «مشكلة ورقة»؟",
+      "image": "/assets/quiz-story.svg",
+      "localFallback": "/assets/quiz-faces.svg",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 11 في الدبلجة العربية هو «مشكلة ورقة».",
+      "reference": "عناوين الحلقات العربية",
+      "options": [
+        "الحلقة 15",
+        "الحلقة 19",
+        "الحلقة 23",
+        "الحلقة 11"
+      ],
+      "answer": 3,
       "id": "q014"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Kuroiwa Ryuusei» في عالم فرسان المجرة؟",
-      "image": "https://truth.bahamut.com.tw/s01/201305/c5124bd9706c0bc93660126ea27401fe.JPG",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «قصة ضياء»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "كورويوا ريوسي: مدرب غامض هو من اختار التشكيلة غير المتوقعة للمنتخب، وتحيط بنواياه أسئلة كثيرة.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 25 في الدبلجة العربية هو «قصة ضياء».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "سورانو آوي",
-        "بيان",
-        "حيان",
-        "كورويوا ريوسي"
+        "الحلقة 29",
+        "الحلقة 33",
+        "الحلقة 25",
+        "الحلقة 37"
       ],
-      "answer": 3,
+      "answer": 2,
       "id": "q015"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Katra Paige» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1016834130.png",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «خطة لبيب»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "كاترا بيج: شخصية محورية في خلفية الصراع الكوني، يرتبط حضورها بمصير الكواكب والآمال التي تحملها الرحلة.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 27 في الدبلجة العربية هو «خطة لبيب».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "لالايا أوبيس",
-        "أوزروك بيتواي",
-        "كاترا بيج",
-        "بوتوموري إمناتور"
+        "الحلقة 31",
+        "الحلقة 27",
+        "الحلقة 35",
+        "الحلقة 39"
       ],
-      "answer": 2,
+      "answer": 1,
       "id": "q016"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Lalaya Obies» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5688-1915298218.jpg",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «الكوكب الملتهب (غاردون)»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "لالايا أوبيس: شخصية قيادية على أحد الكواكب المؤثرة في مسار البطولة، وتدخل في صراع بين الواجب والمشاعر.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 28 في الدبلجة العربية هو «الكوكب الملتهب (غاردون)».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "أوزروك بيتواي",
-        "بوتوموري إمناتور"
+        "الحلقة 32",
+        "الحلقة 36",
+        "الحلقة 40",
+        "الحلقة 28"
       ],
-      "answer": 1,
+      "answer": 3,
       "id": "q017"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Bitway Ozrock» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1434903944.png",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «حيان وبراء في ضيافة زعيم القبيلة الشرقية»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "أوزروك بيتواي: أحد الخصوم الرئيسيين في مرحلة حاسمة، ويتمتع بحضور قوي وغموض يرتبط بماضيه.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 29 في الدبلجة العربية هو «حيان وبراء في ضيافة زعيم القبيلة الشرقية».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "أوزروك بيتواي",
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "بوتوموري إمناتور"
+        "الحلقة 33",
+        "الحلقة 29",
+        "الحلقة 37",
+        "الحلقة 41"
       ],
-      "answer": 0,
+      "answer": 1,
       "id": "q018"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Potomuri Emnator» في عالم فرسان المجرة؟",
-      "image": "https://dxi4wb638ujep.cloudfront.net/1/k/v/d/vdeofxen-se_r0_fullbody.webp",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «هدف غاضب يحسم النتيجة»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "بوتوموري إمناتور: شخصية فضائية غامضة ترافق أبطال الأرض وتساعدهم على فهم بعض أسرار رحلتهم.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 34 في الدبلجة العربية هو «هدف غاضب يحسم النتيجة».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "أوزروك بيتواي",
-        "بوتوموري إمناتور"
+        "الحلقة 38",
+        "الحلقة 42",
+        "الحلقة 3",
+        "الحلقة 34"
       ],
       "answer": 3,
       "id": "q019"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Powai Pichori» في عالم فرسان المجرة؟",
-      "image": "https://static.zerochan.net/Powai.Pichori.1024.2105991.webp",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «ظهور الفارس سارجيس»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "بواي بيتشوري: قائدة فريق سازانارا التي تمتلك قدرة مميزة على فهم الحالات العاطفية، وتظهر خلال رحلة أبطال الأرض عبر الكواكب.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 36 في الدبلجة العربية هو «ظهور الفارس سارجيس».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "بواي بيتشوري",
-        "أوزروك بيتواي"
+        "الحلقة 40",
+        "الحلقة 1",
+        "الحلقة 36",
+        "الحلقة 5"
       ],
       "answer": 2,
       "id": "q020"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Rodan Gasgus» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-53928938.png",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «بيان يواجه عقاب»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "رودان غاسغوس: أحد لاعبي فارام ديت أصحاب المظهر الغريب والروح التنافسية القوية في المراحل المتقدمة من بطولة المجرة.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 38 في الدبلجة العربية هو «بيان يواجه عقاب».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "كاترا بيج",
-        "رودان غاسغوس",
-        "لالايا أوبيس",
-        "أوزروك بيتواي"
+        "الحلقة 42",
+        "الحلقة 38",
+        "الحلقة 3",
+        "الحلقة 7"
       ],
       "answer": 1,
       "id": "q021"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Banda Koloogyu» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-648143341.png",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «فريق إكسارو فوريتو المخيف»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "باندا كولوغيو: مخلوق فضائي يشكل حضوره محطة مؤثرة في رحلة المنتخب، ويمثل الروابط التي تنشأ بين أصدقاء من عوالم مختلفة.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 40 في الدبلجة العربية هو «فريق إكسارو فوريتو المخيف».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "باندا كولوغيو",
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "أوزروك بيتواي"
+        "الحلقة 40",
+        "الحلقة 1",
+        "الحلقة 5",
+        "الحلقة 9"
       ],
       "answer": 0,
       "id": "q022"
     },
     {
-      "category": "faces",
-      "question": "من هي الشخصية المرتبطة بالاسم الأصلي «Said Ashraf» في عالم فرسان المجرة؟",
-      "image": "https://ami.animecharactersdatabase.com/uploads/chars/2855-455784648.png",
+      "category": "story",
+      "question": "في أي حلقة من أبطال الكرة: فرسان المجرة يأتي عنوان «عودة بيان ورفاقه إلى الأرض»؟",
+      "image": "/assets/quiz-story.svg",
       "localFallback": "/assets/quiz-faces.svg",
-      "imageType": "portrait",
-      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "سعيد أشرف: قائد المنتخب السعودي في تصفيات بطولة العالم، ويظهر بثقة وروح تنافسية عالية أثناء مواجهة منتخب اليابان.",
-      "reference": "موسوعة الشخصيات بالموقع",
+      "imageType": "theme",
+      "imageAlt": "رسم قصصي أصلي من عالم أبطال الكرة",
+      "explanation": "عنوان الحلقة 43 في الدبلجة العربية هو «عودة بيان ورفاقه إلى الأرض».",
+      "reference": "عناوين الحلقات العربية",
       "options": [
-        "كاترا بيج",
-        "لالايا أوبيس",
-        "أوزروك بيتواي",
-        "سعيد أشرف"
+        "الحلقة 43",
+        "الحلقة 4",
+        "الحلقة 8",
+        "الحلقة 12"
       ],
-      "answer": 3,
+      "answer": 0,
       "id": "q023"
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية موريمورا كونوهـا في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ورقة في قدرات Soul؟",
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح موريمورا كونوهـا بـ«الثعلب» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح ورقة بـ«الثعلب» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "البومة",
@@ -486,12 +486,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية إيتشيكاوا زاناكورو في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية المهاجم المسرحي في قدرات Soul؟",
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح إيتشيكاوا زاناكورو بـ«الأسد» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح المهاجم المسرحي بـ«الأسد» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الجاموس",
@@ -504,12 +504,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية ماتاتاغي هاياتو في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ضياء في قدرات Soul؟",
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح ماتاتاغي هاياتو بـ«الصقر» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح ضياء بـ«الصقر» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الصقر",
@@ -522,12 +522,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية ميناهو كازوتو في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية لبيب في قدرات Soul؟",
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح ميناهو كازوتو بـ«البومة» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح لبيب بـ«البومة» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الطاووس",
@@ -540,12 +540,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية تيتسوكادو شين في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية المدافع الملاكم في قدرات Soul؟",
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح تيتسوكادو شين بـ«الجاموس» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح المدافع الملاكم بـ«الجاموس» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "ظبي الجبل",
@@ -558,12 +558,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية إيبوكي مونِماسا في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية براء في قدرات Soul؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح إيبوكي مونِماسا بـ«الماموث» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح براء بـ«الماموث» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "غرير العسل",
@@ -581,7 +581,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح حيان بـ«الطاووس» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح حيان بـ«الطاووس» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الطاووس",
@@ -594,12 +594,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية نوزاكي ساكورا في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ليان في قدرات Soul؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح نوزاكي ساكورا بـ«ظبي الجبل» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح ليان بـ«ظبي الجبل» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الذئب",
@@ -612,12 +612,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية مانابي جينئيتشيرو في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية اللاعب المحب للحساب في قدرات Soul؟",
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح مانابي جينئيتشيرو بـ«غرير العسل» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح اللاعب المحب للحساب بـ«غرير العسل» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الحصان المجنح",
@@ -630,12 +630,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية كوساكا ريوجي في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية نضال في قدرات Soul؟",
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح كوساكا ريوجي بـ«الدب الأشيب» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح نضال بـ«الدب الأشيب» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الثعلب",
@@ -653,7 +653,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح عقاب بـ«الذئب» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح عقاب بـ«الذئب» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الذئب",
@@ -671,7 +671,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "ترتبط روح بيان بـ«الحصان المجنح» ضمن قوى الأرواح في سلسلة Galaxy.",
+      "explanation": "ترتبط روح بيان بـ«الحصان المجنح» ضمن قوى الأرواح في فرسان المجرة.",
       "reference": "Earth Eleven – Souls",
       "options": [
         "الصقر",
@@ -684,12 +684,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز إيبوكي مونِماسا المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز براء المعروف في تشكيلة فريق الأرض؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب إيبوكي مونِماسا في مركز حراسة المرمى بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب براء في مركز حراسة المرمى بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "الدفاع",
@@ -702,12 +702,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز موريمورا كونوهـا المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز ورقة المعروف في تشكيلة فريق الأرض؟",
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب موريمورا كونوهـا في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب ورقة في مركز الدفاع بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -720,12 +720,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز ميناهو كازوتو المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز لبيب المعروف في تشكيلة فريق الأرض؟",
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب ميناهو كازوتو في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب لبيب في مركز الدفاع بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "الدفاع",
@@ -738,12 +738,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز مانابي جينئيتشيرو المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز اللاعب المحب للحساب المعروف في تشكيلة فريق الأرض؟",
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب مانابي جينئيتشيرو في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب اللاعب المحب للحساب في مركز الدفاع بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -756,12 +756,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز تيتسوكادو شين المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز المدافع الملاكم المعروف في تشكيلة فريق الأرض؟",
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب تيتسوكادو شين في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب المدافع الملاكم في مركز الدفاع بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -774,12 +774,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز كوساكا ريوجي المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز نضال المعروف في تشكيلة فريق الأرض؟",
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب كوساكا ريوجي في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب نضال في مركز خط الوسط بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -792,12 +792,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز نوزاكي ساكورا المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز ليان المعروف في تشكيلة فريق الأرض؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب نوزاكي ساكورا في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب ليان في مركز خط الوسط بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "خط الوسط",
@@ -815,7 +815,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب بيان في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب بيان في مركز خط الوسط بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -833,7 +833,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب حيان في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب حيان في مركز خط الوسط بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -851,7 +851,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب عقاب في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب عقاب في مركز الهجوم بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -864,12 +864,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز ماتاتاغي هاياتو المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز ضياء المعروف في تشكيلة فريق الأرض؟",
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب ماتاتاغي هاياتو في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب ضياء في مركز الهجوم بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "الهجوم",
@@ -887,7 +887,7 @@ window.GALAXY_QUIZ_BANK = {
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب هشام في مركز حراسة المرمى بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب هشام في مركز حراسة المرمى بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "الدفاع",
@@ -900,12 +900,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "roles",
-      "question": "ما مركز إيتشيكاوا زاناكورو المعروف في تشكيلة فريق الأرض؟",
+      "question": "ما مركز المهاجم المسرحي المعروف في تشكيلة فريق الأرض؟",
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
-      "explanation": "يلعب إيتشيكاوا زاناكورو في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
+      "explanation": "يلعب المهاجم المسرحي في مركز الهجوم بحسب قوائم فريق الأرض.",
       "reference": "Earth Eleven – members",
       "options": [
         "حراسة المرمى",
@@ -939,7 +939,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "يمثل فريق Earth Eleven الأرض في بطولة المجرة.",
+      "explanation": "يمثل فريق الأرض الأرض في بطولة المجرة.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
         "Earth Eleven",
@@ -952,7 +952,7 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "galaxy",
-      "question": "أي كوكب يعد موطن فريق Earth Eleven؟",
+      "question": "أي كوكب يعد موطن فريق الأرض؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
@@ -1146,7 +1146,7 @@ window.GALAXY_QUIZ_BANK = {
       "explanation": "يرتبط بيتواي أوزروك بأحداث البطولة الكبرى ومصائر الكواكب.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
-        "أوزروك بيتواي",
+        "قائد المنافسين",
         "مارك إيفانز",
         "ناثان سويفت",
         "أكسل بليز"
@@ -1224,12 +1224,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "كم حلقة في النسخة اليابانية الأصلية من GO Galaxy؟",
+      "question": "كم عدد حلقات أبطال الكرة: فرسان المجرة في الدبلجة العربية؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "الموسم الياباني الأصلي يتكون من 43 حلقة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "تتألف دبلجة أبطال الكرة: فرسان المجرة من 43 حلقة، وهو عدد الحلقات المعتمد في دليل الموقع.",
+      "reference": "دليل الحلقات المدبلجة",
       "options": [
         "26 حلقة",
         "52 حلقة",
@@ -1241,36 +1241,36 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "في أي سنة بدأ بث أنمي Inazuma Eleven GO Galaxy في اليابان؟",
+      "question": "في أي حلقة من فرسان المجرة تبدأ رحلة الأبطال إلى الفضاء؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "بدأ عرضه في 8 مايو 2013.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "تُسمى الحلقة 19 «الانطلاق إلى الفضاء».",
+      "reference": "عناوين الحلقات المدبلجة",
       "options": [
-        "2011",
-        "2015",
-        "2013",
-        "2017"
+        "الحلقة 15",
+        "الحلقة 17",
+        "الحلقة 19",
+        "الحلقة 21"
       ],
       "answer": 2,
       "id": "q068"
     },
     {
       "category": "story",
-      "question": "في أي سنة انتهى عرض الموسم الياباني الأصلي؟",
+      "question": "ما عنوان الحلقة 17 من فرسان المجرة؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "انتهى بث المسلسل في 19 مارس 2014.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "الحلقة 17 تحمل عنوان «نهاية البطولة».",
+      "reference": "عناوين الحلقات المدبلجة",
       "options": [
-        "2012",
-        "2014",
-        "2015",
-        "2016"
+        "نهاية البطولة",
+        "الانطلاق إلى الفضاء",
+        "مباراة فريق كوكب الرمل",
+        "تجاوزنا كل الصعوبات"
       ],
-      "answer": 1,
+      "answer": 0,
       "id": "q069"
     },
     {
@@ -1292,34 +1292,34 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "من يقود منتخب اليابان الجديد في بداية Galaxy؟",
+      "question": "من قائد فريق الأبطال في بداية فرسان المجرة؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يتولى تينما قيادة المنتخب الجديد في البداية.",
+      "explanation": "بيان هو قائد الفريق في بداية الموسم.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
-        "حيان (شيندو)",
-        "عقاب (تسوروغي)",
-        "إيبوكي",
-        "بيان (تينما)"
+        "حيان",
+        "عقاب",
+        "براء",
+        "بيان"
       ],
       "answer": 3,
       "id": "q071"
     },
     {
       "category": "story",
-      "question": "من الثلاثي الذي يمتلك خبرة كروية سابقة في منتخب اليابان الجديد؟",
+      "question": "من هم الأبطال الثلاثة الذين يمتلكون الخبرة الكروية السابقة في الفريق الجديد؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "الثلاثي القديم يشكل أساس المنتخب وسط ثمانية وافدين جدد إلى كرة القدم.",
+      "explanation": "بيان وحيان وعقاب هم الثلاثة الذين سبق لهم اللعب معًا قبل تشكيل المنتخب الجديد.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
-        "إيبوكي وساكورا ومانابي",
-        "كوساكا وميناهو وكونوها",
-        "تينما وشيندو وتسوروغي",
-        "ماتاتاغي وتيتسوكادو وإيبوكي"
+        "براء وليان واللاعب المحب للحساب",
+        "نضال ولبيب وورقة",
+        "بيان وحيان وعقاب",
+        "ضياء والمدافع الملاكم وبراء"
       ],
       "answer": 2,
       "id": "q072"
@@ -1347,24 +1347,24 @@ window.GALAXY_QUIZ_BANK = {
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يتولى كورويوا ريوسي تدريب المنتخب في Galaxy.",
+      "explanation": "يتولى مدرب المنتخب تدريب المنتخب في Galaxy.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
-        "كورويوا ريوسي",
-        "شيندو تاكوتو",
-        "إيبوكي مونماسا",
-        "ماتاتاغي هاياتو"
+        "مدرب المنتخب",
+        "حيان تاكوتو",
+        "براء مونماسا",
+        "ضياء"
       ],
       "answer": 0,
       "id": "q074"
     },
     {
       "category": "story",
-      "question": "أي لعبة رياضية مارسها إيبوكي قبل كرة القدم؟",
+      "question": "أي لعبة رياضية مارسها براء قبل كرة القدم؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يأتي إيبوكي من خلفية في كرة السلة، وهو ما يؤثر في قفزاته.",
+      "explanation": "يأتي براء من خلفية في كرة السلة، وهو ما يؤثر في قفزاته.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
         "كرة اليد",
@@ -1394,11 +1394,11 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "أي نشاط رياضي مارسته نوزاكي ساكورا؟",
+      "question": "أي نشاط رياضي مارسته ليان؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "تستفيد ساكورا من المرونة والرشاقة المستمدة من الجمباز.",
+      "explanation": "تستفيد ليان من المرونة والرشاقة المستمدة من الجمباز.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
         "سباق الدراجات",
@@ -1411,7 +1411,7 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "في أي مجال رياضي برع ماتاتاغي قبل كرة القدم؟",
+      "question": "في أي مجال رياضي برع ضياء قبل كرة القدم؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
@@ -1479,7 +1479,7 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "ما الدور الذي تقوم به سورانو آوي؟",
+      "question": "ما الدور الذي تقوم به مساعدة الفريق؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
@@ -1496,7 +1496,7 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "ما الميزة التي تميز مانابي جينئيتشيرو؟",
+      "question": "ما الميزة التي تميز اللاعب المحب للحساب؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
@@ -1513,11 +1513,11 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "بماذا يشتهر ميناهو كازوتو بين لاعبي الفريق؟",
+      "question": "بماذا يشتهر لبيب بين لاعبي الفريق؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "ينظر ميناهو إلى اللعب بعين المراقب المحب للتحقيق.",
+      "explanation": "ينظر لبيب إلى اللعب بعين المراقب المحب للتحقيق.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
         "التدريب على الجمباز",
