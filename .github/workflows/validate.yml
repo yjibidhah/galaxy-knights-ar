@@ -20,9 +20,10 @@ jobs:
         env:
           SITE_URL: https://example.pages.dev
         run: |
-          python3 -m py_compile build.py magazine.py
+          python3 -m py_compile build.py magazine.py home.py
           node --check assets/app.js
           node --check assets/magazine.js
+          node --check assets/home.js
           node --check assets/quiz.js
           node --check assets/quiz-data.js
           python3 build.py
@@ -82,6 +83,25 @@ jobs:
               for key in ('/assets/article-story.svg','/assets/article-hayyan-spotlight.svg','/assets/article-nidal-spotlight.svg'):
                   assert (root / key.lstrip('/')).exists(), key
           print("Validated {} original magazine articles, {} sections and two optional official videos.".format(len(editorial),sum(len(a["sections"]) for a in editorial)))
+          home_page = (root / "index.html").read_text(encoding="utf-8")
+          assert home_page.count('class="home-world-card"') == 6
+          assert home_page.count('data-home-mission=') == 3
+          assert home_page.count('class="home-character-card"') == 3
+          assert home_page.count('class="home-editor-card"') == 3
+          assert home_page.count('data-load-video=') == 2
+          assert '<iframe' not in home_page, "Official videos must be loaded only on click"
+          assert 'src="/assets/home.js?v=home-portal-20261111"' in home_page
+          assert 'id="home-mini-area"' in home_page
+          assert 'id="home-watch-track"' in home_page
+          import html
+          mini_match = re.search(r'<script id="home-mini-bank" type="application/json">(.*?)</script>',home_page,re.S)
+          assert mini_match, "Homepage mini quiz missing"
+          mini_bank = json.loads(html.unescape(mini_match.group(1)))
+          assert len(mini_bank) == 3
+          assert all(len(q["options"]) == 4 and len(set(q["options"])) == 4 and 0 <= q["answer"] < 4 for q in mini_bank)
+          assert all((root / q["image"].lstrip("/")).exists() for q in mini_bank)
+          assert '<h1>' in home_page and home_page.count('<h1>') == 1
+          print("Validated homepage portal: 6 worlds, 3 adventure modes, 3-question mini quiz, local watching progress and 2 opt-in official clips.")
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
