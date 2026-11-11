@@ -47,7 +47,7 @@ def render(route, title, description, body, *, head="", article=False):
     full_title = "{} | {}".format(title, NAME) if route != "/" else "مجرة الفرسان | أبطال الكرة فرسان المجرة بالعربية"
     canonical = '<link rel="canonical" href="{}">'.format(safe(full_url(route))) if SITE_URL else ""
     og_url = '<meta property="og:url" content="{}">'.format(safe(full_url(route))) if SITE_URL else ""
-    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/galaxy-hero-desktop-v2.webp"))) if SITE_URL else ""
+    og_image = '<meta property="og:image" content="{}">'.format(safe(full_url("/assets/galaxy-hero-desktop-v2.webp"))) if SITE_URL and 'property="og:image"' not in head else ""
     current = lambda path: ' aria-current="page"' if route == path or (path != "/" and route.startswith(path)) else ""
     navbar = "".join('<a href="{}"{}>{}</a>'.format(p,current(p),safe(t)) for p,t in NAV)
     web_schema = {
@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=premium-galaxy-hero-v2">
+<link rel="stylesheet" href="/assets/styles.css?v=arabic-magazine-20261111">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
