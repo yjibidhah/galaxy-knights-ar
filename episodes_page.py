@@ -18,6 +18,19 @@ def verified_video(item):
         raise ValueError("Video URL must point to a single video post.")
     return url
 
+
+def user_supplied_post(item):
+    """Only produce a safe outbound Facebook URL. Never imply this is an authorized stream."""
+    url=item.get("external_post_url")
+    if not url or item.get("external_post_status")!="user_supplied_unverified":
+        return None
+    u=urlparse(url)
+    if u.scheme!="https" or u.hostname not in {"www.facebook.com","facebook.com","web.facebook.com"}:
+        raise ValueError("Untrusted Facebook post host")
+    if not u.path.startswith("/61587433145166/videos/") or not u.path.rstrip("/").split("/")[-1].isdigit():
+        raise ValueError("Unexpected external episode post format")
+    return url
+
 def build_episodes(root):
     root=Path(root)
     source=json.loads((root/"episodes_data.json").read_text(encoding="utf-8"))
@@ -29,16 +42,20 @@ def build_episodes(root):
     cards=[]
     for e in episodes:
         verified=verified_video(e)
+        external=user_supplied_post(e)
+        external_button = (f'<a class="ep-external-link" href="{esc(external)}" target="_blank" rel="noopener noreferrer" aria-label="فتح منشور الحلقة {e["number"]} على فيسبوك من صفحة غير رسمية">▶ عرض المنشور على فيسبوك ↗</a>' if external else "")
         cards.append(f'''<article class="ep-card" data-ep-item data-ep-number="{e["number"]}" data-ep-stage="{esc(e["phase"])}" data-ep-search="{esc(str(e["number"])+" "+e["title"]+" "+e["phase"])}">
           <button type="button" class="ep-card-open" data-ep-open="{e["number"]}" aria-label="عرض تفاصيل الحلقة {e["number"]}: {esc(e["title"])}">
             <span class="ep-thumb"><img src="{e["art"]}" width="320" height="190" loading="lazy" alt="رسمة أصلية تمثل أجواء الحلقة {e["number"]}"><span class="ep-number-chip">الحلقة {e["number"]:02d}</span></span>
             <span class="ep-card-info"><span class="ep-stage-name">{esc(e["phase"])}</span><strong>{esc(e["title"])}</strong><span class="ep-open-label">{'مشاهدة متاحة من المصدر الرسمي ▶' if verified else 'عرض تفاصيل الحلقة ←'}</span></span>
           </button>
+          {external_button}
           <button type="button" class="episode ep-watched-toggle" data-episode="{e["number"]}" aria-pressed="false"><span class="episode-status">لم أشاهدها</span></button>
         </article>''')
     # Only actual authorized video URLs can reach browser-side embed rendering.
     videos=[{"number":e["number"],"url":verified_video(e)} for e in episodes if verified_video(e)]
-    player_data=json.dumps({"episodes":[{"number":e["number"],"title":e["title"],"phase":e["phase"],"art":e["art"]} for e in episodes],"videos":videos},ensure_ascii=False).replace("<","\\u003c")
+    external_posts=[{"number":e["number"],"url":user_supplied_post(e),"source":e["external_post_source"]} for e in episodes if user_supplied_post(e)]
+    player_data=json.dumps({"episodes":[{"number":e["number"],"title":e["title"],"phase":e["phase"],"art":e["art"]} for e in episodes],"videos":videos,"externalPosts":external_posts},ensure_ascii=False).replace("<","\\u003c")
     html=f'''<div class="episode-library">
       <section class="ep-welcome">
         <div class="ep-welcome-copy"><span class="home-eyebrow">⚽ دليل حلقات فرسان المجرة</span><h2>43 مغامرة… رحلة واحدة نحو النجوم!</h2>
@@ -51,7 +68,7 @@ def build_episodes(root):
         <div class="ep-progress-track"><div class="progress-track" id="watch-progress" role="progressbar" aria-label="نسبة مشاهدة الحلقات" aria-valuemin="0" aria-valuemax="43" aria-valuenow="0"><div class="progress-bar"></div></div></div></div>
         <button id="reset-watch" type="button" class="btn secondary">إعادة ضبط التقدم</button>
       </section>
-      <div class="ep-legality"><strong>عن مشاهدة الحلقات:</strong> تظهر روابط تشغيل الحلقات الكاملة فقط عندما نتحقق من أن الناشر مخوّل بإتاحتها وأن الفيديو العام يقبل التضمين. لم نتحقق بعد من رابط رسمي كامل لكل حلقة على فيسبوك؛ لذلك هذه القائمة دليل للحلقات وليست مكتبة بث. وقد يطلب فيسبوك تسجيل الدخول لبعض الفيديوهات.</div>
+      <div class="ep-legality"><strong>عن مشاهدة الحلقات:</strong> تظهر روابط تشغيل الحلقات الكاملة فقط عندما نتحقق من أن الناشر مخوّل بإتاحتها وأن الفيديو العام يقبل التضمين. أضيف رابطا منشوري الحلقتين 20 و40 من صفحة Old But Cold بناءً على الروابط التي شاركها أحد المتابعين. وهما روابط إلى فيسبوك فقط وليسا بثًا داخل الموقع؛ لم يُتحقق من إتاحة مشاهدتهما بلا تسجيل دخول أو من حقوق نشر الحلقات. وقد يطلب فيسبوك تسجيل الدخول.</div>
       <section class="ep-browse" aria-labelledby="ep-browser-title">
         <div class="ep-section-head"><h2 id="ep-browser-title">اختر حلقتك</h2><p>تصفح العناوين أو ابحث برقم الحلقة أو باسمها</p></div>
         <div class="ep-search-toolbar"><label for="episode-search-v2">🔎 <input id="episode-search-v2" type="search" placeholder="مثلاً: الحلقة 25 أو قصة ضياء" autocomplete="off"></label><span id="ep-count-label" aria-live="polite">43 حلقة</span></div>
