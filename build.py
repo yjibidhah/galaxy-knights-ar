@@ -239,9 +239,9 @@ def article_html(slug,title,intro,emoji,parts):
     return "".join(chunks)
 
 def write_articles():
-    render("/articles/","مقالات أبطال الكرة فرسان المجرة","مقالات عربية أصلية عن قصة أبطال الكرة فرسان المجرة وترتيب المشاهدة والشخصيات وروح الفريق.",'<div class="toolbar"><input id="search-site" type="search" class="field" placeholder="ابحث بين المقالات" aria-label="بحث المقالات"></div>'+cards([(title,intro,"/articles/{}/".format(slug),emoji) for slug,title,intro,emoji,parts in ARTICLES])+'<p id="search-empty" class="empty" hidden>لم نجد مقالات بهذه الكلمات.</p>')
-    for slug,title,intro,emoji,parts in ARTICLES:
-        render("/articles/{}/".format(slug),title,intro,article_html(slug,title,intro,emoji,parts),article=True)
+    """Generate the illustrated Arabic editorial magazine and full article pages."""
+    from magazine import build_magazine
+    return build_magazine(render, full_url, ROOT)
 
 def write_episodes():
     eps="".join('<button type="button" class="episode" data-episode="{}" aria-pressed="false"><span>الحلقة {:02d}</span><span class="episode-status">لم أشاهدها</span></button>'.format(n,n) for n in range(1,44))
