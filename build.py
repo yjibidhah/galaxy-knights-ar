@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=arabic-magazine-20261111">
+<link rel="stylesheet" href="/assets/styles.css?v=galaxy-home-portal-20261111">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
@@ -149,7 +149,7 @@ def write_home():
     hero = '''<section class="galaxy-hero" aria-label="أبطال الكرة فرسان المجرة - الموقع العربي">
     <picture class="galaxy-hero-picture">
       <source media="(max-width: 700px)" srcset="/assets/galaxy-hero-mobile-v2.webp" type="image/webp">
-      <img src="/assets/galaxy-hero-desktop-v2.webp" width="2172" height="724" fetchpriority="high" loading="eager" decoding="async" alt="تنما وشيندو وتسووروجي في ملعب كرة قدم فضائي وسط النجوم والمجرات">
+      <img src="/assets/galaxy-hero-desktop-v2.webp" width="2172" height="724" fetchpriority="high" loading="eager" decoding="async" alt="بيان وحيان وعقاب في مشهد فني لملعب كرة قدم فضائي وسط النجوم">
     </picture>
     <div class="shell galaxy-hero-overlay">
       <div class="galaxy-hero-copy">
@@ -157,22 +157,16 @@ def write_home():
         <h1><span>أبطال الكرة</span><strong>فرسان المجرة</strong></h1>
         <p>انطلق نحو النجوم مع أبطالك المفضلين! اكتشف الشخصيات، استكشف دليل الحلقات، واختبر معلوماتك في مغامرة كروية بالعربية.</p>
         <div class="galaxy-hero-links" aria-label="ابدأ الاستكشاف">
-          <a class="btn primary" href="/episodes/">اكتشف الحلقات ⚽</a>
-          <a class="btn secondary" href="/characters/">تعرّف على الأبطال ✨</a>
+          <a class="btn primary" href="#home-mini-quiz">⚡ جرّب تحديًا سريعًا</a>
+          <a class="btn secondary" href="/episodes/">🎬 دليل الحلقات</a>
+          <a class="btn secondary" href="#home-worlds">🪐 استكشف العالم</a>
         </div>
       </div>
     </div>
   </section>'''
-    main = '<div class="shell">'+section("استكشف العالم","كل شيء في مكان واحد، بتجربة عربية سهلة على الهاتف والحاسوب.",cards([
-        ("دليل الحلقات","تابع تقدمك خلال حلقات فرسان المجرة الـ43 بالترتيب العربي.","/episodes/","🎬"),
-        ("أبطال القصة","صفحات تعريفية بالشخصيات وأدوارها في عالم كرة القدم.","/characters/","🌟"),
-        ("تحدي الفرسان","أكثر من 100 سؤال مصوّر في ستة اختبارات وملحمة كونية!","/quiz/","🏆")
-    ]))+section("اقرأ وتعلّم","مقالات أصلية للتعرّف أكثر على المسلسل وأفكاره.",cards([
-        ("قصة فرسان المجرة","مدخل دون حرق كبير للأحداث.","/articles/story/","🌌"),
-        ("ترتيب المشاهدة","من أين تبدأ وما الذي يجب معرفته؟","/articles/watch-order/","🧭"),
-        ("دليل الشخصيات","كيف تتعرّف على أبطالك المفضلين؟","/articles/characters-guide/","👥")
-    ]))+'<div class="callout"><h2>شارك روح الفريق ⚽</h2><p>كل لاعب يملك مهارة مختلفة، والعمل الجماعي والاحترام يصنعان فريقًا أقوى. هذا الموقع مساحة تشجع المرح والروح الرياضية بعيدًا عن الإساءة أو مشاركة البيانات الشخصية.</p></div></div>'
-    render("/","أبطال الكرة فرسان المجرة","موقع مجرة الفرسان العربي: دليل حلقات أبطال الكرة فرسان المجرة، الشخصيات، المقالات والاختبارات التفاعلية.",hero+main,head=critical_style)
+    from home import build_home_sections
+    main, home_head = build_home_sections(ROOT)
+    render("/","أبطال الكرة فرسان المجرة","مجرة الفرسان: موقع أبطال الكرة فرسان المجرة بالعربية؛ 43 حلقة، 23 شخصية، 104 أسئلة مصوّرة، مقالات وتحديات وألعاب ممتعة.",hero+main,head=critical_style+home_head)
 
 CHARACTER_DATA = json.loads((ROOT / "characters_data.json").read_text(encoding="utf-8"))
 CHARACTERS = CHARACTER_DATA["characters"]
