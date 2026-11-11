@@ -37,9 +37,9 @@ function validFacebook(url){
      (/^\/[^?#]*\/videos\//.test(u.pathname)||u.pathname.startsWith('/watch/')||u.pathname.startsWith('/reel/'));
  }catch{return false;}
 }
-function createPlayer(url,n){
+function createPlayer(url,n,width){
  const frame=document.createElement('iframe');
- frame.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent(url)+'&show_text=false&width=640&autoplay=false&allowfullscreen=true';
+ frame.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent(url)+'&show_text=false&width='+width+'&autoplay=false&allowfullscreen=true';
  frame.title='مشغّل فيديو فيسبوك المضمن للحلقة '+n;
  frame.loading='lazy';
  frame.setAttribute('allowfullscreen','');
@@ -76,7 +76,8 @@ for(const opener of document.querySelectorAll('[data-ep-open]'))opener.addEventL
    label.textContent='▶ شاهد الحلقة '+n+' هنا عبر مشغّل فيسبوك';
    const wrap=document.createElement('div');
    wrap.className='ep-facebook-frame';
-   wrap.appendChild(createPlayer(source.url,n));
+   const embedWidth=Math.max(220,Math.min(640,Math.floor(zone.getBoundingClientRect().width||window.innerWidth-32)));
+   wrap.appendChild(createPlayer(source.url,n,embedWidth));
    const help=document.createElement('p');
    help.className='ep-player-help';
    help.textContent='يعمل الفيديو داخل هذه الصفحة إذا سمحت إعدادات فيسبوك بعرضه. قد تظهر رسالة تسجيل دخول أو عدم توفر الفيديو حسب الحساب والمنطقة وإعدادات الناشر.';
