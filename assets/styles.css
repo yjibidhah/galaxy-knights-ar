@@ -607,3 +607,13 @@
 @media(max-width:510px){.ep-welcome{padding:16px}.ep-progress-panel{padding:14px;flex-direction:column;align-items:stretch}.ep-welcome-copy h2{font-size:1.55rem}.ep-card-info{padding:10px}.ep-card-info strong{font-size:.85rem}.ep-stage-name{font-size:.68rem}.ep-filter{font-size:.73rem;padding:7px 10px}.ep-facebook-frame{height:280px}}
 @media(max-width:360px){.ep-grid{grid-template-columns:1fr}.ep-thumb{max-height:190px}}
 @media(prefers-reduced-motion:reduce){.ep-card,.ep-thumb img{transition:none!important}}
+
+
+/* Episode references from external pages: clearly distinguish outbound posts from verified embeds */
+.ep-external-link{display:flex;align-items:center;justify-content:center;text-align:center;gap:8px;padding:10px 12px;min-height:44px;color:#172842!important;font-size:.84rem;font-weight:900;background:linear-gradient(110deg,#ffe08b,#f1c36e);border:1px solid #cfaa58;text-decoration:none;border-radius:11px;line-height:1.5;transition:filter .2s}
+.ep-card>.ep-external-link{margin:0 10px 10px}
+.ep-external-link:hover{filter:brightness(1.07)}
+.ep-external-post{padding:12px 14px;margin:13px 0 16px;background:#18395d;border:1px solid #53779d;border-radius:14px}
+.ep-external-post p{color:#d0e4f5;font-size:.83rem;line-height:1.75;margin:0 0 11px}
+.ep-external-post .ep-external-link{display:inline-flex;max-width:100%}
+@media(prefers-reduced-motion:reduce){.ep-external-link{transition:none}}
