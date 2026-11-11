@@ -5,7 +5,7 @@ const dataElement=$('episode-catalog-data');
 if(!dataElement)return;
 let catalogue;
 try{catalogue=JSON.parse(dataElement.textContent);}catch{return;}
-if(!Array.isArray(catalogue.episodes)||!Array.isArray(catalogue.videos))return;
+if(!Array.isArray(catalogue.episodes)||!Array.isArray(catalogue.videos)||!Array.isArray(catalogue.externalPosts))return;
 const cards=[...document.querySelectorAll('[data-ep-item]')];
 const search=$('episode-search-v2');
 const filterButtons=[...document.querySelectorAll('[data-ep-stage]')].filter(x=>x.tagName==='BUTTON');
@@ -37,6 +37,21 @@ for(const opener of document.querySelectorAll('[data-ep-open]'))opener.addEventL
  $('ep-detail-image').src=e.art;
  $('ep-detail-image').alt='رسمة أصلية لأجواء الحلقة '+n;
  $('ep-detail-description').textContent='العنوان العربي: «'+e.title+'». تنتمي الحلقة إلى مرحلة '+e.phase+'. يمكنك تسجيل مشاهدتها من القائمة أعلاه.';
+ const outgoing=$('ep-external-post');
+ outgoing.replaceChildren();outgoing.hidden=true;
+ const external=catalogue.externalPosts.find(v=>v.number===n&&validFacebook(v.url));
+ if(external){
+   const note=document.createElement('p');
+   note.textContent='منشور شاركه أحد المتابعين من صفحة Old But Cold. لم نتحقق من حقوق نشر الحلقة أو من إمكانية المشاهدة دون تسجيل دخول.';
+   const link=document.createElement('a');
+   link.className='ep-external-link';
+   link.href=external.url;
+   link.target='_blank';
+   link.rel='noopener noreferrer';
+   link.textContent='▶ فتح منشور الحلقة '+n+' على فيسبوك ↗';
+   outgoing.append(note,link);
+   outgoing.hidden=false;
+ }
  const zone=$('ep-verified-video'),status=$('ep-play-status');
  zone.replaceChildren();zone.hidden=true;status.hidden=false;
  const source=catalogue.videos.find(v=>v.number===n&&validFacebook(v.url));
