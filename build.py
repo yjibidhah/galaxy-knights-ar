@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=galaxy-home-portal-20261111">
+<link rel="stylesheet" href="/assets/styles.css?v=arabic-episodes-library-20261111">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
@@ -238,13 +238,9 @@ def write_articles():
     return build_magazine(render, full_url, ROOT)
 
 def write_episodes():
-    eps="".join('<button type="button" class="episode" data-episode="{}" aria-pressed="false"><span>الحلقة {:02d}</span><span class="episode-status">لم أشاهدها</span></button>'.format(n,n) for n in range(1,44))
-    body='''<div class="notice"><strong>معلومة مهمة:</strong> دليل <strong>43 حلقة من أبطال الكرة: فرسان المجرة بالدبلجة العربية</strong>، مرتبة من الأولى إلى الأخيرة. هذه صفحة لتنظيم المشاهدة ولا تستضيف حلقات غير مرخصة.</div>
-<div class="callout"><h2>تقدم المشاهدة: <span id="watched-count">0</span> / 43</h2><div class="progress-track" role="progressbar" id="watch-progress" aria-label="نسبة الحلقات التي شاهدتها" aria-valuemin="0" aria-valuemax="43" aria-valuenow="0"><div class="progress-bar"></div></div>
-<p class="tiny">يُحفظ تقدمك محليًا في هذا المتصفح فقط، دون إنشاء حساب أو إرسال بيانات إلينا.</p></div>
-<div class="toolbar"><input class="field" id="episode-filter" type="search" inputmode="numeric" placeholder="ابحث برقم الحلقة، مثل 12" aria-label="البحث برقم الحلقة"><button id="reset-watch" type="button" class="btn">مسح التقدم</button></div>
-<div class="episodes-grid">'''+eps+'''</div><a href="/articles/watch-order/" class="btn secondary">اقرأ دليل ترتيب المشاهدة</a>'''
-    render("/episodes/","حلقات أبطال الكرة فرسان المجرة كاملة بالترتيب","دليل ترتيب حلقات أبطال الكرة فرسان المجرة: قائمة الحلقات العربية الـ43 مع متتبع تقدم مشاهدة مجاني.",body)
+    from episodes_page import build_episodes
+    body, head = build_episodes(ROOT)
+    render("/episodes/","دليل حلقات أبطال الكرة فرسان المجرة الـ43 بالعربية","دليل 43 حلقة من أبطال الكرة فرسان المجرة بأسمائها العربية، بحث وتصنيفات ومتابعة محلية. روابط المشاهدة لا تعرض إلا بعد التحقق من مصدر مخول.",body,head=head)
 
 def write_quiz():
     challenges = [
