@@ -20,10 +20,11 @@ jobs:
         env:
           SITE_URL: https://example.pages.dev
         run: |
-          python3 -m py_compile build.py magazine.py home.py
+          python3 -m py_compile build.py magazine.py home.py episodes_page.py
           node --check assets/app.js
           node --check assets/magazine.js
           node --check assets/home.js
+          node --check assets/episodes.js
           node --check assets/quiz.js
           node --check assets/quiz-data.js
           python3 build.py
@@ -102,6 +103,20 @@ jobs:
           assert all((root / q["image"].lstrip("/")).exists() for q in mini_bank)
           assert '<h1>' in home_page and home_page.count('<h1>') == 1
           print("Validated homepage portal: 6 worlds, 3 adventure modes, 3-question mini quiz, local watching progress and 2 opt-in official clips.")
+          episode_data = json.loads(Path("episodes_data.json").read_text(encoding="utf-8"))["episodes"]
+          assert len(episode_data) == 43
+          assert [e["number"] for e in episode_data] == list(range(1,44))
+          assert all(e["title"] and e["art"] and (root / e["art"].lstrip("/")).exists() for e in episode_data)
+          episode_html = (root / "episodes/index.html").read_text(encoding="utf-8")
+          assert episode_html.count('data-ep-item') == 43
+          assert episode_html.count('data-ep-open') == 43
+          assert 'src="/assets/episodes.js?v=20261111"' in episode_html
+          assert 'id="watched-count"' in episode_html and 'id="reset-watch"' in episode_html
+          assert 'id="ep-play-status"' in episode_html
+          assert 'facebook.com/plugins/video.php' not in episode_html, "No Facebook request until a verified video is deliberately played."
+          import episodes_page
+          assert all(episodes_page.verified_video(e) is None or e["source_status"] == "authorized_verified" for e in episode_data)
+          print("Validated 43 Arabic-titled episodes with local tracker and verified-only video policy.")
           assert (root / "robots.txt").exists()
           ET.parse(root / "sitemap.xml")
           for page in pages:
