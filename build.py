@@ -77,7 +77,7 @@ def render(route, title, description, body, *, head="", article=False):
 <meta property="og:description" content="{desc}">
 {canonical}{og_url}{og_image}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/styles.css?v=arabic-episodes-library-20261111">
+<link rel="stylesheet" href="/assets/styles.css?v=old-but-cold-posts-20261111">
 {schema}{head}
 <script defer src="/assets/app.js"></script>
 </head>
