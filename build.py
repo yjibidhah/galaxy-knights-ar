@@ -164,7 +164,7 @@ def write_home():
     </div>
   </section>'''
     main = '<div class="shell">'+section("استكشف العالم","كل شيء في مكان واحد، بتجربة عربية سهلة على الهاتف والحاسوب.",cards([
-        ("دليل الحلقات","تابع تقدمك عبر الحلقات الـ43 من النسخة اليابانية الأصلية.","/episodes/","🎬"),
+        ("دليل الحلقات","تابع تقدمك خلال حلقات فرسان المجرة الـ43 بالترتيب العربي.","/episodes/","🎬"),
         ("أبطال القصة","صفحات تعريفية بالشخصيات وأدوارها في عالم كرة القدم.","/characters/","🌟"),
         ("تحدي الفرسان","أكثر من 100 سؤال مصوّر في ستة اختبارات وملحمة كونية!","/quiz/","🏆")
     ]))+section("اقرأ وتعلّم","مقالات أصلية للتعرّف أكثر على المسلسل وأفكاره.",cards([
@@ -184,7 +184,7 @@ def character_portrait(c, featured=False):
         klass, safe(c["portrait"]), safe(alt), "eager" if featured else "lazy")
 
 def character_card(c):
-    tag = "اسم الدبلجة العربية" if c["dub"] else "نقل صوتي للاسم الأصلي"
+    tag = "اسم الدبلجة العربية" if c["dub"] else "وصف مؤقت إلى حين توثيق اسم الدبلجة"
     short = c["intro"][:144].rsplit(" ", 1)[0] + "…"
     return '<a class="character-card" href="/characters/{}/" data-character-group="{}" data-search aria-label="ملف شخصية {}">{photo}<div class="character-card-body"><div class="character-kicker">{group}</div><h2>{name}</h2><p class="character-position">{position}</p><p>{intro}</p><span class="character-tag">{tag}</span><span class="character-more">التفاصيل الكاملة ←</span></div></a>'.format(
         c["slug"],safe(c["group"]),safe(c["name"]),photo=character_portrait(c),group={"earth":"فريق الأرض","staff":"إدارة الفريق","galaxy":"شخصيات المجرة"}[c["group"]],name=safe(c["name"]),position=safe(c["position"]),intro=safe(short),tag=safe(tag))
@@ -193,17 +193,17 @@ def write_characters():
     count = len(CHARACTERS)
     heading = '<div class="character-intro"><p class="chip">موسوعة مجرة الفرسان</p><h2>تعرّف على {} شخصية من عالم فرسان المجرة</h2><p>صور الشخصيات، أدوارها، مسيرتها وأهم مميزاتها. ابحث بالاسم أو اختر مجموعة اللاعبين أو الشخصيات الفضائية.</p></div>'.format(count)
     notice = '<div class="notice character-notice"><strong>تنبيه بخصوص الأسماء:</strong> {} وتظل الصور والرسوم الخاصة بالشخصيات ملكًا لأصحاب الحقوق؛ الروابط الخارجية لأغراض التعريف بالمصدر وليست دليلًا على الترخيص.</div>'.format(safe(CHARACTER_DATA["disclaimer"]))
-    filters = '<div class="character-tools"><input id="search-site" type="search" class="field" placeholder="ابحث: بيان، حيان، عقاب، إيبوكي…" aria-label="ابحث عن شخصية"><div class="character-filters" role="group" aria-label="تصفية مجموعات الشخصيات"><button class="character-filter active" data-char-filter="all" type="button" aria-pressed="true">الجميع</button><button class="character-filter" data-char-filter="earth" type="button" aria-pressed="false">فريق الأرض</button><button class="character-filter" data-char-filter="staff" type="button" aria-pressed="false">الطاقم</button><button class="character-filter" data-char-filter="galaxy" type="button" aria-pressed="false">شخصيات المجرة</button></div></div>'
+    filters = '<div class="character-tools"><input id="search-site" type="search" class="field" placeholder="ابحث: بيان، حيان، عقاب، ضياء، لبيب…" aria-label="ابحث عن شخصية"><div class="character-filters" role="group" aria-label="تصفية مجموعات الشخصيات"><button class="character-filter active" data-char-filter="all" type="button" aria-pressed="true">الجميع</button><button class="character-filter" data-char-filter="earth" type="button" aria-pressed="false">فريق الأرض</button><button class="character-filter" data-char-filter="staff" type="button" aria-pressed="false">الطاقم</button><button class="character-filter" data-char-filter="galaxy" type="button" aria-pressed="false">شخصيات المجرة</button></div></div>'
     grid = '<div class="character-grid" id="character-grid">{}</div><p id="search-empty" role="status" class="empty" hidden>لا توجد شخصيات تطابق البحث.</p>'.format("".join(character_card(c) for c in CHARACTERS))
     render("/characters/","شخصيات أبطال الكرة فرسان المجرة - الصور والمعلومات الكاملة","موسوعة شخصيات أبطال الكرة فرسان المجرة بالعربية: صور بيان وحيان وعقاب، أبطال فريق الأرض، المواهب والمنافسون، وصفحات تعريف مفصلة.",heading+filters+grid+notice)
 
     for c in CHARACTERS:
         related = [v for v in CHARACTERS if v["slug"] != c["slug"] and v["group"] == c["group"]][:3]
         related_html = '<div class="character-related-grid">'+ "".join('<a class="character-related" href="/characters/{}/">{photo}<span>{}</span></a>'.format(v["slug"],safe(v["name"]),photo=character_portrait(v)) for v in related) + "</div>" if related else ""
-        alias = '<span class="character-tag authentic">اسم مستخدم في الدبلجة العربية</span>' if c["dub"] else '<span class="character-tag">كتابة عربية للاسم الأصلي — اسم الدبلجة غير مؤكد</span>'
-        body = '<div class="character-detail"><div class="character-profile-top">{photo}<div class="character-profile-summary"><span class="chip">{role}</span><h2>{name}</h2><p class="latin-name" lang="en">{original}</p>{alias}<p class="character-lead">{intro}</p><div class="character-facts"><span>المجموعة: <b>{group}</b></span><span>الدور: <b>{position}</b></span></div></div></div><section><h2>القصة والدور في المسلسل</h2><p>{story}</p></section><section><h2>مهاراته ومميزاته</h2><p>{skill}</p></section><section><h2>تطوّر الشخصية</h2><p>{growth}</p></section><section><h2>شخصيات قد تعجبك</h2>{related}</section><p class="character-credit">مصدر صورة الشخصية: <a href="{source}" target="_blank" rel="noopener noreferrer">عرض المصدر الأصلي</a>. الصور خارجية وقد يتوقف عرضها إذا تغيّرت سياسة الموقع المضيف. هذا موقع معجبين غير رسمي.</p><a href="/characters/" class="btn secondary">← العودة إلى جميع الشخصيات</a></div>'.format(
-            photo=character_portrait(c,True),role={"earth":"فريق الأرض","staff":"الطاقم والإدارة","galaxy":"شخصيات ومنافسو المجرة"}[c["group"]],name=safe(c["name"]),original=safe(c["original"]),alias=alias,intro=safe(c["intro"]),group={"earth":"منتخب الأرض","staff":"إدارة المنتخب","galaxy":"عالم المجرة"}[c["group"]],position=safe(c["position"]),story=safe(c["story"]),skill=safe(c["skill"]),growth=safe(c["growth"]),related=related_html,source=safe(c["src"]))
-        render("/characters/{}/".format(c["slug"]),"{} | شخصيات أبطال الكرة فرسان المجرة".format(c["name"]),"تعرف على {} ({}): صورته، قصته، مهاراته وتطوّره ضمن أبطال الكرة فرسان المجرة.".format(c["name"],c["original"]),body,article=True)
+        alias = '<span class="character-tag authentic">اسم مستخدم في الدبلجة العربية</span>' if c["dub"] else '<span class="character-tag">وصف مؤقت — اسم الدبلجة غير موثّق</span>'
+        body = '<div class="character-detail"><div class="character-profile-top">{photo}<div class="character-profile-summary"><span class="chip">{role}</span><h2>{name}</h2>{alias}<p class="character-lead">{intro}</p><div class="character-facts"><span>المجموعة: <b>{group}</b></span><span>الدور: <b>{position}</b></span></div></div></div><section><h2>القصة والدور في المسلسل</h2><p>{story}</p></section><section><h2>مهاراته ومميزاته</h2><p>{skill}</p></section><section><h2>تطوّر الشخصية</h2><p>{growth}</p></section><section><h2>شخصيات قد تعجبك</h2>{related}</section><p class="character-credit">مصدر صورة الشخصية: <a href="{source}" target="_blank" rel="noopener noreferrer">عرض المصدر الأصلي</a>. الصور خارجية وقد يتوقف عرضها إذا تغيّرت سياسة الموقع المضيف. هذا موقع معجبين غير رسمي.</p><a href="/characters/" class="btn secondary">← العودة إلى جميع الشخصيات</a></div>'.format(
+            photo=character_portrait(c,True),role={"earth":"فريق الأرض","staff":"الطاقم والإدارة","galaxy":"شخصيات ومنافسو المجرة"}[c["group"]],name=safe(c["name"]),alias=alias,intro=safe(c["intro"]),group={"earth":"منتخب الأرض","staff":"إدارة المنتخب","galaxy":"عالم المجرة"}[c["group"]],position=safe(c["position"]),story=safe(c["story"]),skill=safe(c["skill"]),growth=safe(c["growth"]),related=related_html,source=safe(c["src"]))
+        render("/characters/{}/".format(c["slug"]),"{} | شخصيات أبطال الكرة فرسان المجرة".format(c["name"]),"تعرف على {}: صورته، قصته، مهاراته وتطوّره ضمن أبطال الكرة فرسان المجرة.".format(c["name"]),body,article=True)
 
 ARTICLES = [
     ("story","قصة أبطال الكرة فرسان المجرة","ما الذي يميز رحلة كرة القدم في هذا الجزء؟","🌌",[
@@ -212,9 +212,9 @@ ARTICLES = [
         ("كيف تبدأ متابعته؟","إذا كنت جديدًا على عالم أبطال الكرة، يمكنك البدء بالتعرّف على السلسلة وأجزائها، ثم مراجعة دليل ترتيب المشاهدة في موقعنا. وإن كنت تعرف الشخصيات مسبقًا، انتقل إلى قائمة الحلقات ونظّم تقدمك بنفسك."),
         ("بدون حرق","نتجنب هنا كشف النتائج المهمة للمباريات أو مفاجآت القصة حتى تبقى متعة الاكتشاف عند المشاهدة.")
     ]),
-    ("watch-order","ترتيب مشاهدة أبطال الكرة فرسان المجرة","دليل للمبتدئين مع توضيح الفرق بين النسخة اليابانية والدبلجة.","🧭",[
+    ("watch-order","ترتيب مشاهدة أبطال الكرة فرسان المجرة","دليل عربي مبسط لمتابعة الحلقات بالترتيب.","🧭",[
         ("من أين أبدأ؟","إذا كانت هذه تجربتك الأولى مع Inazuma Eleven، فقد يساعدك التعرف على الأجزاء السابقة من سلسلة GO لفهم العلاقات بين بعض الشخصيات. لكن يمكنك أيضًا الاستمتاع بعالم Galaxy مع قراءة ملخص عام للسياق."),
-        ("عدد الحلقات","النسخة اليابانية الأصلية من Inazuma Eleven GO Galaxy تتكون من 43 حلقة. قد تختلف طريقة تقسيم حلقات العرض العربي أو تسميتها بحسب منصة البث أو إصدار الدبلجة؛ لذلك يعتمد متتبع الحلقات هنا الترقيم الياباني الأصلي بوضوح."),
+        ("عدد الحلقات","أبطال الكرة: فرسان المجرة يتكوّن من 43 حلقة في الدبلجة العربية. يمكنك متابعة الحلقات بالترتيب من الأولى حتى الثالثة والأربعين."),
         ("طريقة تنظيم المشاهدة","افتح دليل الحلقات، واضغط على كل حلقة تنتهي منها. سيحتفظ متصفحك بتقدمك على الجهاز نفسه فقط دون إنشاء حساب. يمكنك العودة في أي وقت لتكملة رحلتك."),
         ("أين أشاهد؟","احرص على استخدام مصادر مشاهدة رسمية مرخّصة متاحة في بلدك. هذا الموقع يقدم معلومات وتحديات ولا يستضيف الحلقات أو يعيد نشرها.")
     ]),
@@ -245,20 +245,20 @@ def write_articles():
 
 def write_episodes():
     eps="".join('<button type="button" class="episode" data-episode="{}" aria-pressed="false"><span>الحلقة {:02d}</span><span class="episode-status">لم أشاهدها</span></button>'.format(n,n) for n in range(1,44))
-    body='''<div class="notice"><strong>معلومة مهمة:</strong> هذا الدليل يعتمد ترقيم <strong>43 حلقة من النسخة اليابانية الأصلية</strong> لمسلسل Inazuma Eleven GO Galaxy. قد يختلف عدد أو تقسيم حلقات النسخ العربية حسب جهة العرض. لا توجد روابط مشاهدة غير مرخصة هنا.</div>
+    body='''<div class="notice"><strong>معلومة مهمة:</strong> دليل <strong>43 حلقة من أبطال الكرة: فرسان المجرة بالدبلجة العربية</strong>، مرتبة من الأولى إلى الأخيرة. هذه صفحة لتنظيم المشاهدة ولا تستضيف حلقات غير مرخصة.</div>
 <div class="callout"><h2>تقدم المشاهدة: <span id="watched-count">0</span> / 43</h2><div class="progress-track" role="progressbar" id="watch-progress" aria-label="نسبة الحلقات التي شاهدتها" aria-valuemin="0" aria-valuemax="43" aria-valuenow="0"><div class="progress-bar"></div></div>
 <p class="tiny">يُحفظ تقدمك محليًا في هذا المتصفح فقط، دون إنشاء حساب أو إرسال بيانات إلينا.</p></div>
 <div class="toolbar"><input class="field" id="episode-filter" type="search" inputmode="numeric" placeholder="ابحث برقم الحلقة، مثل 12" aria-label="البحث برقم الحلقة"><button id="reset-watch" type="button" class="btn">مسح التقدم</button></div>
 <div class="episodes-grid">'''+eps+'''</div><a href="/articles/watch-order/" class="btn secondary">اقرأ دليل ترتيب المشاهدة</a>'''
-    render("/episodes/","حلقات أبطال الكرة فرسان المجرة كاملة بالترتيب","دليل ترتيب حلقات أبطال الكرة فرسان المجرة: قائمة 43 حلقة يابانية أصلية مع متتبع تقدم مشاهدة مجاني.",body)
+    render("/episodes/","حلقات أبطال الكرة فرسان المجرة كاملة بالترتيب","دليل ترتيب حلقات أبطال الكرة فرسان المجرة: قائمة الحلقات العربية الـ43 مع متتبع تقدم مشاهدة مجاني.",body)
 
 def write_quiz():
     challenges = [
-        ("faces", "من هذا البطل؟", "صوَر وأسماء أشهر شخصيات فرسان المجرة، من بيان إلى منافسي الكواكب.", "23 سؤالًا", "/assets/quiz-faces.svg", "👀"),
+        ("faces", "من هذا البطل؟", "صور وأسماء أبطال فرسان المجرة كما تعرفهم في الدبلجة العربية.", "10 أسئلة", "/assets/quiz-faces.svg", "👀"),
         ("souls", "قوى الأرواح", "هل تتذكر الحيوان الذي يمثل روح كل لاعب من أبطال الفريق؟", "12 سؤالًا", "/assets/quiz-souls.svg", "🐺"),
         ("roles", "نجوم فريق الأرض", "اختبر معرفتك بمراكز اللاعبين وحراس المرمى والمهاجمين.", "13 سؤالًا", "/assets/quiz-stadium.svg", "⚽"),
         ("galaxy", "مغامرة عبر المجرة", "الكواكب والمنافسون وسر البطولة الكونية.", "18 سؤالًا", "/assets/quiz-cosmos.svg", "🪐"),
-        ("story", "أسرار فرسان المجرة", "الأحداث والشخصيات والبدايات التي صنعت قصة الموسم.", "18 سؤالًا", "/assets/quiz-story.svg", "🌟"),
+        ("story", "أسرار فرسان المجرة", "الأحداث وعناوين الحلقات والشخصيات في الدبلجة العربية.", "31 سؤالًا", "/assets/quiz-story.svg", "🌟"),
         ("football", "أستاذ كرة القدم", "اختبر مهاراتك في القوانين والخطط والروح الرياضية.", "20 سؤالًا", "/assets/quiz-stadium.svg", "🏆"),
     ]
     cards_html = "".join('''
