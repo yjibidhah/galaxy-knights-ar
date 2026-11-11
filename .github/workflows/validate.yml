@@ -54,6 +54,8 @@ jobs:
           assert len({q["id"] for q in questions}) == len(questions)
           assert all(len(q["options"]) == 4 and len(set(q["options"])) == 4 and 0 <= q["answer"] < 4 for q in questions)
           assert all(q.get("image") and q.get("explanation") for q in questions)
+          assert all(not re.search(r"[A-Za-z]", str(text)) for q in questions for text in [q["question"], q["explanation"], *q["options"]]), "Quiz visible text must use Arabic-only character and team names"
+          assert all(not re.search(r"تاكوتو|مونماسا|تيتسوكادو|إيبوكي|ماتاتاغي|شيندو|تسوروغي|تينما", str(text)) for q in questions for text in [q["question"], q["explanation"], *q["options"]]), "Unverified transliterated Japanese names in quiz"
           assert all((root / q["image"].lstrip("/")).exists() for q in questions if q["image"].startswith("/"))
           print("Validated illustrated arcade with {} questions.".format(len(questions)))
           assert (root / "robots.txt").exists()
