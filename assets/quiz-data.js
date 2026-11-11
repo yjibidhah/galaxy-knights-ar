@@ -58,7 +58,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://cdn.neoapo.com/images/character/541/e7055f5578f09e2791bd58ec6b660533.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "بيان: بيان هو قلب الحكاية وصاحب الإيمان الذي لا يتزعزع بكرة القدم. يقود المنتخب في رحلة تبدأ بمباريات صعبة وتنفتح لاحقًا على تحديات تفوق حدود الأرض.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -76,7 +76,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://2.bp.blogspot.com/-ZXijEEeoi_A/Tmtf56770WI/AAAAAAAAAJ0/yj_7RkpOLSE/s1600/shindou.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "حيان: حيان قائد يتمتع بحس تكتيكي استثنائي؛ يرى الملعب كأنه لوحة موسيقية تحتاج إلى تنظيم دقيق وحسن توقيت.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -94,7 +94,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/738412181176209408/wRmqwJsl_400x400.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "عقاب: عقاب مهاجم قوي وسريع، يبدو هادئًا وصارمًا لكنه يضع كل طاقته داخل الملعب عندما يحتاجه الفريق.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -112,7 +112,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://cdn.anime-planet.com/characters/primary/shinsuke-nishizono-1.jpg?t=1625826767",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "هشام: هشام حارس مرمى صغير القامة لكنه يتمتع بروح تنافسية كبيرة، ولا يقبل أن تمنعه الفوارق الجسدية من تحقيق حلمه.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -130,7 +130,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "إيبوكي مونِماسا: حارس مرمى موهوب يأتي إلى المنتخب بخبرة رياضية من كرة السلة، ويواجه صعوبة في البداية في الانسجام مع أسلوب الفريق.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -148,7 +148,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ماتاتاغي هاياتو: أحد أسرع لاعبي المنتخب، وقد انتقل إلى كرة القدم بعد ممارسة ألعاب القوى، ويخفي وراء ابتسامته جانبًا معقدًا من شخصيته.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -166,7 +166,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "نوزاكي ساكورا: لاعبة جاءت من الجمباز الإيقاعي، وتتميز برشاقتها وقدرتها على التحكم بحركتها داخل الملعب.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -184,7 +184,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "موريمورا كونوهـا: فتاة خجولة تحب الحيوانات، ولا تبدو في البداية مرتاحة لخشونة المباريات أو الضغط الذي تفرضه كرة القدم.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -202,7 +202,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "مانابي جينئيتشيرو: لاعب بارع في الحساب والتحليل، يفضل التفكير بالأرقام والاحتمالات قبل اتخاذ قراره.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -220,7 +220,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ميناهو كازوتو: شخصية محبة للملاحظة والتحقيق، يلفت انتباهها ما يغيب عن الآخرين من تصرفات وإشارات صغيرة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -238,7 +238,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "تيتسوكادو شين: ملاكم سابق يستخدم قوته البدنية وخفة حركة قدميه للدفاع عن فريقه في الملعب.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -256,7 +256,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "كوساكا ريوجي: لاعب ضخم البنية يملك قوة لافتة، وتتغير طريقة لعبه عندما يفقد السيطرة على غضبه.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -274,7 +274,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "إيتشيكاوا زاناكورو: لاعب له أسلوب ملفت مستوحى من فن الكابوكي الياباني، وينضم إلى رحلة فريق الأرض في مرحلة متقدمة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -292,7 +292,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://i.pinimg.com/736x/a9/3c/24/a93c24a094af12e9de7e5da8292ea679.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "سورانو آوي: إحدى أقرب الشخصيات إلى بيان، ترافق الفريق وتساند اللاعبين خارج أرض الملعب.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -310,7 +310,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://truth.bahamut.com.tw/s01/201305/c5124bd9706c0bc93660126ea27401fe.JPG",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "كورويوا ريوسي: مدرب غامض هو من اختار التشكيلة غير المتوقعة للمنتخب، وتحيط بنواياه أسئلة كثيرة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -328,7 +328,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1016834130.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "كاترا بيج: شخصية محورية في خلفية الصراع الكوني، يرتبط حضورها بمصير الكواكب والآمال التي تحملها الرحلة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -346,7 +346,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5688-1915298218.jpg",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "لالايا أوبيس: شخصية قيادية على أحد الكواكب المؤثرة في مسار البطولة، وتدخل في صراع بين الواجب والمشاعر.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -364,7 +364,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1434903944.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "أوزروك بيتواي: أحد الخصوم الرئيسيين في مرحلة حاسمة، ويتمتع بحضور قوي وغموض يرتبط بماضيه.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -382,7 +382,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/v/d/vdeofxen-se_r0_fullbody.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "بوتوموري إمناتور: شخصية فضائية غامضة ترافق أبطال الأرض وتساعدهم على فهم بعض أسرار رحلتهم.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -400,7 +400,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Powai.Pichori.1024.2105991.webp",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "بواي بيتشوري: قائدة فريق سازانارا التي تمتلك قدرة مميزة على فهم الحالات العاطفية، وتظهر خلال رحلة أبطال الأرض عبر الكواكب.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -418,7 +418,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-53928938.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "رودان غاسغوس: أحد لاعبي فارام ديت أصحاب المظهر الغريب والروح التنافسية القوية في المراحل المتقدمة من بطولة المجرة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -436,7 +436,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-648143341.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "باندا كولوغيو: مخلوق فضائي يشكل حضوره محطة مؤثرة في رحلة المنتخب، ويمثل الروابط التي تنشأ بين أصدقاء من عوالم مختلفة.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -454,7 +454,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/2855-455784648.png",
       "localFallback": "/assets/quiz-faces.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة شخصية من عالم أبطال الكرة",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "سعيد أشرف: قائد المنتخب السعودي في تصفيات بطولة العالم، ويظهر بثقة وروح تنافسية عالية أثناء مواجهة منتخب اليابان.",
       "reference": "موسوعة الشخصيات بالموقع",
       "options": [
@@ -472,7 +472,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح موريمورا كونوهـا بـ«الثعلب» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -490,7 +490,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح إيتشيكاوا زاناكورو بـ«الأسد» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -508,7 +508,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح ماتاتاغي هاياتو بـ«الصقر» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -526,7 +526,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح ميناهو كازوتو بـ«البومة» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -544,7 +544,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح تيتسوكادو شين بـ«الجاموس» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -562,7 +562,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح إيبوكي مونِماسا بـ«الماموث» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -580,7 +580,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://2.bp.blogspot.com/-ZXijEEeoi_A/Tmtf56770WI/AAAAAAAAAJ0/yj_7RkpOLSE/s1600/shindou.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح حيان بـ«الطاووس» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -598,7 +598,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح نوزاكي ساكورا بـ«ظبي الجبل» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -616,7 +616,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح مانابي جينئيتشيرو بـ«غرير العسل» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -634,7 +634,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح كوساكا ريوجي بـ«الدب الأشيب» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -652,7 +652,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/738412181176209408/wRmqwJsl_400x400.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح عقاب بـ«الذئب» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -670,7 +670,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://cdn.neoapo.com/images/character/541/e7055f5578f09e2791bd58ec6b660533.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة مرتبطة بالسؤال",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح بيان بـ«الحصان المجنح» ضمن قوى الأرواح في سلسلة Galaxy.",
       "reference": "Earth Eleven – Souls",
       "options": [
@@ -688,7 +688,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب إيبوكي مونِماسا في مركز حراسة المرمى بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -706,7 +706,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب موريمورا كونوهـا في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -724,7 +724,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب ميناهو كازوتو في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -742,7 +742,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب مانابي جينئيتشيرو في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -760,7 +760,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب تيتسوكادو شين في مركز الدفاع بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -778,7 +778,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب كوساكا ريوجي في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -796,7 +796,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب نوزاكي ساكورا في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -814,7 +814,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://cdn.neoapo.com/images/character/541/e7055f5578f09e2791bd58ec6b660533.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب بيان في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -832,7 +832,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://2.bp.blogspot.com/-ZXijEEeoi_A/Tmtf56770WI/AAAAAAAAAJ0/yj_7RkpOLSE/s1600/shindou.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب حيان في مركز خط الوسط بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -850,7 +850,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://pbs.twimg.com/profile_images/738412181176209408/wRmqwJsl_400x400.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب عقاب في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -868,7 +868,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب ماتاتاغي هاياتو في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -886,7 +886,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://cdn.anime-planet.com/characters/primary/shinsuke-nishizono-1.jpg?t=1625826767",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب هشام في مركز حراسة المرمى بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -904,7 +904,7 @@ window.GALAXY_QUIZ_BANK = {
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-stadium.svg",
       "imageType": "portrait",
-      "imageAlt": "صورة من شخصيات فريق الأرض",
+      "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب إيتشيكاوا زاناكورو في مركز الهجوم بحسب قوائم فريق Earth Eleven.",
       "reference": "Earth Eleven – members",
       "options": [
@@ -1225,9 +1225,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "كم حلقة في النسخة اليابانية الأصلية من GO Galaxy؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "الموسم الياباني الأصلي يتكون من 43 حلقة.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1242,9 +1242,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "في أي سنة بدأ بث أنمي Inazuma Eleven GO Galaxy في اليابان؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "بدأ عرضه في 8 مايو 2013.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1259,9 +1259,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "في أي سنة انتهى عرض الموسم الياباني الأصلي؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "انتهى بث المسلسل في 19 مارس 2014.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1276,9 +1276,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "أي موسم من سلسلة Inazuma Eleven GO هو Galaxy؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يُعد Galaxy الموسم الثالث والأخير من مسار Inazuma Eleven GO التلفزيوني.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1293,9 +1293,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "من يقود منتخب اليابان الجديد في بداية Galaxy؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يتولى تينما قيادة المنتخب الجديد في البداية.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1310,9 +1310,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "من الثلاثي الذي يمتلك خبرة كروية سابقة في منتخب اليابان الجديد؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "الثلاثي القديم يشكل أساس المنتخب وسط ثمانية وافدين جدد إلى كرة القدم.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1327,9 +1327,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "كم لاعبًا من التشكيلة الأولى يُعدون جددًا على كرة القدم؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تضم التشكيلة الأساسية ثمانية لاعبين لم يعتادوا ممارسة كرة القدم.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1344,9 +1344,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "من مدرب المنتخب الجديد صاحب القرارات الغامضة؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يتولى كورويوا ريوسي تدريب المنتخب في Galaxy.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1361,9 +1361,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "أي لعبة رياضية مارسها إيبوكي قبل كرة القدم؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يأتي إيبوكي من خلفية في كرة السلة، وهو ما يؤثر في قفزاته.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1378,9 +1378,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "أي رياضة مارسها تيتسوكادو قبل الانضمام إلى المنتخب؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "ينقل تيتسوكادو خبرته في الملاكمة إلى الدفاع.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1395,9 +1395,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "أي نشاط رياضي مارسته نوزاكي ساكورا؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تستفيد ساكورا من المرونة والرشاقة المستمدة من الجمباز.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1412,9 +1412,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "في أي مجال رياضي برع ماتاتاغي قبل كرة القدم؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تساعده خبرته في ألعاب القوى على السرعة.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1429,9 +1429,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "ما اسم فريق منتخب اليابان بعد التحول إلى المنافسة الكونية؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يصبح الفريق معروفًا باسم Earth Eleven للدفاع عن كوكب الأرض.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1446,9 +1446,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "ما الرياضة التي يشتهر بها عالم أبطال الكرة؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تدور مباريات السلسلة حول كرة القدم الخيالية.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1463,9 +1463,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "كيف تنمو علاقة الوافدين الجدد بالفريق خلال الموسم؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تؤكد القصة أهمية العمل الجماعي ومساعدة اللاعبين بعضهم.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1480,9 +1480,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "ما الدور الذي تقوم به سورانو آوي؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "ترافق آوي الفريق وتساعد في التنظيم والتشجيع.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1497,9 +1497,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "ما الميزة التي تميز مانابي جينئيتشيرو؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يستخدم مانابي مهاراته في الحساب والتحليل للمساعدة في الدفاع.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
@@ -1514,9 +1514,9 @@ window.GALAXY_QUIZ_BANK = {
     {
       "category": "story",
       "question": "بماذا يشتهر ميناهو كازوتو بين لاعبي الفريق؟",
-      "image": "/assets/quiz-faces.svg",
+      "image": "/assets/quiz-story.svg",
       "imageType": "theme",
-      "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
+      "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "ينظر ميناهو إلى اللعب بعين المراقب المحب للتحقيق.",
       "reference": "سلسلة Inazuma Eleven GO Galaxy",
       "options": [
