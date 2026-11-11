@@ -1,6 +1,6 @@
-/* Original Arabic quiz content for Galaxy Knights. No visitor analytics. */
+/* Arabic-only quiz display names, questions and answers. */
 window.GALAXY_QUIZ_BANK = {
-  "version": "2026-11-11-spacetoon-ar",
+  "version": "2026-11-11-arabic-names-only-v2",
   "categories": [
     {
       "id": "faces",
@@ -468,13 +468,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية ورقة في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ورقة في قدرات قوى الأرواح؟",
       "image": "https://static.zerochan.net/Morimura.Konoha.1024.1506046.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح ورقة بـ«الثعلب» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "البومة",
         "الطاووس",
@@ -486,13 +486,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية المهاجم المسرحي في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية المهاجم المسرحي في قدرات قوى الأرواح؟",
       "image": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1958249752.png",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح المهاجم المسرحي بـ«الأسد» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الجاموس",
         "الأسد",
@@ -504,13 +504,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية ضياء في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ضياء في قدرات قوى الأرواح؟",
       "image": "https://s1.zerochan.net/Matatagi.Hayato.600.1572581.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح ضياء بـ«الصقر» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الصقر",
         "الماموث",
@@ -522,13 +522,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية لبيب في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية لبيب في قدرات قوى الأرواح؟",
       "image": "https://pbs.twimg.com/profile_images/378800000018626251/b1a53d6035c4a53c3f9dc1dda5b04bc8.jpeg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح لبيب بـ«البومة» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الطاووس",
         "الدب الأشيب",
@@ -540,13 +540,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية المدافع الملاكم في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية المدافع الملاكم في قدرات قوى الأرواح؟",
       "image": "https://static.zerochan.net/Tetsukado.Shin.full.1563610.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح المدافع الملاكم بـ«الجاموس» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "ظبي الجبل",
         "الذئب",
@@ -558,13 +558,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية براء في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية براء في قدرات قوى الأرواح؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/9/9e/Ibuki_Munemasa.png/revision/latest?cb=20130812150131",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح براء بـ«الماموث» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "غرير العسل",
         "الماموث",
@@ -576,13 +576,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية حيان في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية حيان في قدرات قوى الأرواح؟",
       "image": "https://2.bp.blogspot.com/-ZXijEEeoi_A/Tmtf56770WI/AAAAAAAAAJ0/yj_7RkpOLSE/s1600/shindou.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح حيان بـ«الطاووس» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الطاووس",
         "الدب الأشيب",
@@ -594,13 +594,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية ليان في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية ليان في قدرات قوى الأرواح؟",
       "image": "https://vignette.wikia.nocookie.net/inazuma-eleven/images/b/bd/Nozaki_Sakura.png/revision/latest?cb=20130812150741",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح ليان بـ«ظبي الجبل» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الذئب",
         "الأسد",
@@ -612,13 +612,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية اللاعب المحب للحساب في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية اللاعب المحب للحساب في قدرات قوى الأرواح؟",
       "image": "https://s1.zerochan.net/Manabe.Jinichirou.600.1529984.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح اللاعب المحب للحساب بـ«غرير العسل» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الحصان المجنح",
         "الصقر",
@@ -630,13 +630,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية نضال في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية نضال في قدرات قوى الأرواح؟",
       "image": "https://dxi4wb638ujep.cloudfront.net/1/k/-/a/-awa7tx_mbc_r0.webp",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح نضال بـ«الدب الأشيب» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الثعلب",
         "الدب الأشيب",
@@ -648,13 +648,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية عقاب في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية عقاب في قدرات قوى الأرواح؟",
       "image": "https://pbs.twimg.com/profile_images/738412181176209408/wRmqwJsl_400x400.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح عقاب بـ«الذئب» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الذئب",
         "الأسد",
@@ -666,13 +666,13 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "souls",
-      "question": "أي روح حيوانية ترتبط بشخصية بيان في قدرات Soul؟",
+      "question": "أي روح حيوانية ترتبط بشخصية بيان في قدرات قوى الأرواح؟",
       "image": "https://cdn.neoapo.com/images/character/541/e7055f5578f09e2791bd58ec6b660533.jpg",
       "localFallback": "/assets/quiz-souls.svg",
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "ترتبط روح بيان بـ«الحصان المجنح» ضمن قوى الأرواح في فرسان المجرة.",
-      "reference": "Earth Eleven – Souls",
+      "reference": "فريق الأرض – Souls",
       "options": [
         "الصقر",
         "الماموث",
@@ -690,7 +690,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب براء في مركز حراسة المرمى بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "الدفاع",
         "خط الوسط",
@@ -708,7 +708,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب ورقة في مركز الدفاع بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "الدفاع",
@@ -726,7 +726,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب لبيب في مركز الدفاع بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "الدفاع",
         "حراسة المرمى",
@@ -744,7 +744,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب اللاعب المحب للحساب في مركز الدفاع بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "خط الوسط",
@@ -762,7 +762,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب المدافع الملاكم في مركز الدفاع بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "خط الوسط",
@@ -780,7 +780,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب نضال في مركز خط الوسط بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "خط الوسط",
@@ -798,7 +798,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب ليان في مركز خط الوسط بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "خط الوسط",
         "حراسة المرمى",
@@ -816,7 +816,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب بيان في مركز خط الوسط بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "الدفاع",
@@ -834,7 +834,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب حيان في مركز خط الوسط بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "الدفاع",
@@ -852,7 +852,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب عقاب في مركز الهجوم بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "الهجوم",
@@ -870,7 +870,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب ضياء في مركز الهجوم بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "الهجوم",
         "حراسة المرمى",
@@ -888,7 +888,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب هشام في مركز حراسة المرمى بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "الدفاع",
         "خط الوسط",
@@ -906,7 +906,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "portrait",
       "imageAlt": "صورة من عالم أبطال الكرة مرافقة للسؤال",
       "explanation": "يلعب المهاجم المسرحي في مركز الهجوم بحسب قوائم فريق الأرض.",
-      "reference": "Earth Eleven – members",
+      "reference": "فريق الأرض – members",
       "options": [
         "حراسة المرمى",
         "الدفاع",
@@ -918,34 +918,34 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "galaxy",
-      "question": "ما الاسم الأصلي للبطولة الكونية الكبرى في قصة GO Galaxy؟",
+      "question": "ما طبيعة البطولة الكبرى التي يخوضها الأبطال بعد مغادرة الأرض؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "تتحول المنافسة إلى Grand Celesta Galaxy بعد التصفيات الآسيوية.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "تتحول المنافسة من تصفيات المنتخبات إلى بطولة تجمع فرقًا من كواكب مختلفة.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Holy Road",
-        "Grand Celesta Galaxy",
-        "Football Frontier",
-        "Champion Road"
+        "دوري بين المدارس",
+        "بطولة كرة قدم بين الكواكب",
+        "بطولة للأندية المحلية",
+        "منافسة فردية بين اللاعبين"
       ],
       "answer": 1,
       "id": "q049"
     },
     {
       "category": "galaxy",
-      "question": "أي فريق يدافع عن مصير كوكب الأرض في البطولة الكونية؟",
+      "question": "أي فريق يشارك في البطولة الكونية دفاعًا عن كوكبنا؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "يمثل فريق الأرض الأرض في بطولة المجرة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يتنافس فريق الأرض من أجل حماية كوكبه في بطولة المجرة.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Earth Eleven",
-        "Raimon Eleven",
-        "El Dorado 03",
-        "Faram Dite"
+        "فريق الأرض",
+        "فريق غوردون",
+        "فريق سازانارا",
+        "فريق فارام"
       ],
       "answer": 0,
       "id": "q050"
@@ -957,7 +957,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "أبطال فريق الأرض ينطلقون من كوكب الأرض.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "سازانارا",
         "غوردون",
@@ -974,7 +974,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "تبدأ مواجهات الكواكب بعد مغادرة الأرض بزيارة ساندوريوس.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "سازانارا",
         "راتونيك",
@@ -990,13 +990,13 @@ window.GALAXY_QUIZ_BANK = {
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "فريق Sazanaara Eleven يتنافس باسم كوكب سازانارا.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يحمل الفريق اسم كوكب سازانارا الذي يمثله في المنافسات.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Earth Eleven",
-        "Sazanaara Eleven",
-        "Gurdon Eleven",
-        "Sandorius Eleven"
+        "فريق الأرض",
+        "فريق سازانارا",
+        "فريق غوردون",
+        "فريق ساندوريوس"
       ],
       "answer": 1,
       "id": "q053"
@@ -1007,47 +1007,47 @@ window.GALAXY_QUIZ_BANK = {
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "يحمل فريق Gurdon Eleven اسم كوكب غوردون.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يمثل فريق غوردون كوكب غوردون في البطولة.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Gurdon Eleven",
-        "Sazanaara Eleven",
-        "Earth Eleven",
-        "Faram Dite"
+        "فريق غوردون",
+        "فريق سازانارا",
+        "فريق الأرض",
+        "فريق فارام"
       ],
       "answer": 0,
       "id": "q054"
     },
     {
       "category": "galaxy",
-      "question": "أي فريق يرتبط بكوكب راتونيك؟",
+      "question": "أي فريق ينتمي إلى كوكب راتونيك؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "يظهر Ratoniik Eleven بين فرق بطولة المجرة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "فريق راتونيك هو الفريق الذي يمثل ذلك الكوكب.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Faram Dite",
-        "Sandorius Eleven",
-        "Storm Wolf",
-        "Ratoniik Eleven"
+        "فريق فارام",
+        "فريق ساندوريوس",
+        "فريق غوردون",
+        "فريق راتونيك"
       ],
       "answer": 3,
       "id": "q055"
     },
     {
       "category": "galaxy",
-      "question": "ما فريق الكوكب الذي يرتبط باسم فارام؟",
+      "question": "أي فريق يرتبط بالكوكب المعروف باسم فارام؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "فريق Faram Dite أحد أبرز أطراف المنافسة في مرحلة المجرة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يُعرف الفريق المنافس المرتبط بكوكب فارام باسم فريق فارام في هذا الدليل.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Earth Eleven",
-        "Sandorius Eleven",
-        "Faram Dite",
-        "Gurdon Eleven"
+        "فريق الأرض",
+        "فريق ساندوريوس",
+        "فريق فارام",
+        "فريق غوردون"
       ],
       "answer": 2,
       "id": "q056"
@@ -1059,7 +1059,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "تكشف القصة أن التصفيات الآسيوية كانت تمهيدًا لبطولة بين كواكب.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "بطولة جامعية",
         "مباريات بين كواكب مختلفة",
@@ -1071,17 +1071,17 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "galaxy",
-      "question": "لماذا تُقام بطولة Grand Celesta Galaxy في القصة؟",
+      "question": "ما الرهان الأكبر في بطولة المجرة بالنسبة إلى الكواكب المشاركة؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "تصبح كرة القدم وسيلة لتقرير مصائر الكواكب بدلاً من الحرب.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "لا تتعلق البطولة بكأس رياضية فقط؛ بل ترتبط نتائجها بمستقبل الكواكب.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "لحسم مصير الكواكب بطريقة رياضية",
-        "لاختيار مدرسة جديدة",
-        "لإنشاء نادٍ محلي",
-        "لتدريب الحكام فقط"
+        "تقرير مصير الكواكب",
+        "اختيار مدرسة جديدة",
+        "إنشاء نادٍ محلي",
+        "تدريب الحكام فقط"
       ],
       "answer": 0,
       "id": "q058"
@@ -1093,7 +1093,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "تُحسم المنافسات الكونية عبر مباريات كرة القدم.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "سباقات السيارات",
         "مبارزات بالسيوف",
@@ -1110,7 +1110,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "يرتبط تنظيم بطولة المجرة بأزمة تهدد كوكب فارام أوبيوس.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "الأرض",
         "ساندوريوس",
@@ -1127,7 +1127,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "يفوز منتخب اليابان بالتصفيات الآسيوية قبل كشف البطولة الكونية.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "نهائي دوري الجامعات",
         "التصفيات الآسيوية",
@@ -1139,29 +1139,29 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "galaxy",
-      "question": "من الشخصيات الفضائية التي تظهر ضمن أطراف الصراع الكوني؟",
+      "question": "من الشخصيات التالية أحد لاعبي فريق الأرض؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "يرتبط بيتواي أوزروك بأحداث البطولة الكبرى ومصائر الكواكب.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "براء من حراس فريق الأرض، أما بقية الخيارات فشخصيات ذات أدوار أخرى في القصة.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "قائد المنافسين",
-        "مارك إيفانز",
-        "ناثان سويفت",
-        "أكسل بليز"
+        "براء",
+        "حاكمة الكوكب",
+        "أميرة المجرة",
+        "قائد المنافسين"
       ],
       "answer": 0,
       "id": "q062"
     },
     {
       "category": "galaxy",
-      "question": "أي كوكب من هذه الكواكب يظهر ضمن رحلة فريق الأرض؟",
+      "question": "أي من الكواكب التالية يظهر في رحلة فرسان المجرة؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "سازانارا عالم خيالي من الكواكب المتنافسة في قصة Galaxy.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "سازانارا كوكب خيالي من عوالم القصة التي يزورها فريق الأرض.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
         "المريخ الحقيقي",
         "نبتون الحقيقي",
@@ -1178,7 +1178,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
       "explanation": "تصبح نتائج مباريات المجرة ذات أثر يتجاوز الألقاب الرياضية.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "شراء ملعب جديد",
         "الانتقال إلى رياضة أخرى",
@@ -1190,29 +1190,29 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "galaxy",
-      "question": "أي بطولة تبدو في البداية كأنها المنافسة الرئيسية؟",
+      "question": "كيف تبدو البطولة في بداية أحداث فرسان المجرة قبل اكتشاف حقيقتها؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "تبدأ القصة بنسخة جديدة من منافسات المنتخبات قبل كشف الحقيقة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "تبدو المنافسة في البداية كتصفيات للمنتخبات، ثم تنكشف طبيعتها الكونية.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Grand Celesta Galaxy فقط",
-        "Football Frontier International Vision 2",
-        "Holy Road فقط",
-        "دوري رايمون المحلي"
+        "بطولة بين الكواكب منذ البداية",
+        "بطولة المنتخبات الآسيوية",
+        "دوري المدارس فقط",
+        "دوري للأندية المحلية"
       ],
       "answer": 1,
       "id": "q065"
     },
     {
       "category": "galaxy",
-      "question": "كم فريقًا فضائيًا بارزًا يسرد مصدر البطولة مع فريق الأرض ضمن المشاركين؟",
+      "question": "كم فريقًا فضائيًا رئيسيًا يظهر ضمن الفرق المشاركة في بطولة المجرة؟",
       "image": "/assets/quiz-cosmos.svg",
       "imageType": "theme",
       "imageAlt": "رسم توضيحي مستوحى من عالم كرة القدم والمجرة",
-      "explanation": "تظهر ستة فرق في قائمة الفرق الرئيسية ببطولة Grand Celesta Galaxy.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "تتضمن المنافسة ستة فرق فضائية رئيسية وفق قائمة فرق البطولة.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
         "ستة فرق",
         "ثلاثة فرق",
@@ -1275,17 +1275,17 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "أي موسم من سلسلة Inazuma Eleven GO هو Galaxy؟",
+      "question": "ما ترتيب جزء «فرسان المجرة» بين الأجزاء التي تروي مغامرات بيان ورفاقه؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يُعد Galaxy الموسم الثالث والأخير من مسار Inazuma Eleven GO التلفزيوني.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "فرسان المجرة هو الجزء الثالث من مغامرات بيان ورفاقه ضمن سلسلة أبطال الكرة جو.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "الموسم الثالث",
-        "الموسم الأول",
-        "الموسم الثاني",
-        "الموسم الخامس"
+        "الجزء الثالث",
+        "الجزء الأول",
+        "الجزء الثاني",
+        "الجزء الخامس"
       ],
       "answer": 0,
       "id": "q070"
@@ -1297,7 +1297,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "بيان هو قائد الفريق في بداية الموسم.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "حيان",
         "عقاب",
@@ -1314,7 +1314,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "بيان وحيان وعقاب هم الثلاثة الذين سبق لهم اللعب معًا قبل تشكيل المنتخب الجديد.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "براء وليان واللاعب المحب للحساب",
         "نضال ولبيب وورقة",
@@ -1331,7 +1331,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تضم التشكيلة الأساسية ثمانية لاعبين لم يعتادوا ممارسة كرة القدم.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "لاعبان",
         "ثمانية لاعبين",
@@ -1343,17 +1343,17 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "من مدرب المنتخب الجديد صاحب القرارات الغامضة؟",
+      "question": "لماذا أثار اختيار لاعبي المنتخب الجديد استغراب الأبطال في بداية القصة؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يتولى مدرب المنتخب تدريب المنتخب في Galaxy.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "ضم المنتخب مجموعة من اللاعبين الجدد الذين لم تكن لهم خبرة كروية مماثلة لخبرة بيان وحيان وعقاب.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "مدرب المنتخب",
-        "حيان تاكوتو",
-        "براء مونماسا",
-        "ضياء"
+        "لأن معظمهم جاءوا من رياضات وخلفيات أخرى",
+        "لأن الفريق لم يكن يضم أي قائد",
+        "لأن الجميع كانوا لاعبين محترفين سابقًا",
+        "لأن كل اللاعبين كانوا من الفريق القديم"
       ],
       "answer": 0,
       "id": "q074"
@@ -1365,7 +1365,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "يأتي براء من خلفية في كرة السلة، وهو ما يؤثر في قفزاته.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "كرة اليد",
         "الكرة الطائرة",
@@ -1377,12 +1377,12 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "أي رياضة مارسها تيتسوكادو قبل الانضمام إلى المنتخب؟",
+      "question": "أي رياضة كان يمارسها أحد المدافعين الجدد قبل أن يتعلم كرة القدم؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "ينقل تيتسوكادو خبرته في الملاكمة إلى الدفاع.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "أحد المدافعين الجدد كان ملاكمًا قبل الانضمام إلى المنتخب.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
         "السباحة",
         "المبارزة",
@@ -1399,7 +1399,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تستفيد ليان من المرونة والرشاقة المستمدة من الجمباز.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "سباق الدراجات",
         "الجمباز الإيقاعي",
@@ -1416,7 +1416,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تساعده خبرته في ألعاب القوى على السرعة.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "ألعاب القوى",
         "الملاكمة",
@@ -1428,17 +1428,17 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "ما اسم فريق منتخب اليابان بعد التحول إلى المنافسة الكونية؟",
+      "question": "بماذا يُعرف منتخب الأبطال عندما يبدأ تمثيل كوكب الأرض في البطولة الكونية؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يصبح الفريق معروفًا باسم Earth Eleven للدفاع عن كوكب الأرض.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يمثل الأبطال كوكبهم تحت اسم فريق الأرض.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "Raimon Junior",
-        "Royal Academy",
-        "Chrono Storm",
-        "Earth Eleven"
+        "فريق النسور",
+        "فريق المدرسة الملكية",
+        "فريق العاصفة",
+        "فريق الأرض"
       ],
       "answer": 3,
       "id": "q079"
@@ -1450,7 +1450,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تدور مباريات السلسلة حول كرة القدم الخيالية.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "كرة السلة",
         "الكرة الطائرة",
@@ -1467,7 +1467,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "تؤكد القصة أهمية العمل الجماعي ومساعدة اللاعبين بعضهم.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "بالعزلة عن بعضهم",
         "بالتدرب والثقة والتعاون",
@@ -1479,34 +1479,34 @@ window.GALAXY_QUIZ_BANK = {
     },
     {
       "category": "story",
-      "question": "ما الدور الذي تقوم به مساعدة الفريق؟",
+      "question": "كيف تساهم إحدى مساعدات الفريق في رحلته خارج الملعب؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "ترافق آوي الفريق وتساعد في التنظيم والتشجيع.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يساعد الطاقم الإداري في تنظيم الرحلة ودعم اللاعبين حتى يركزوا على المباريات.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
-        "مساعدة ومنظمة لشؤون الفريق",
-        "حارسة مرمى أساسية",
-        "مهاجمة أولى",
-        "حكمة للمباريات"
+        "تنظيم شؤون اللاعبين ودعمهم",
+        "حراسة المرمى طوال المباريات",
+        "تسجيل الأهداف بدل المهاجمين",
+        "اتخاذ قرارات التحكيم"
       ],
       "answer": 0,
       "id": "q082"
     },
     {
       "category": "story",
-      "question": "ما الميزة التي تميز اللاعب المحب للحساب؟",
+      "question": "أي مهارة عقلية تساعد أحد المدافعين على قراءة تحركات المنافس؟",
       "image": "/assets/quiz-story.svg",
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
-      "explanation": "يستخدم مانابي مهاراته في الحساب والتحليل للمساعدة في الدفاع.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "explanation": "يستفيد بعض المدافعين من ملاحظة الأنماط والحساب لتحسين تمركزهم.",
+      "reference": "أبطال الكرة: فرسان المجرة — الدبلجة العربية",
       "options": [
         "الوثب العالي فقط",
         "السرعة وحدها",
         "التسديد من بعيد فقط",
-        "التحليل والحساب"
+        "الحساب والتحليل"
       ],
       "answer": 3,
       "id": "q083"
@@ -1518,7 +1518,7 @@ window.GALAXY_QUIZ_BANK = {
       "imageType": "theme",
       "imageAlt": "رسم قصصي أصلي من عالم المجرة",
       "explanation": "ينظر لبيب إلى اللعب بعين المراقب المحب للتحقيق.",
-      "reference": "سلسلة Inazuma Eleven GO Galaxy",
+      "reference": "سلسلة Inazuma Eleven فرسان المجرة",
       "options": [
         "التدريب على الجمباز",
         "المصارعة",
