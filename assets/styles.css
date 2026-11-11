@@ -617,3 +617,17 @@
 .ep-external-post p{color:#d0e4f5;font-size:.83rem;line-height:1.75;margin:0 0 11px}
 .ep-external-post .ep-external-link{display:inline-flex;max-width:100%}
 @media(prefers-reduced-motion:reduce){.ep-external-link{transition:none}}
+
+
+/* In-page Facebook player for public, user-shared episode posts; no rehosting. */
+.ep-video-badge{position:absolute;bottom:10px;left:9px;z-index:2;display:inline-flex;align-items:center;padding:4px 9px;border-radius:99px;border:1px solid #ffd682b0;background:#102958e8;color:#ffde78;font-size:.72rem;font-weight:900;box-shadow:0 3px 12px #0007}
+.ep-player-heading{font-size:1.02rem;font-weight:900;color:#ffe48d;margin:0 0 4px}
+.ep-verified-video:not([hidden]){display:flex;flex-direction:column;gap:10px;margin:16px 0 6px}
+.ep-facebook-frame{background:#081a36;min-height:280px;height:clamp(280px,37vw,430px);width:100%;max-width:100%;border:1px solid #5489af;border-radius:13px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ep-facebook-frame iframe{display:block;width:100%;height:100%;border:0}
+.ep-player-help{font-size:.8rem;line-height:1.8;color:#c4d7ee;margin:2px 0 0}
+.ep-player-stop{align-self:flex-start;min-height:38px;cursor:pointer;border-radius:11px;border:1px solid #3f789a;background:#183b60;color:#d9f3ff;font-size:.82rem;font-weight:800;padding:6px 12px}
+.ep-player-stop:hover{background:#24567d}
+.ep-external-post{padding:10px 14px;margin:7px 0 13px;background:#132f4a;border:1px solid #3e648c;border-radius:13px}
+.ep-external-post p{font-size:.78rem;color:#b6cde3;line-height:1.8;margin:0}
+@media(max-width:510px){.ep-facebook-frame{min-height:245px;height:270px}.ep-player-heading{font-size:.91rem}.ep-video-badge{font-size:.66rem;bottom:6px;left:5px}}
