@@ -1,7 +1,7 @@
 {
   "series": "أبطال الكرة: فرسان المجرة",
   "count": 43,
-  "note": "Episode labels are from third-party Arabic episode catalogues; original video links remain empty unless independently verified to be from an authorized publisher and publicly embeddable.",
+  "note": "Episode titles are indexed as an Arabic fan guide. Two Facebook post URLs for episodes 20 and 40 were supplied by a visitor and point to Old But Cold; no public playback, no-login access, embedding permission, or distribution rights could be independently verified. They are external source links only, not onsite streams.",
   "episodes": [
     {
       "number": 1,
@@ -161,7 +161,10 @@
       "phase": "رحلة الفضاء الأولى",
       "art": "/assets/article-galaxy-worlds.svg",
       "facebook_video_url": null,
-      "source_status": "unverified"
+      "source_status": "unverified",
+      "external_post_url": "https://www.facebook.com/61587433145166/videos/%D8%A7%D8%A8%D8%B7%D8%A7%D9%84-%D8%A7%D9%84%D9%83%D8%B1%D8%A9-%D9%81%D8%B1%D8%B3%D8%A7%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A9-%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9-20-%D8%B3%D8%A8%D9%8A%D8%B3%D8%AA%D9%88%D9%86-%D8%A7%D8%A8%D8%B7%D8%A7%D9%84_%D8%A7%D9%84%D9%83%D8%B1%D8%A9-zyrekon/1538264508018291/",
+      "external_post_source": "Old But Cold",
+      "external_post_status": "user_supplied_unverified"
     },
     {
       "number": 21,
@@ -321,7 +324,10 @@
       "phase": "المواجهات الأخيرة",
       "art": "/assets/article-story.svg",
       "facebook_video_url": null,
-      "source_status": "unverified"
+      "source_status": "unverified",
+      "external_post_url": "https://www.facebook.com/61587433145166/videos/%D8%A7%D8%A8%D8%B7%D8%A7%D9%84-%D8%A7%D9%84%D9%83%D8%B1%D8%A9-%D9%81%D8%B1%D8%B3%D8%A7%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A9-%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9-40-%D8%B3%D8%A8%D9%8A%D8%B3%D8%AA%D9%88%D9%86-%D8%A7%D8%A8%D8%B7%D8%A7%D9%84_%D8%A7%D9%84%D9%83%D8%B1%D8%A9-zyrekon/3226086250916619/",
+      "external_post_source": "Old But Cold",
+      "external_post_status": "user_supplied_unverified"
     },
     {
       "number": 41,
