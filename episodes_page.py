@@ -82,6 +82,7 @@ def build_episodes(root):
         <p id="ep-detail-description">تابع تفاصيل الحلقة المدبلجة بالعربية، ثم سجّل مشاهدتها بعد الانتهاء منها.</p>
         <div id="ep-verified-video" class="ep-verified-video" hidden></div>
         <p id="ep-play-status" class="ep-play-status">لا يتوفر بعد فيديو كامل من ناشر مخوّل تم التحقق منه لهذه الحلقة.</p>
+        <div id="ep-external-post" class="ep-external-post" hidden></div>
         <a href="/articles/watch-order/" class="btn secondary">دليل ترتيب مشاهدة الحلقات ←</a></div>
       </section>
       <script type="application/json" id="episode-catalog-data">{player_data}</script>
