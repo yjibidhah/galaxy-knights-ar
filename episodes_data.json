@@ -1,0 +1,351 @@
+{
+  "series": "أبطال الكرة: فرسان المجرة",
+  "count": 43,
+  "note": "Episode labels are from third-party Arabic episode catalogues; original video links remain empty unless independently verified to be from an authorized publisher and publicly embeddable.",
+  "episodes": [
+    {
+      "number": 1,
+      "title": "كارثة المنتخب الوطني الجديد!",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 2,
+      "title": "كلماتك ملهمة ولكن..",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 3,
+      "title": "بداية التغيير",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 4,
+      "title": "تبعثر المنتخب",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 5,
+      "title": "اختبار الإقصاء",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 6,
+      "title": "مواجهة المنتخب الأسترالي",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 7,
+      "title": "ليان تواجه مشكلة",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 8,
+      "title": "مشكلة نضال",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 9,
+      "title": "الأمر ليس كما تظن يا نضال",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 10,
+      "title": "تدريب من نوع مختلف",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 11,
+      "title": "مشكلة ورقة",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 12,
+      "title": "مباراة المنتخب التايلندي",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 13,
+      "title": "إيجاد الحل",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 14,
+      "title": "مباراة تدريبية",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 15,
+      "title": "تجاوزنا كل الصعوبات ولكن ينقصنا شيء",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 16,
+      "title": "لن يعترض طريقنا شيء",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 17,
+      "title": "نهاية البطولة",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 18,
+      "title": "البطولة ليست كما كنا نظن",
+      "phase": "بدايات الفريق والبطولة",
+      "art": "/assets/article-team-guide.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 19,
+      "title": "الانطلاق إلى الفضاء",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 20,
+      "title": "الوصول إلى كوكب الرمل",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 21,
+      "title": "أحداث غير متوقعة في الغرفة السوداء",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 22,
+      "title": "مباراة فريق كوكب الرمل",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 23,
+      "title": "بداية ظهور القوى الخفية",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 24,
+      "title": "الوصول إلى كوكب الماء",
+      "phase": "رحلة الفضاء الأولى",
+      "art": "/assets/article-galaxy-worlds.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 25,
+      "title": "قصة ضياء",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 26,
+      "title": "ظهور قوة ضياء",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 27,
+      "title": "خطة لبيب",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 28,
+      "title": "الكوكب الملتهب (غاردون)",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 29,
+      "title": "حيان وبراء في ضيافة زعيم القبيلة الشرقية",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 30,
+      "title": "فريقنا يتحدى الصعاب",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 31,
+      "title": "وصول حيان وبراء إلى الملعب",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 32,
+      "title": "الوصول إلى الكوكب الأخضر",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 33,
+      "title": "بدء مباراة فريق الكوكب الأخضر",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 34,
+      "title": "هدف غاضب يحسم النتيجة",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 35,
+      "title": "شظايا الأمل",
+      "phase": "الكواكب والاختبارات",
+      "art": "/assets/article-powers.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 36,
+      "title": "ظهور الفارس سارجيس",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 37,
+      "title": "بدء المباراة النهائية",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 38,
+      "title": "بيان يواجه عقاب",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 39,
+      "title": "نهاية المباراة النهائية",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 40,
+      "title": "فريق إكسارو فوريتو المخيف",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 41,
+      "title": "فريق الأرض يواجه فريق إكسارو",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 42,
+      "title": "لنلعب بأسلوب المناورة",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    },
+    {
+      "number": 43,
+      "title": "عودة بيان ورفاقه إلى الأرض",
+      "phase": "المواجهات الأخيرة",
+      "art": "/assets/article-story.svg",
+      "facebook_video_url": null,
+      "source_status": "unverified"
+    }
+  ]
+}
